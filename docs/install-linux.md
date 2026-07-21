@@ -1,23 +1,23 @@
 # Install on Linux (Ubuntu)
 
-This page sets everything up on **Ubuntu 20.04 or 22.04**. Most steps are typed into a
-**terminal** (the window where you type commands instead of clicking — see the
+This page sets everything up on **Ubuntu 20.04 or 22.04**. Most steps are typed into a **terminal**
+(the window where you type commands instead of clicking, explained in the
 [glossary](glossary.md#setup-words)). Copy each command exactly. Give yourself about 30 minutes.
 
 !!! tip "Before you begin"
-    Read [Before you start](before-you-start.md) if you haven't — it explains the three pieces
-    (Python, Webots, Erebus). On Ubuntu, Python 3 is already installed, so you only add a couple of
-    pieces to it.
+    If you haven't read [Before you start](before-you-start.md), do that first. It explains the
+    three pieces (Python, Webots, Erebus). On Ubuntu, Python 3 is already installed, so you only add
+    a couple of pieces to it.
 
 !!! note "Other Linux distributions"
     These exact commands are for **Ubuntu** (and Ubuntu-based systems like Linux Mint). On Fedora,
-    Arch, etc. the idea is the same but the package commands differ — install Webots R2023b from the
-    [Webots releases page](https://github.com/cyberbotics/webots/releases/tag/R2023b) and use your
-    own package manager for `pip`.
+    Arch, and others the idea is the same, but the package commands differ. Install Webots R2023b
+    from the [Webots releases page](https://github.com/cyberbotics/webots/releases/tag/R2023b) and
+    use your own package manager for `pip`.
 
 ---
 
-## Step 1 — Set up Python's libraries
+## Step 1: Set up Python's libraries
 
 Open a terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run these one at a time.
 
@@ -36,27 +36,28 @@ Open a terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run these 
 
     !!! note "Why more than three?"
         The official docs list only `numpy termcolor requests`, but the Competition Supervisor also
-        needs `opencv-python`, `pillow`, and `overrides` — and `opencv-python` isn't installed
-        automatically. Installing the full list now avoids a `No module named 'cv2'` crash later.
-        (Verified on a real run, 2026-07-21.)
+        needs `opencv-python`, `pillow`, and `overrides`, and `opencv-python` isn't installed
+        automatically. Installing the full list now saves you from a `No module named 'cv2'` crash
+        later. (We hit this on a real run and confirmed the fix.)
 
 !!! success "You should now have"
-    `pip` and the three libraries installed. Check Python itself is present with
-    `python3 --version` — Ubuntu 20.04/22.04 ships 3.8–3.10, all of which work.
+    `pip` and the libraries installed. Check that Python itself is present with `python3 --version`.
+    Ubuntu 20.04 and 22.04 ship Python 3.8 to 3.10, all of which work.
 
 ---
 
-## Step 2 — Install Webots R2023b
+## Step 2: Install Webots R2023b
 
 Erebus needs the **exact** version R2023b, not the newest Webots.
 
-1. Download the R2023b package (about 1 GB — this takes a while, that's normal):
+1. Download the R2023b package (about 1 GB, so this takes a while, and that's normal):
 
     ```bash
     wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb
     ```
 
-2. Install it (the `./` in front matters — it tells `apt` to install the file you just downloaded):
+2. Install it. The `./` in front matters, because it tells `apt` to install the file you just
+   downloaded:
 
     ```bash
     sudo apt install ./webots_2023b_amd64.deb
@@ -67,21 +68,21 @@ Erebus needs the **exact** version R2023b, not the newest Webots.
         correct version.
 
 !!! success "You should now have"
-    Webots installed. Test it with `webots` in the terminal — it should open to a 3D window. Close
-    it again; the next steps open it properly.
+    Webots installed. Test it by typing `webots` in the terminal, and it should open to a 3D window.
+    Close it again. The next steps open it properly.
 
 ---
 
-## Step 3 — Download the Erebus files
+## Step 3: Download the Erebus files
 
-Erebus is the competition package (maze worlds, sample robot, scoring referee) — a folder of files
-you unzip, not an installer.
+Erebus is the competition package (maze worlds, sample robot, scoring referee). It's a folder of
+files you unzip, not an installer.
 
 1. Go to the latest release page: **<https://github.com/robocup-junior/erebus/releases/latest>**.
 2. Under **"Assets"**, download **"Source code (zip)"**.
 
-    !!! warning "There is no 'Release Build' file — use 'Source code (zip)'"
-        Older guides mention a "Release Build". Newer Erebus releases don't include one —
+    !!! warning "There's no 'Release Build' file. Use 'Source code (zip)'"
+        Older guides mention a "Release Build." Newer Erebus releases don't include one, so
         **"Source code (zip)" is the real, complete package** (confirmed against the current v26.1).
 
 3. Unzip it into a folder you'll remember, for example your home folder:
@@ -95,7 +96,7 @@ you unzip, not an installer.
 
 ---
 
-## Step 4 — Open it and check it works
+## Step 4: Open it and check it works
 
 1. Launch the world file with Webots. Replace the path with wherever you unzipped it:
 
@@ -103,14 +104,14 @@ you unzip, not an installer.
     webots ~/Erebus/erebus-26.1/game/worlds/world1.wbt
     ```
 
-2. Webots opens and the Competition Supervisor panel appears on the left.
-3. The first time only, Webots installs Python libraries automatically — you'll see
+2. Webots opens, and the Competition Supervisor panel appears on the left.
+3. The first time only, Webots installs Python libraries automatically. You'll see
    **"Initializing…"**.
 
-    !!! note "\"Initializing…\" can take a few minutes — this is normal"
-        It looks frozen but isn't; it's setting up in the background. Wait a couple of minutes. If
-        it truly never finishes, you already installed the libraries in Step 1, so check the
-        console for other errors — see [When it goes wrong](troubleshooting.md).
+    !!! note "\"Initializing…\" can take a few minutes, and that's normal"
+        It looks frozen, but it isn't. It's setting up in the background. Wait a couple of minutes.
+        If it truly never finishes, remember you already installed the libraries in Step 1, so open
+        the console and read the actual error. See [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
 !!! success "You're installed! ✅"
     When the maze is on screen and the Competition Controller panel shows a time limit, Linux setup
@@ -120,11 +121,11 @@ you unzip, not an installer.
 
 ## If it goes wrong
 
-- **`webots: command not found`** → the `.deb` install didn't finish; re-run Step 2.
-- **Webots screen is blank/black** → unzip Erebus to its own folder (Step 3) and open the world
-  from there, not from inside the archive viewer.
-- **"Initializing…" never ends** → you already ran Step 1, so open the console and read the actual
-  error; details on [When it goes wrong](troubleshooting.md).
-- **The Supervisor panel didn't appear** → the fix is on [When it goes wrong](troubleshooting.md).
+- **`webots: command not found`.** The `.deb` install didn't finish. Re-run Step 2.
+- **The Webots screen is blank or black.** Unzip Erebus to its own folder (Step 3) and open the
+  world from there, not from inside the archive viewer.
+- **"Initializing…" never ends.** You already ran Step 1, so open the console and read the actual
+  error. Details are on [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
+- **The Supervisor panel didn't appear.** The fix is on [When it goes wrong](troubleshooting.md#4-the-competition-supervisor-panel-doesnt-appear).
 
-Full, error-message-indexed help is on the **[When it goes wrong](troubleshooting.md)** page.
+Full, searchable help is on the **[When it goes wrong](troubleshooting.md)** page.
