@@ -1,0 +1,24 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Internal project/loop notes — kept local, NOT published to the public repo
+PLAN.md
+LOOP.md
+SOURCES.md
+UPSTREAM-ISSUES.md
+PROGRESS.md
+BACKLOG.md
+.claude/

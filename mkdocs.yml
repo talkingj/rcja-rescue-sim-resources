@@ -1,0 +1,47 @@
+site_name: Erebus Rescue Sim — Beginner Guide
+site_description: Get from a blank laptop to a robot driving in the Erebus rescue simulator.
+site_url: https://talkingj.github.io/rcja-rescue-sim-resources/
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition          # the "note / warning / success" callout boxes
+  - pymdownx.details    # collapsible fix-it boxes
+  - attr_list           # image sizing / classes
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Before you start: before-you-start.md
+  - Install:
+      - Windows: install-windows.md
+      - macOS: install-mac.md
+      - Linux (Ubuntu): install-linux.md
+  - Your first run: first-run.md
+  - Make it move: make-it-move.md
+  - When it goes wrong: troubleshooting.md
+  - Glossary: glossary.md
+
+# strict is enforced on the command line: mkdocs build --strict
