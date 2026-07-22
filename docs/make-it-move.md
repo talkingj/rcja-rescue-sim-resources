@@ -94,6 +94,7 @@ from turning to sensing walls to finding victims, is built from more lines like 
 
 ---
 
-Next: keep exploring. The official
-[Erebus tutorials](https://erebus.rcj.cloud/docs/tutorials/) cover reading the distance sensors,
-using the cameras, and mapping the maze, all building on exactly what you just did.
+Next: [What's next: sensors](next-steps.md) is a short teaser on reading the robot's distance
+sensors, the next natural thing to try. The official
+[Erebus tutorials](https://erebus.rcj.cloud/docs/tutorials/) go further still, covering the
+cameras and mapping the maze.

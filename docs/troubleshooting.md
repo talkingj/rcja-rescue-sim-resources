@@ -175,3 +175,11 @@ If none of these match, note the **exact** text of the error in the Webots conso
 you were on. Then re-read the install page for your system,
 [Windows](install-windows.md), [macOS](install-mac.md), or [Linux](install-linux.md), with that
 error in mind. That usually reveals the missed step.
+
+If it's still not fixed, ask a person:
+
+- The **Erebus Discord server** is where most technical setup questions actually get answered
+  (faster than the forum). Look for the invite link on the
+  [Erebus GitHub page](https://github.com/robocup-junior/erebus).
+- The [RoboCupJunior Rescue Simulation forum](https://junior.forum.robocup.org/c/rescue-simulation)
+  is good for rules questions and searching past setup problems other teams have hit.

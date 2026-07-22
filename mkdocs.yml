@@ -41,7 +41,9 @@ nav:
       - Linux (Ubuntu): install-linux.md
   - Your first run: first-run.md
   - Make it move: make-it-move.md
+  - "What's next: sensors": next-steps.md
   - When it goes wrong: troubleshooting.md
   - Glossary: glossary.md
+  - Quick-start (printable): quick-start.md
 
 # strict is enforced on the command line: mkdocs build --strict
