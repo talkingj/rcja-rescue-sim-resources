@@ -94,12 +94,12 @@ isn't an app you install. It's a folder of files you unzip.
 3. The first time only, Webots installs some Python libraries automatically. You'll see
    **"Initializing…"**.
 
-    !!! note "\"Initializing…\" can take a few minutes, and that's normal"
-        It looks frozen, but it isn't. It's setting up some Python libraries in the background. Wait
-        a couple of minutes. If it never finishes, or you see `WARNING: Python was not found`, head
-        to [When it goes wrong](troubleshooting.md#5-warning-python-was-not-found).
+    !!! note "\"Initializing…\" can take a few minutes"
+        It's installing Python libraries in the background, not stuck. If it never finishes, or you
+        see `WARNING: Python was not found`, head to
+        [When it goes wrong](troubleshooting.md#5-warning-python-was-not-found).
 
-!!! success "You're installed! ✅"
+!!! success "You should now have"
     When the maze is on screen and the Competition Controller panel shows a time limit, macOS setup
     is done. Continue to **[Your first run](first-run.md)** to load the robot and watch it move.
 

@@ -4,9 +4,9 @@ This site gets you from *"I have a laptop"* all the way to *"my robot is driving
 maze on my screen."* There's a picture for every click, and every confusing word gets explained the
 first time it shows up.
 
-**Who this is for:** you're in grade 9 or up, and you've never set any of this up before. You don't
-need to know how to program yet. You just need to be able to download a file and find it again
-afterwards.
+**Who this is for:** you're in grade 9 or up, and you've never set any of this up before. No
+programming experience required — see [Before you start](before-you-start.md) for exactly what
+you'll need.
 
 ## What you'll build
 

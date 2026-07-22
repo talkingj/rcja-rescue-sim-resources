@@ -54,5 +54,5 @@ add-on to a beginner guide.
   for "my thing is broken" questions. Look for the invite link on the
   [Erebus GitHub page](https://github.com/robocup-junior/erebus).
 
-You already know more than you did an hour ago: you've installed a real simulator, run a real
-robot, and changed real code. Sensors are just the next number to change.
+You've installed a real simulator, run a real robot, and changed real code. Sensors are just the
+next number to change.

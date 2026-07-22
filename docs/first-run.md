@@ -69,10 +69,10 @@ The Competition Controller has three round buttons. The left one starts the matc
     the simulator needs. Give it a minute or two. If it never finishes, or you see an error about a
     missing module, see [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
-!!! success "You did it! ✅"
-    The robot drives around the start area by itself, turning away from walls. We ran this ourselves
+!!! success "You should now see"
+    The robot driving around the start area by itself, turning away from walls. We ran this ourselves
     to be sure: with the sample controller loaded, the robot really does spawn and drive around,
-    avoiding obstacles. That's exactly what you should see.
+    avoiding obstacles.
 
 ![The robot in the world1 maze during a real run](assets/real/world1-first-run.png)
 

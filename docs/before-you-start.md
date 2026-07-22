@@ -8,8 +8,7 @@ install anything yet. The actual steps are on the install page for your computer
 You're going to install three separate things, in this order. Each one needs the one before it, so
 the order matters.
 
-1. **Python** is a programming language. It's what makes your robot's code run. Think of it as the
-   language your robot understands.
+1. **Python** is a programming language. It's what your robot's code is written in and what runs it.
 2. **Webots** is the simulator, a 3D app that the robot lives inside. It draws the maze and the
    robot, and it makes the robot bump into walls like a real one would. Erebus needs one *exact*
    version of Webots, not "whatever's newest," so check the box below.

@@ -4,9 +4,8 @@ You've watched the sample robot drive itself in [Your first run](first-run.md). 
 **one number** in its code and see the robot behave differently. This is your first real taste of
 programming the robot, and it takes about 5 minutes.
 
-!!! note "You don't need to know how to code yet"
-    You're going to change a single number and save. That's it. Everything else in the file can stay
-    exactly as it is.
+!!! note "What you're changing"
+    A single number, then save. Everything else in the file stays exactly as it is.
 
 ---
 

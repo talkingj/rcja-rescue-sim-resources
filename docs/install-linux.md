@@ -113,7 +113,7 @@ files you unzip, not an installer.
         If it truly never finishes, remember you already installed the libraries in Step 1, so open
         the console and read the actual error. See [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
-!!! success "You're installed! ✅"
+!!! success "You should now have"
     When the maze is on screen and the Competition Controller panel shows a time limit, Linux setup
     is done. Continue to **[Your first run](first-run.md)** to load the robot and watch it move.
 

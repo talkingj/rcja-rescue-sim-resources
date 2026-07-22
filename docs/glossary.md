@@ -1,4 +1,4 @@
-# Glossary: scary words explained
+# Glossary: unfamiliar words explained
 
 Every word here shows up somewhere in this guide. If you hit a word you don't know, it's probably
 listed below. Words are in the order you'll meet them, not alphabetical order.
