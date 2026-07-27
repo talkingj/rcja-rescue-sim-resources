@@ -73,6 +73,52 @@ listed below. Words are in the order you'll meet them, not alphabetical order.
   loads everything. It looks stuck. It usually isn't (see the "If it goes wrong" box on
   [Your first run](first-run.md)).
 
+## Rules & scoring words
+
+**Wall token**
+: The general term for anything on a wall your robot needs to find and report: either a letter victim
+  or a cognitive target. See [Victims and hazmats](rules-tokens.md).
+
+**Letter victim**
+: A black letter (Φ, Ψ, or Ω) printed on a wall, marking a victim's health status: harmed, stable, or
+  unharmed. See [Victims and hazmats](rules-tokens.md#letter-victims).
+
+**Cognitive target**
+: A 5 cm ringed circle on a wall representing a hazardous chemical. Its colors decode to a hazmat type
+  by summing color values. See
+  [Victims and hazmats](rules-tokens.md#cognitive-targets-reading-the-rings).
+
+**Checkpoint**
+: A silver tile. Reaching one scores points and becomes your robot's fallback spot if it later needs
+  to be reset. See [Understanding the field](rules-field.md#checkpoints).
+
+**Linear tile / floating tile**
+: A linear tile is reachable from the start by always following the same wall. A floating tile isn't,
+  reaching it means crossing open space. Floating tiles score more. See
+  [Understanding the field](rules-field.md#linear-tiles-vs-floating-tiles).
+
+**Swamp**
+: A brown tile that doesn't block the robot, but makes simulated time run faster while it's there,
+  worse each time the robot re-enters the same swamp. See
+  [Understanding the field](rules-field.md#swamps-obstacles-and-holes).
+
+**Lack of Progress (LoP)**
+: What happens when the robot gets stuck, falls in a hole, or otherwise can't continue. It's reset to
+  the last checkpoint reached, and it costs 5 points. See
+  [How points are earned](rules-scoring.md#the-building-blocks).
+
+**Area multiplier**
+: A per-area scaling factor (×1 to ×2) applied to points earned there, since later areas are harder to
+  navigate. See [How points are earned](rules-scoring.md#area-multipliers).
+
+**Exit bonus**
+: A 10% score bonus for identifying at least one wall token and making it back to the starting tile
+  before time runs out. See [How points are earned](rules-scoring.md#bonuses-applied-last).
+
+**Mapping bonus**
+: A score multiplier (×1 to ×2.2) based on how accurate the maze map your robot submits is. See
+  [Drawing the map](rules-map-format.md).
+
 ## If a word isn't here
 
 Check [When it goes wrong](troubleshooting.md), or ask someone. Don't guess. Every step in this

@@ -37,11 +37,16 @@ The full competition asks the robot to do three things at once, each building on
 already touched:
 
 - **Navigate the maze** without bumping into walls (you've seen the start of this).
-- **Find "victims"** using the robot's camera, little coloured or lettered markers on the walls.
-- **Report a map** of the maze back to the Competition Supervisor before time runs out.
+- **Find "victims"** using the robot's camera, little coloured or lettered markers on the walls. What
+  those markers actually mean and what they're worth is covered in
+  [Victims and hazmats](rules-tokens.md) and [How points are earned](rules-scoring.md).
+- **Report a map** of the maze back to the Competition Supervisor before time runs out. The exact
+  format that map needs to be in is covered in [Drawing the map](rules-map-format.md).
 
-None of that is covered here. It's a lot more code, and it deserves real tutorials, not a rushed
-add-on to a beginner guide.
+None of the *code* for those three is covered here. It's a lot more code, and it deserves real
+tutorials, not a rushed add-on to a beginner guide. But the rules behind them, what you're actually
+being scored on, are covered on this site: start at
+[Understanding the field](rules-field.md).
 
 ## Where to go for the real thing
 

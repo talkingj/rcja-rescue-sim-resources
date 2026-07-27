@@ -28,6 +28,9 @@ checkpoints, the coloured tiles are hazards, and the round object near the top i
 3. **[Your first run](first-run.md)** opens the maze and gets the robot moving for the first time.
 4. **[Make it move](make-it-move.md)** has you change one line of the robot's code and see it do
    something new. This is your first taste of programming the robot.
+5. **Rules & Scoring**, starting at the [quick briefing](briefing.md), turns "drive around a maze"
+   into "actually compete": what your robot is searching for, how points are earned and lost, and how
+   the mapping bonus works. No code here, just the rulebook made readable.
 
 Stuck at any point? **[When it goes wrong](troubleshooting.md)** is a single page you can search by
 what you're seeing on screen. And the **[Glossary](glossary.md)** explains every unfamiliar word.

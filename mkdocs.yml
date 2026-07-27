@@ -42,8 +42,21 @@ nav:
   - Your first run: first-run.md
   - Make it move: make-it-move.md
   - "What's next: sensors": next-steps.md
+  - Rules & Scoring:
+      - Quick briefing: briefing.md
+      - Classroom workshop (45-60 min): workshop.md
+      - Understanding the field: rules-field.md
+      - Victims and hazmats: rules-tokens.md
+      - How points are earned: rules-scoring.md
+      - Drawing the map: rules-map-format.md
+      - Rules self-check: rules-quiz.md
+      - Official rules (reference): official-rules-2026.md
   - When it goes wrong: troubleshooting.md
   - Glossary: glossary.md
-  - Quick-start (printable): quick-start.md
+  - Printable pages:
+      - Quick-start: quick-start.md
+      - Scoring cheat sheet: scoring-cheat-sheet.md
+      - Cognitive target decoder: cognitive-target-decoder.md
+      - Workshop activity sheet: workshop-activity-sheet.md
 
 # strict is enforced on the command line: mkdocs build --strict
