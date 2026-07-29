@@ -288,4 +288,4 @@ strategy questions, not new API calls.
 
 ---
 
-Next: strategy and competition readiness (coming soon).
+Next: [spending your eight minutes](strategy-run-budget.md).
