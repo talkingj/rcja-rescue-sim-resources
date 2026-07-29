@@ -54,6 +54,7 @@ nav:
       - Getting stuck, and recovering from it: code-lack-of-progress.md
       - Sending the exit message: code-exit.md
       - Building and submitting the map matrix: code-mapping.md
+      - "Putting it together: a complete scored run": code-complete-run.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md

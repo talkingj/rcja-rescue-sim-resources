@@ -211,4 +211,4 @@ back onto the start tile before exiting, [same trick as the last page](code-exit
 
 ---
 
-Next: putting it together, a complete scored run (coming soon).
+Next: [putting it together, a complete scored run](code-complete-run.md).
