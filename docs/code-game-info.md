@@ -132,4 +132,4 @@ field to report on partway through the run.
 
 ---
 
-Next: sending the exit message (coming soon).
+Next: [getting stuck, and recovering from it](code-lack-of-progress.md).
