@@ -4,9 +4,9 @@ You've got a robot driving itself and you've changed how fast it goes. That's th
 guide teaches: **edit code → reload → watch what changes.** Everything past this point uses that
 same loop, just with more interesting code.
 
-!!! note "This page is a teaser, not a tutorial"
-    We don't walk through these steps with screenshots the way the rest of the site does. Think of
-    it as a map of where to go next, once you're ready.
+!!! note "The real tutorials now exist on this site"
+    This page is still the quick map. For the full walkthrough, with real numbers from a real run,
+    start at [Reading a distance sensor](code-sensors.md).
 
 ---
 
@@ -17,9 +17,10 @@ The e-puck robot (the round one you've been driving) has **eight distance sensor
 avoid walls. That's *why* the robot turns before it crashes. It isn't guessing. It's checking a
 sensor first.
 
-A distance sensor is a **device**, a piece of hardware code can talk to. It returns a number. A low
-number means open space. A high number means something's close. Reading one in code looks like
-this:
+A distance sensor is a **device**, a piece of hardware code can talk to. It returns a number, and on
+this build it works the opposite way you might expect: a high number means open space, a low number
+means something's close. [Reading a distance sensor](code-sensors.md) has the real values from a
+real run. Reading one in code looks like this:
 
 ```python
 distance_sensor = robot.getDevice("ps0")
