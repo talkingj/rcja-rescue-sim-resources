@@ -85,12 +85,13 @@ game actually works:
   map, given [the mapping bonus is a multiplier, not a flat amount](rules-scoring.md#bonuses-applied-last),
   it's worth more the more you've already scored, not a fixed payoff?
 - Given [misidentification only costs 5 points, flat](code-reporting.md), is a fast, less accurate
-  reporting strategy ever better than a slow, careful one? Scoring maths for strategy decisions
-  (the next page in this series) works through exactly this kind of comparison with real numbers.
+  reporting strategy ever better than a slow, careful one? [Scoring maths for strategy
+  decisions](strategy-scoring-maths.md) works through exactly this kind of comparison with real
+  numbers.
 - How much of your own team's practice time goes into exploration coverage versus reporting
   accuracy? Track C's own experience says coverage was the harder problem here, is that true for
   your robot too?
 
 ---
 
-Next: scoring maths for strategy decisions (coming soon).
+Next: [scoring maths for strategy decisions](strategy-scoring-maths.md).

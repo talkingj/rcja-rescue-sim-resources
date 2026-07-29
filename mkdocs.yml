@@ -57,6 +57,7 @@ nav:
       - "Putting it together: a complete scored run": code-complete-run.md
   - "Strategy and competition readiness":
       - Spending your eight minutes: strategy-run-budget.md
+      - Scoring maths for strategy decisions: strategy-scoring-maths.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md
