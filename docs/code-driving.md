@@ -147,8 +147,8 @@ degrees, four turns in a row should bring the robot back to face the exact wall 
   close to the same number, if it overshoots noticeably, that tells you something about how the
   simulation handles fast spins.
 
-Next in this series, the floor colour sensor tells the robot what kind of tile it's driving over,
-which matters as much as not hitting walls.
+Next in this series, [the floor colour sensor](code-colour.md) tells the robot what kind of tile
+it's driving over, which matters as much as not hitting walls.
 
 ---
 
@@ -167,4 +167,4 @@ which matters as much as not hitting walls.
 
 ---
 
-Next: the floor colour sensor (coming soon).
+Next: [Reading the floor with the colour sensor](code-colour.md).
