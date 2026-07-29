@@ -141,8 +141,8 @@ than trusting a guessed threshold.
 - Try slowing the robot down. The near-white readings above jitter by a few points frame to frame,
   slower driving makes it easier to tell real colour changes from that noise.
 
-Next in this series: a wall-follower that combines this page and the last two into a robot that can
-actually survive a maze.
+Next in this series: [a wall-follower](code-wall-follower.md) that combines this page and the last
+two into a robot that can actually survive a maze.
 
 ---
 
@@ -162,4 +162,4 @@ actually survive a maze.
 
 ---
 
-Next: a wall-follower that survives world1 (coming soon).
+Next: [A wall-follower that survives world1](code-wall-follower.md).
