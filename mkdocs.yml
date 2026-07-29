@@ -50,6 +50,7 @@ nav:
       - Turning on the camera: code-camera.md
       - Spotting a victim sign: code-victim-detection.md
       - Reporting a victim and earning your first points: code-reporting.md
+      - Reading the clock and the score: code-game-info.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md

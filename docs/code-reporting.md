@@ -182,4 +182,4 @@ detection logic and want to know exactly how close is close enough.
 
 ---
 
-Next: reading the clock and the score (coming soon).
+Next: [reading the clock and the score](code-game-info.md).
