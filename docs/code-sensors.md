@@ -114,8 +114,9 @@ numbers should drop toward zero as the robot presses into it.
 - Try changing the forward speed from `3.0` to `6.0` and see how much less warning you get before
   the front sensors drop toward zero, since the robot covers the same distance in less time.
 
-The next page in this series, *Driving straight and turning a known amount*, uses these same numbers
-to make the robot turn before it hits the wall, instead of just watching it happen.
+The next page in this series,
+[Driving straight and turning a known amount](code-driving.md), uses these same numbers to make the
+robot turn before it hits the wall, instead of just watching it happen.
 
 ---
 
@@ -133,4 +134,4 @@ to make the robot turn before it hits the wall, instead of just watching it happ
 
 ---
 
-Next: *Driving straight and turning a known amount* (coming soon).
+Next: [Driving straight and turning a known amount](code-driving.md).

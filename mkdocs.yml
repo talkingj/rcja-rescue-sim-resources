@@ -44,6 +44,7 @@ nav:
   - "What's next: sensors": next-steps.md
   - "Code: build a scoring robot":
       - Reading a distance sensor: code-sensors.md
+      - Driving straight and turning: code-driving.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md
