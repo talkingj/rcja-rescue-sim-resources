@@ -49,6 +49,7 @@ nav:
       - A wall-follower that survives world1: code-wall-follower.md
       - Turning on the camera: code-camera.md
       - Spotting a victim sign: code-victim-detection.md
+      - Reporting a victim and earning your first points: code-reporting.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md

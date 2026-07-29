@@ -119,4 +119,4 @@ Next in this series: spotting a victim sign in this same camera image.
 
 ---
 
-Next: spotting a victim sign (coming soon).
+Next: [spotting a victim sign](code-victim-detection.md).
