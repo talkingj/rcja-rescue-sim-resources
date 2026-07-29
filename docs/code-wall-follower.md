@@ -180,4 +180,4 @@ but it isn't yet a maze-solving algorithm.
 
 ---
 
-Next: turning on the camera (coming soon).
+Next: [Turning on the camera](code-camera.md).

@@ -47,6 +47,7 @@ nav:
       - Driving straight and turning: code-driving.md
       - Reading the floor colour sensor: code-colour.md
       - A wall-follower that survives world1: code-wall-follower.md
+      - Turning on the camera: code-camera.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md
