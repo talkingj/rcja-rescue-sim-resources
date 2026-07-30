@@ -98,4 +98,4 @@ you're risking to try.
 
 ---
 
-Next: the eight practice worlds and what each one is for (coming soon).
+Next: [the eight practice worlds and what each one is for](practice-worlds.md).
