@@ -103,4 +103,4 @@ on" item, later weeks assume it.
 
 ---
 
-Next: workshop 2, sensors lab (coming soon).
+Next: [workshop 2, sensors lab](workshop-sensors.md).
