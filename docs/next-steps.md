@@ -4,9 +4,20 @@ You've got a robot driving itself and you've changed how fast it goes. That's th
 guide teaches: **edit code → reload → watch what changes.** Everything past this point uses that
 same loop, just with more interesting code.
 
-!!! note "The real tutorials now exist on this site"
-    This page is still the quick map. For the full walkthrough, with real numbers from a real run,
-    start at [Reading a distance sensor](code-sensors.md).
+!!! success "The full code tutorial series now exists on this site"
+    This page used to be a teaser with no tutorial behind it. That's no longer true: **[Code: build
+    a scoring robot](code-sensors.md)** is a twelve-page series, sensors and driving through a
+    complete scored run, and every page quotes real numbers from a real run on this exact robot, not
+    invented ones. Read this page for the quick map, then go straight there for the real thing.
+
+    | You want to... | Go to |
+    |---|---|
+    | Read a distance sensor for real | [Reading a distance sensor](code-sensors.md) |
+    | Drive a known distance and turn a known angle | [Driving straight and turning](code-driving.md) |
+    | Build a robot that survives the maze | [A wall-follower that survives world1](code-wall-follower.md) |
+    | See and report a victim | [Spotting a victim sign](code-victim-detection.md), [Reporting a victim](code-reporting.md) |
+    | Submit a map and see the mapping bonus | [Building and submitting the map matrix](code-mapping.md) |
+    | See it all combined, including what still doesn't work | [Putting it together: a complete scored run](code-complete-run.md) |
 
 ---
 
@@ -35,19 +46,23 @@ you drag the robot near a wall.
 ## After that: mapping and victims
 
 The full competition asks the robot to do three things at once, each building on what you've
-already touched:
+already touched, and each now has both a rules explanation and a real, trialled code tutorial:
 
-- **Navigate the maze** without bumping into walls (you've seen the start of this).
+- **Navigate the maze** without bumping into walls. [A wall-follower that survives
+  world1](code-wall-follower.md) builds one, and reports honestly on how much of the maze it does
+  and doesn't cover.
 - **Find "victims"** using the robot's camera, little coloured or lettered markers on the walls. What
-  those markers actually mean and what they're worth is covered in
-  [Victims and hazmats](rules-tokens.md) and [How points are earned](rules-scoring.md).
-- **Report a map** of the maze back to the Competition Supervisor before time runs out. The exact
-  format that map needs to be in is covered in [Drawing the map](rules-map-format.md).
+  those markers mean and what they're worth is covered in [Victims and hazmats](rules-tokens.md) and
+  [How points are earned](rules-scoring.md); the code that actually sees one is [Spotting a victim
+  sign](code-victim-detection.md), and [Reporting a victim](code-reporting.md) turns that into real
+  points.
+- **Report a map** of the maze back to the Competition Supervisor before time runs out. The format is
+  covered in [Drawing the map](rules-map-format.md); [Building and submitting the map
+  matrix](code-mapping.md) is the code that sends one and shows the real score change.
 
-None of the *code* for those three is covered here. It's a lot more code, and it deserves real
-tutorials, not a rushed add-on to a beginner guide. But the rules behind them, what you're actually
-being scored on, are covered on this site: start at
-[Understanding the field](rules-field.md).
+Once you've been through all of Track C, [Spending your eight minutes](strategy-run-budget.md)
+starts a second series on strategy, budgeting your time, the maths behind real decisions, and the
+mistakes that quietly cost the most.
 
 ## Where to go for the real thing
 

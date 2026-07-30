@@ -19,7 +19,7 @@ and will soon edit yourself.
 *This is a real screenshot from running Erebus while making this guide. The grey squares are
 checkpoints, the coloured tiles are hazards, and the round object near the top is your robot.*
 
-## The four steps
+## The path through this site
 
 1. **[Before you start](before-you-start.md)** tells you about the three pieces you'll install
    (Python, Webots, Erebus) and what you need on hand.
@@ -28,12 +28,21 @@ checkpoints, the coloured tiles are hazards, and the round object near the top i
 3. **[Your first run](first-run.md)** opens the maze and gets the robot moving for the first time.
 4. **[Make it move](make-it-move.md)** has you change one line of the robot's code and see it do
    something new. This is your first taste of programming the robot.
-5. **Rules & Scoring**, starting at the [quick briefing](briefing.md), turns "drive around a maze"
+5. **[Code: build a scoring robot](code-sensors.md)** is a twelve-page series that takes you from
+   reading a single sensor all the way to a robot that finds a victim, reports it, and earns real
+   points, every page quotes real numbers from a real run, not invented ones.
+6. **Rules & Scoring**, starting at the [quick briefing](briefing.md), turns "drive around a maze"
    into "actually compete": what your robot is searching for, how points are earned and lost, and how
-   the mapping bonus works. No code here, just the rulebook made readable.
+   the mapping bonus works.
+7. **Strategy and competition readiness**, starting at [spending your eight
+   minutes](strategy-run-budget.md), and **teacher and club material**, starting at [the 8-week
+   curriculum](club-curriculum.md), go further still, once you've got a working robot and want to
+   place well or run a whole term around this site.
 
-Stuck at any point? **[When it goes wrong](troubleshooting.md)** is a single page you can search by
-what you're seeing on screen. And the **[Glossary](glossary.md)** explains every unfamiliar word.
+Stuck at any point? **[When it goes wrong](troubleshooting.md)** covers setup, and [the debugging
+playbook](debugging-playbook.md) covers your own code, both indexed by what you're seeing on screen.
+The **[Glossary](glossary.md)** explains every unfamiliar word, and the [Erebus API cheat
+sheet](api-cheat-sheet.md) is a one-page reference once you already know your way around.
 
 ## Why this guide exists
 
