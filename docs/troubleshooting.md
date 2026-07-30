@@ -21,6 +21,8 @@ just the normal rough edges of setting up a robotics simulator.
 | Can't load or choose a controller | [6. Can't load a controller](#6-cant-load-a-controller) |
 | `python` opens the Store or "not recognized" | [7. Python isn't on the PATH](#7-typing-python-does-nothing-windows) |
 | Everything runs very slowly | [8. The simulation is slow](#8-the-simulation-runs-slowly) |
+| Webots crashes or won't open (macOS) | [9. Webots crashes on macOS](#9-webots-crashes-or-wont-open-at-all-on-macos) |
+| Your own controller does nothing, no error | [10. No error at all](#10-your-own-controller-does-nothing-with-no-error-text-at-all) |
 
 ---
 
@@ -166,6 +168,44 @@ of tries.
 1. Open **Webots → Preferences** (macOS) or **Tools → Preferences** (Windows or Linux).
 2. Open the **OpenGL** tab.
 3. Turn the quality settings down.
+
+---
+
+## 9. Webots crashes or won't open at all on macOS
+
+**You'll see:** Webots quits immediately on launch, or crashes the moment a world loads, with no
+clear error dialog.
+
+**Why:** confirmed while building this site's own Track C material: a real crash
+(`QScreen::geometry()` null pointer, deep in Webots' own GUI setup) reproduced on this Mac
+regardless of rendering or batch-mode settings.
+
+**Fix:** launch Webots minimized rather than with its window immediately visible, then restore the
+window once it's running. If you're driving Webots from the command line (not something a normal
+LOAD-and-play session needs), add a minimize flag to the launch command; if you only ever use the
+Webots app directly, this is unlikely to affect you, it showed up specifically when automating
+Webots from outside the app.
+
+---
+
+## 10. Your own controller does nothing, with no error text at all
+
+**You'll see:** once you start writing your own controller code (see [Track C](code-sensors.md)),
+your print statements stop appearing right after the controller starts, and the only console line
+is `INFO: 'robot0Controller' controller exited successfully.` No traceback, no `AttributeError`.
+
+**Why:** confirmed on [the sensors page](code-sensors.md): a misspelled `robot.getDevice("...")`
+name doesn't raise a visible error in this engine, the controller just silently stops on the bad
+call.
+
+**Fix:** double check every device name against [the API cheat sheet](api-cheat-sheet.md) or the
+robot's proto file. This is the single most common cause of "my controller does nothing at all,"
+confirmed while building this site's own code pages.
+
+For anything else that comes up once you're past first-run and into writing your own Track C
+controllers, [the debugging playbook](debugging-playbook.md) is the deeper, code-focused companion
+to this page, symptom-indexed the same way, covering the camera, the emitter/receiver, and the
+wall-follower specifically.
 
 ---
 
