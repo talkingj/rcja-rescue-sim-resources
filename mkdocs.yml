@@ -65,6 +65,7 @@ nav:
   - "Teacher and club material":
       - An 8-week club curriculum: club-curriculum.md
       - "Workshop 2: sensors lab": workshop-sensors.md
+      - "Workshop 3: victim detection lab": workshop-victims.md
   - Rules & Scoring:
       - Quick briefing: briefing.md
       - Classroom workshop (45-60 min): workshop.md

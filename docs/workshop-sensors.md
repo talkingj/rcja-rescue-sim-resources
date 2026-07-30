@@ -129,4 +129,4 @@ it saves.
 
 ---
 
-Next: workshop 3, victim detection lab (coming soon).
+Next: [workshop 3, victim detection lab](workshop-victims.md).
