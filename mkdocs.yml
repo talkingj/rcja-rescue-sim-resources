@@ -42,8 +42,49 @@ nav:
   - Your first run: first-run.md
   - Make it move: make-it-move.md
   - "What's next: sensors": next-steps.md
+  - "Code: build a scoring robot":
+      - Reading a distance sensor: code-sensors.md
+      - Driving straight and turning: code-driving.md
+      - Reading the floor colour sensor: code-colour.md
+      - A wall-follower that survives world1: code-wall-follower.md
+      - Turning on the camera: code-camera.md
+      - Spotting a victim sign: code-victim-detection.md
+      - Reporting a victim and earning your first points: code-reporting.md
+      - Reading the clock and the score: code-game-info.md
+      - Getting stuck, and recovering from it: code-lack-of-progress.md
+      - Sending the exit message: code-exit.md
+      - Building and submitting the map matrix: code-mapping.md
+      - "Putting it together: a complete scored run": code-complete-run.md
+  - "Strategy and competition readiness":
+      - Spending your eight minutes: strategy-run-budget.md
+      - Scoring maths for strategy decisions: strategy-scoring-maths.md
+      - The eight practice worlds and what each is for: practice-worlds.md
+      - The debugging playbook: debugging-playbook.md
+      - Pre-run and competition-day checklist: competition-day.md
+      - The rule violations that quietly cost the most: costly-mistakes.md
+  - "Teacher and club material":
+      - An 8-week club curriculum: club-curriculum.md
+      - "Workshop 2: sensors lab": workshop-sensors.md
+      - "Workshop 3: victim detection lab": workshop-victims.md
+      - Assessment rubric and progress tracker: assessment-rubric.md
+      - Running a mock competition in class: mock-competition.md
+      - The printables pack: printables-pack.md
+  - Rules & Scoring:
+      - Quick briefing: briefing.md
+      - Classroom workshop (45-60 min): workshop.md
+      - Understanding the field: rules-field.md
+      - Victims and hazmats: rules-tokens.md
+      - How points are earned: rules-scoring.md
+      - Drawing the map: rules-map-format.md
+      - Rules self-check: rules-quiz.md
+      - Official rules (reference): official-rules-2026.md
+  - Erebus API cheat sheet: api-cheat-sheet.md
   - When it goes wrong: troubleshooting.md
   - Glossary: glossary.md
-  - Quick-start (printable): quick-start.md
+  - Printable pages:
+      - Quick-start: quick-start.md
+      - Scoring cheat sheet: scoring-cheat-sheet.md
+      - Cognitive target decoder: cognitive-target-decoder.md
+      - Workshop activity sheet: workshop-activity-sheet.md
 
 # strict is enforced on the command line: mkdocs build --strict
