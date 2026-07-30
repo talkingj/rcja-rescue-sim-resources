@@ -65,4 +65,4 @@ the same swamp repeatedly is losing real playing time with nothing on screen ann
 
 ---
 
-Next: teacher and club material (coming soon).
+Next: [an 8-week club curriculum](club-curriculum.md).
