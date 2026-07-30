@@ -124,4 +124,4 @@ double check every string argument is actually encoded to bytes first.
 
 ---
 
-Next: pre-run and competition-day checklist (coming soon).
+Next: [pre-run and competition-day checklist](competition-day.md).
