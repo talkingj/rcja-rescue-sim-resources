@@ -118,4 +118,4 @@ samples aren't always right for your build" lesson in this whole lab.
 
 ---
 
-Next: assessment rubric and progress tracker (coming soon).
+Next: [assessment rubric and progress tracker](assessment-rubric.md).
