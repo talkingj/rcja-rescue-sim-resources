@@ -53,4 +53,4 @@ skill 4 (the wall-follower) going into week 4 is worth extra attention before pi
 
 ---
 
-Next: running a mock competition in class (coming soon).
+Next: [running a mock competition in class](mock-competition.md).

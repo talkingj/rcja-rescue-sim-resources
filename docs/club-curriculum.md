@@ -86,8 +86,7 @@ example ones.
 
 - [The debugging playbook](debugging-playbook.md)
 - [Pre-run and competition-day checklist](competition-day.md)
-- A scored mock round in class (see the mock-competition workshop guide, later in this Teacher
-  track)
+- A scored mock round in class, see [running a mock competition in class](mock-competition.md)
 
 **Check before moving on:** every team has run their controller through a full timed match at least
 once, start to finish, with a real final score, whatever that score turns out to be.
