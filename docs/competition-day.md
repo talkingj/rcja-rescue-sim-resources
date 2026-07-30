@@ -69,4 +69,4 @@ C](code-sensors.md), nothing here is generic advice.
 
 ---
 
-Next: the rule violations that quietly cost the most (coming soon).
+Next: [the rule violations that quietly cost the most](costly-mistakes.md).

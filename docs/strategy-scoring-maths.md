@@ -93,8 +93,9 @@ you're risking to try.
   where a map becomes "worth it" moves depending on how much you usually score first.
 - Redo Comparison 3 with your own team's real identification success rate instead of "best case /
   worst case", if you're only right half the time, what does the expected value actually favour?
-- The costly mistakes page (later in this series) covers the flip side of this page: the ways teams
-  lose points they didn't need to, rather than the trades they chose to make.
+- [The costly mistakes page](costly-mistakes.md) (later in this series) covers the flip side of
+  this page: the ways teams lose points they didn't need to, rather than the trades they chose to
+  make.
 
 ---
 
