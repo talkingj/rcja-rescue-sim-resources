@@ -86,4 +86,4 @@ bonus, all on one sheet.
 
 ---
 
-Next: the printables pack (coming soon).
+Next: [the printables pack](printables-pack.md).
