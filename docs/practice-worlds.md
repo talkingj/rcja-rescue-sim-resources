@@ -175,4 +175,4 @@ maze's worth of exploration time to reach them.
 
 ---
 
-Next: the debugging playbook (coming soon).
+Next: [the debugging playbook](debugging-playbook.md).
