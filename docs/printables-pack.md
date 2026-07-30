@@ -45,4 +45,4 @@ Each sheet already has its own "printing this page" tip using the browser's prin
 
 ---
 
-Next: reference and maintenance (coming soon).
+Next: [the Erebus API cheat sheet](api-cheat-sheet.md).

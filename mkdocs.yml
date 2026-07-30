@@ -78,6 +78,7 @@ nav:
       - Drawing the map: rules-map-format.md
       - Rules self-check: rules-quiz.md
       - Official rules (reference): official-rules-2026.md
+  - Erebus API cheat sheet: api-cheat-sheet.md
   - When it goes wrong: troubleshooting.md
   - Glossary: glossary.md
   - Printable pages:
