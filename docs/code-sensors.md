@@ -1,13 +1,13 @@
 # Reading a distance sensor
 
-[What's next: sensors](next-steps.md) showed you the four lines that read `ps0`. This page is the
-real version: you'll write a controller that reads all eight distance sensors and watch the numbers
-change as the robot drives into a wall. It takes about 15 minutes and is the first page in a series
-that ends with a robot that can score points.
+[What's next: sensors](next-steps.md) showed you four lines that read `ps0`.
+To go beyond that, this page has you write a controller that reads all eight distance sensors and
+watch the numbers change as the robot drives into a wall. It takes about 15 minutes and is the first
+page in a series that ends with a robot that can score points.
 
 !!! note "What you're building"
     A controller that prints all eight sensor readings, twice a second, while the robot drives
-    straight ahead. No steering logic yet, that's the next page.
+    straight ahead. No steering logic yet — that's the next page.
 
 ---
 
@@ -16,13 +16,13 @@ that ends with a robot that can score points.
 The e-puck robot (the round one) has eight distance sensors spaced evenly around its edge, named
 `ps0` through `ps7`. Each one is a **device**, a piece of hardware your code talks to through
 `robot.getDevice("name")`. Once you have the device, you must call `.enable(timeStep)` on it before
-it reports anything. This is easy to forget, an un-enabled sensor silently returns `0.0` forever
+it reports anything. This is easy to forget. An un-enabled sensor silently returns `0.0` forever
 instead of an error.
 
 A sensor's `.getValue()` is **not a distance in centimetres**. It's a raw number, and on this build
 it runs from about `0.8` (nothing nearby) down toward `0.0` (something right against the sensor).
-That's the opposite of what you might expect: **low means close, high means clear.** You'll see the
-real numbers in Step 3.
+However, that's the opposite of what you might expect: **low means close, high means clear.** You'll
+see the real numbers in Step 3.
 
 ---
 
@@ -70,7 +70,7 @@ while robot.step(timeStep) != -1:
 ```
 
 Save it. Every device this page uses (`wheel1 motor`, `wheel2 motor`, `ps0`–`ps7`) is already
-named on the robot, you don't need to change anything in Webots itself.
+named on the robot, so you don't need to change anything in Webots itself.
 
 ---
 
@@ -88,9 +88,9 @@ named on the robot, you don't need to change anything in Webots itself.
     {'ps0': 0.8, 'ps1': 0.461, 'ps2': 0.8, 'ps3': 0.185, 'ps4': 0.171, 'ps5': 0.055, 'ps6': 0.116, 'ps7': 0.45}
     ```
 
-The robot drives forward with no steering at all, so it will eventually meet a wall head-on. Watch
-`ps0` and `ps7` in particular, they're the sensors that ended up facing the wall on this run. Their
-numbers should drop toward zero as the robot presses into it.
+The robot drives forward with no steering at all. Therefore, it will eventually meet a wall head-on.
+Watch `ps0` and `ps7` in particular, as they're the sensors that ended up facing the wall on this run.
+Their numbers should drop toward zero as the robot presses into it.
 
 !!! success "You should now see"
     On the same run, once the robot had driven into a wall and stopped making progress, the reading
@@ -100,8 +100,8 @@ numbers should drop toward zero as the robot presses into it.
     {'ps0': 0.011, 'ps1': 0.06, 'ps2': 0.8, 'ps3': 0.52, 'ps4': 0.173, 'ps5': 0.056, 'ps6': 0.064, 'ps7': 0.011}
     ```
 
-    `ps0` and `ps7` fell from `0.8`/`0.45` at the start to `0.011`, and stayed at `0.011` for the
-    rest of the run, that's the wall. `ps2`, which never faced anything, stayed pegged at `0.8` for
+    `ps0` and `ps7` fell from `0.8`/`0.45` at the start to `0.011` and stayed at `0.011` for the
+    rest of the run — that's the wall. `ps2`, which never faced anything, stayed pegged at `0.8` for
     the entire 30 seconds. On this build, readings above about `0.4` mean nothing is close, and
     readings below about `0.1` mean the sensor is pressed against something.
 
@@ -123,14 +123,14 @@ robot turn before it hits the wall, instead of just watching it happen.
 ## If it goes wrong
 
 - **Nothing prints in the console.** Check you saved the file before pressing LOAD, and that you
-  pressed LOAD again after saving, an old version stays loaded until you do.
+  pressed LOAD again after saving, since an old version stays loaded until you do.
 - **Nothing prints, and the console just says the controller exited successfully, with no error at
   all.** We tested this by misspelling `ps0` as `pso` on purpose: the controller doesn't crash and
-  doesn't print anything, it just quietly stops on the first bad `getDevice()` call. There's no
-  traceback to read. If your printing stops right after start with no error text, re-check every
+  doesn't print anything, meaning it just quietly stops on the first bad `getDevice()` call. There's
+  no traceback to read. If your printing stops right after start with no error text, re-check every
   sensor name is spelled exactly `ps0` through `ps7`, lowercase, no typos.
-- **The console fills up faster than you can read it.** That's expected at twice a second. Use the
-  console's scrollback, or lower how often it prints as described above.
+- **The console fills up faster than you can read it.** That's expected at twice a second. Therefore,
+  use the console's scrollback, or lower how often it prints as described above.
 
 ---
 
