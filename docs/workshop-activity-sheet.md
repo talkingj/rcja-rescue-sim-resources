@@ -12,7 +12,7 @@ Team name: ______________________
 
 ## Activity 1 — Read the field
 
-**1.** Your robot's floor-color sensor reads green. Which two areas did it just cross between?
+**1.** Your robot's floor-colour sensor reads green. Which two areas did it just cross between?
 
 `________________________________`
 
