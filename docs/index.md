@@ -1,12 +1,12 @@
 # Get your robot driving in the Erebus rescue simulator
 
-This site gets you from *"I have a laptop"* all the way to *"my robot is driving around inside a
-maze on my screen."* There's a picture for every click, and every confusing word gets explained the
-first time it shows up.
+To take you from *"I have a laptop"* to *"my robot is driving around inside a maze on my screen,"*
+this site gives you a picture for every click and explains every confusing word the first time it
+shows up.
 
-**Who this is for:** you're in grade 9 or up, and you've never set any of this up before. No
-programming experience required — see [Before you start](before-you-start.md) for exactly what
-you'll need.
+**Who this is for:** you're in grade 9 or up, and you've never set any of this up before.
+Additionally, no programming experience is required — see [Before you start](before-you-start.md)
+for exactly what you'll need.
 
 ## What you'll build
 
@@ -30,7 +30,7 @@ checkpoints, the coloured tiles are hazards, and the round object near the top i
    something new. This is your first taste of programming the robot.
 5. **[Code: build a scoring robot](code-sensors.md)** is a twelve-page series that takes you from
    reading a single sensor all the way to a robot that finds a victim, reports it, and earns real
-   points, every page quotes real numbers from a real run, not invented ones.
+   points — every page quotes real numbers from a real run, not invented ones.
 6. **Rules & Scoring**, starting at the [quick briefing](briefing.md), turns "drive around a maze"
    into "actually compete": what your robot is searching for, how points are earned and lost, and how
    the mapping bonus works.
@@ -39,15 +39,17 @@ checkpoints, the coloured tiles are hazards, and the round object near the top i
    curriculum](club-curriculum.md), go further still, once you've got a working robot and want to
    place well or run a whole term around this site.
 
-Stuck at any point? **[When it goes wrong](troubleshooting.md)** covers setup, and [the debugging
-playbook](debugging-playbook.md) covers your own code, both indexed by what you're seeing on screen.
+Stuck at any point? **[When it goes wrong](troubleshooting.md)** covers setup. Similarly, [the
+debugging playbook](debugging-playbook.md) covers your own code — both indexed by what you're seeing
+on screen.
 The **[Glossary](glossary.md)** explains every unfamiliar word, and the [Erebus API cheat
 sheet](api-cheat-sheet.md) is a one-page reference once you already know your way around.
 
 ## Why this guide exists
 
-The official Erebus install docs are accurate, but they're written for someone who already knows
-words like "PATH" and "controller." This guide adds the missing screenshots, plain-English
-explanations, and a "you should now see…" check after every step, so nothing is left to guesswork.
+The official Erebus install docs are accurate. However, they're written for someone who already
+knows words like "PATH" and "controller."
+To leave nothing to guesswork, this guide adds the missing screenshots, plain-English explanations,
+and a "you should now see…" check after every step.
 
 Ready? Start with **[Before you start](before-you-start.md)**.
