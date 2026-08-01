@@ -1,8 +1,9 @@
 # Reporting a victim and earning your first points
 
-This page takes the sign your robot can already spot ([last page](code-victim-detection.md)) and
-turns it into actual score, the first page in this series where the number in the top corner of the
-Competition Controller moves because of something your code did. It takes about 20 minutes.
+To turn the sign your robot can already spot ([last page](code-victim-detection.md)) into actual
+score, this page shows you how to report it to the supervisor. It takes about 20 minutes and is
+the first page in this series where the number in the top corner of the Competition Controller
+moves because of something your code did.
 
 !!! note "Not adapted from a sample this time"
     There's no official `report_victim.py` sample to start from. The message format below was read
@@ -20,7 +21,7 @@ Your robot only has one way to talk to the supervisor: `emitter.send(bytes)`. Wh
 - **1 byte, the letter `G`**, a game-info request. The supervisor replies (via your `receiver`)
   with 16 bytes: `struct.pack("c f i i", b'G', score, time_left, real_time_left)`.
 - **9 bytes: two ints and a char**, a victim or hazmat report. `struct.pack('i i c', x_cm, z_cm,
-  type_char)`. The two ints are your **estimated position in whole centimetres**, not metres, that's
+  type_char)`. The two ints are your **estimated position in whole centimetres**, not metres — that's
   the detail most likely to trip you up. The char is the type: `'H'`/`'U'`/`'S'` for a harmed,
   unharmed, or stable victim, or one of the hazmat letters for a cognitive target.
 
@@ -97,6 +98,9 @@ asks again, reports a deliberately wrong location, asks a third time.
 
 ## Step 3: A real run, score before and after
 
+To see the score change in real time, the controller queries the game info three times — once before
+any report, once after a correct one, and once after a deliberate misidentification.
+
 !!! success "You should now see"
     Starting score, queried before any report:
 
@@ -125,12 +129,12 @@ asks again, reports a deliberately wrong location, asks a third time.
 
 Not a round number, and that's worth unpacking rather than skipping past. Per
 [the scoring page](rules-scoring.md#point-values), a correctly-identified linear-tile victim is
-worth **5 points** (TI) plus **10 points** (TT) for getting the type right too, 15 raw points. The
-robot scored 22.5, which is `15 × 1.5`, this particular victim sits in a spot the supervisor scores
-with a **×1.5 area multiplier**, the same multiplier [the scoring page](rules-scoring.md#area-multipliers)
-lists for Area 3. Nothing about `world1` announces which room counts as which area, we only found
-this by reading the actual score change. Worth remembering: *where* you find a victim can matter as
-much as which one it is.
+worth **5 points** (TI) plus **10 points** (TT) for getting the type right too, 15 raw points.
+The robot scored 22.5, which is `15 × 1.5`, as this particular victim sits in a spot the supervisor
+scores with a **×1.5 area multiplier** — the same multiplier
+[the scoring page](rules-scoring.md#area-multipliers) lists for Area 3. Nothing about `world1`
+announces which room counts as which area. We only found this by reading the actual score change.
+Therefore, *where* you find a victim can matter as much as which one it is.
 
 The misidentification afterwards cost a flat **−5**, no multiplier, matching the scoring page's note
 that TMI doesn't scale with area.
@@ -138,20 +142,21 @@ that TMI doesn't scale with area.
 ### How the robot got next to a real victim
 
 Same limitation as [the last page](code-victim-detection.md): reliable navigation to a specific
-victim isn't solved yet on this site. This controller starts already in position, staged there by
-the trial harness's supervisor access (an environment variable the harness sets before the match
-starts), not by anything the controller itself does. The code above is exactly what ran and sent
+victim isn't solved yet on this site. Additionally, this controller starts already in position,
+staged there by the trial harness's supervisor access (an environment variable the harness sets
+before the match starts), not by anything the controller itself does. The code above is exactly what ran and sent
 the reports, the positioning step is a testing convenience, not a technique your controller has
 access to in a real round.
 
 ### About that identification range
 
-The supervisor checks two things before accepting a report as correct: your robot has to be
+To understand how close your reported coordinate needs to be, you need to know the supervisor
+checks two things before accepting a report as correct: your robot has to be
 physically near the real victim, *and* your reported coordinate has to be near it too. Both checks
-use the same fixed radius, read straight from the source: **0.09 m**. [The scoring
-page](rules-scoring.md#identifying-a-token-correctly) describes this in the rules' own words as
-"half a tile", this page's number is the one actually enforced in code, use `0.09` if you're writing
-detection logic and want to know exactly how close is close enough.
+Both checks use the same fixed radius, read straight from the source: **0.09 m**.
+[The scoring page](rules-scoring.md#identifying-a-token-correctly) describes this in the rules'
+own words as "half a tile." However, this page's number is the one actually enforced in code —
+use `0.09` if you're writing detection logic and want to know exactly how close is close enough.
 
 ---
 
