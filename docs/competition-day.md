@@ -1,8 +1,9 @@
 # Pre-run and competition-day checklist
 
-A checklist to run through the morning of, before your first real match. Every item here traces to
-either the official rules or a real failure this site actually hit while building [Track
-C](code-sensors.md), nothing here is generic advice.
+To catch the failures that most often sink an otherwise solid run, walk through this checklist
+before your first real match. Every item here traces to either the official rules or a real failure
+this site actually hit while building [Track C](code-sensors.md), meaning none of it is generic
+advice.
 
 !!! note "Where this fits"
     Fifth of six Strategy pages. Read [the debugging playbook](debugging-playbook.md) first, several
@@ -29,18 +30,20 @@ C](code-sensors.md), nothing here is generic advice.
       longer real-world clock that's slack, not extra playing time.
 - [ ] **If you're submitting a map, you send it with real time to spare, not on your very last
       message.** The map bonus is only banked once `'M'` has actually been received, [confirmed on
-      the mapping page](code-mapping.md), sending it and then immediately running out of time before
-      the supervisor processes it is a real, avoidable risk.
+      the mapping page](code-mapping.md). Additionally, sending it and then immediately running out
+      of time before the supervisor processes it is a real, avoidable risk.
 - [ ] **You know exactly what your exit message needs to be true to pay off.** [Two conditions,
       confirmed on the exit page](code-exit.md#step-1-one-byte-two-conditions): on the start tile,
-      and at least one prior identification. Miss either and the message still ends the match, it
-      just doesn't pay the 10% bonus.
+      and at least one prior identification. Miss either and the message still ends the match — it
+      just doesn't pay the 10% bonus. Therefore, double-check both conditions in testing, not just in
+      the rules.
 - [ ] **You've tested what your controller does immediately after an LoP relocate.** Position and
-      orientation both change abruptly [confirmed on the LoP page](code-lack-of-progress.md), any
-      code that assumes smooth, continuous movement should be checked against a sudden jump.
+      orientation both change abruptly [confirmed on the LoP page](code-lack-of-progress.md).
+      Therefore, any code that assumes smooth, continuous movement should be checked against a
+      sudden jump.
 - [ ] **You've run your actual competition controller against more than one practice world.** [The
       eight practice worlds page](practice-worlds.md) found real, structural differences between
-      them, trap counts, area spread, token density, a controller tuned against only one world may
+      them — trap counts, area spread, token density. A controller tuned against only one world may
       behave differently on the one you're actually given.
 
 ---
@@ -60,12 +63,12 @@ C](code-sensors.md), nothing here is generic advice.
 
 ## If it goes wrong on the day
 
-- **Something that worked in practice doesn't work in the real round.** [The debugging
-  playbook](debugging-playbook.md) is the first place to check, most of what's there is exactly this
-  kind of "worked before, mysteriously doesn't now" symptom.
+To troubleshoot something that worked in practice but fails in the real round, start with [the
+debugging playbook](debugging-playbook.md). Most of what's there is exactly this kind of "worked
+before, mysteriously doesn't now" symptom.
 - **You're unsure whether to keep exploring or exit with what you have.** [Scoring maths for
   strategy decisions](strategy-scoring-maths.md) works through that exact trade-off with real
-  numbers, worth reviewing the morning of, not figuring out live.
+  numbers. Therefore, it is worth reviewing the morning of, not figuring out live.
 
 ---
 
