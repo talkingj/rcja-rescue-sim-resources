@@ -1,8 +1,8 @@
 # The eight practice worlds and what each is for
 
-Erebus ships eight ready-made worlds. This page opens all eight, reports what's really in each one
-(parsed straight from the world files, not guessed), and gives one honest line on what to practise
-in each.
+To help you choose deliberately, this page opens all eight ready-made worlds Erebus ships, reports
+what's really in each one (parsed straight from the world files, not guessed), and gives one honest
+line on what to practise in each.
 
 !!! note "About the images on this page"
     A full top-down screenshot of each maze would be more useful than what's here, but this
@@ -11,7 +11,7 @@ in each.
     a Webots-specific problem). Rather than fake a screenshot, each world below gets a real image
     instead: one frame decoded directly from the robot's own `camera_centre` at its start position,
     [the same honest technique used for the camera and victim-detection pages](code-camera.md). It's
-    a small, low-resolution corridor view, not a map, treat the table underneath each one as the
+    a small, low-resolution corridor view, not a map. Treat the table underneath each one as the
     real substance.
 
 ---
@@ -32,7 +32,7 @@ The world every Track C page on this site was built and trialled against.
 
 **Practise here:** everything Track C already covers, [sensors](code-sensors.md) through
 [a complete run](code-complete-run.md). [The wall-follower](code-wall-follower.md) and [the
-complete-run page](code-complete-run.md) both found real coverage limits on this exact maze, it's a
+complete-run page](code-complete-run.md) both found real coverage limits on this exact maze. It's a
 good honest baseline for testing whether your own navigation beats what this site's did.
 
 ## world2
@@ -47,9 +47,10 @@ good honest baseline for testing whether your own navigation beats what this sit
 | Swamp / checkpoint / trap tiles | 1 / 1 / 2 |
 | Areas present | 1, 2, 3, 4 |
 
-**Practise here:** the most victim-dense of the four full-size worlds, and the only one of the two
-this site used with a real trap tile count above one. Good for testing misidentification handling
-under higher token density, more chances to get one wrong per minute of play than `world1`.
+**Practise here:** the most victim-dense of the four full-size worlds. In addition, it's the only
+one of the two this site used with a real trap tile count above one. Good for testing
+misidentification handling under higher token density, more chances to get one wrong per minute of
+play than `world1`.
 
 ## world3
 
@@ -81,7 +82,8 @@ through before the clock runs out, [per the run-budget page's own findings](stra
 
 **Practise here:** the biggest maze and the most checkpoints of any world on this list, with zero
 trap tiles, so Lack of Progress here comes almost entirely from getting physically stuck, not from
-falling in a hole. Good for testing pure exploration coverage over a longer, more open run.
+falling in a hole. Therefore, it's good for testing pure exploration coverage over a longer, more
+open run.
 
 ## NewPassages
 
@@ -96,7 +98,7 @@ falling in a hole. Good for testing pure exploration coverage over a longer, mor
 | Areas present | 1, 2, 3, 4 |
 
 **Practise here:** no tokens at all, real and worth knowing before you load it expecting to score.
-This is a pure navigation and mapping world, [the map matrix's official sample
+This is a pure navigation and mapping world. [The map matrix's official sample
 controller](code-mapping.md) actually ships its own ready-made test matrix for this exact world (see
 that page's notes), making it a good place to practise map building and submission without any
 detection code in the way.
@@ -131,9 +133,9 @@ still debugging basic sensor code rather than trying to cover ground.
 | Areas present | 1, 2 |
 
 **Practise here:** small enough to fully explore in well under a minute even with a mediocre
-wall-follower, a good place to test a complete detect-report-exit pipeline end to end without
-[the coverage problems Track C ran into on the bigger worlds](code-complete-run.md) getting in the
-way first.
+wall-follower. Thus, it's a good place to test a complete detect-report-exit pipeline end to end
+without [the coverage problems Track C ran into on the bigger worlds](code-complete-run.md) getting
+in the way first.
 
 ## mapping_example_3
 
@@ -156,19 +158,21 @@ maze's worth of exploration time to reach them.
 
 ## Now pick deliberately, not by habit
 
-- If your team always practises on the same one or two worlds, this table is worth a second look,
-  several of these have real, structural differences (trap count, area spread, token density) that
+- If your team always practises on the same one or two worlds, this table is worth a second look.
+  Several of these have real, structural differences (trap count, area spread, token density) that
   change what a run on them is actually testing.
 - The three `mapping_example` worlds are small enough to run many times per practice session. If
   your team is iterating on core logic rather than testing endurance, they're a faster loop than the
   four full-size worlds.
+
+Therefore, pick each session's world by what you actually want to test, not by habit.
 
 ---
 
 ## If it goes wrong
 
 - **A `mapping_example` world "feels too easy" and gives a false sense of readiness.** That's a real
-  risk with small worlds, they're good for iterating on logic, not for judging whether your
+  risk with small worlds. They're good for iterating on logic, not for judging whether your
   exploration coverage is good enough for a full-size maze.
 - **You expected tokens on `NewPassages` and found none.** Confirmed on this page: that world has
   zero victims and zero cognitive targets by design.
