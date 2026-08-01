@@ -50,10 +50,10 @@ By the end of the session, students should be able to:
 
 ## Intro: what a sensor actually returns (5 min)
 
-A distance sensor doesn't return "meters to the wall", it returns a raw number whose scale you have
+A distance sensor doesn't return "metres to the wall" — it returns a raw number whose scale you have
 to discover for yourself. On this exact build, [confirmed on the sensors page](code-sensors.md), low
-means close and high means clear, the opposite of what most students guess first. That's the whole
-point of Activity 1.
+means close and high means clear. However, that's the opposite of what most students guess first,
+which is the whole point of Activity 1.
 
 ## Activity 1 — Read the distance sensors (15 min)
 
@@ -79,15 +79,16 @@ Adapt [the driving page's controller](code-driving.md#step-2-write-the-controlle
 until the front sensors cross the near threshold from Activity 1, then turn using the wheel position
 sensors (`wheel1 sensor`/`wheel2 sensor`) until a fixed radian value is reached.
 
-**Give pairs the real number to aim for, don't make them guess it:** [confirmed on the driving
-page](code-driving.md), roughly **2.28 radians** of wheel rotation turned this robot 90 degrees,
-verified by turning four times in a row and checking the sensors read the same as the reference.
+To give pairs a real number to aim for instead of a guess, tell them the measured value: [confirmed
+on the driving page](code-driving.md), roughly **2.28 radians** of wheel rotation turned this robot
+90 degrees, verified by turning four times in a row and checking the sensors read the same as the
+reference.
 
 ??? question "A good check for pairs that finish early"
     Have them turn four times in a row, like [the source page
     did](code-driving.md#step-3-load-it-and-watch-it-stop-turn-and-stop-again), and confirm the sensor reading
-    after four turns matches the reading before the first one. If it doesn't match closely, their
-    radian value needs adjusting.
+    after four turns matches the reading before the first one. Therefore, if it doesn't match closely,
+    their radian value needs adjusting.
 
 ## Activity 3 — The colour sensor surprise (15 min)
 
@@ -97,7 +98,7 @@ a clean textbook one.
 Adapt [the colour sensor page's controller](code-colour.md#step-2-write-the-controller): print the
 decoded RGB whenever it changes while driving around.
 
-**Tell students what to expect, this is the interesting part:** [confirmed on that
+To prepare them for the interesting part, tell students what to expect: [confirmed on that
 page](code-colour.md#step-3-load-it-and-watch-the-readings), on this exact build, plain
 floor, a checkpoint tile, and a swamp tile all read close to the same near-white value. That's a
 real, verified finding, not a mistake in their code if they see it too. Ask pairs: if the colour
@@ -110,8 +111,10 @@ into later too](code-complete-run.md).)
 Recap: sensor scale isn't obvious and has to be measured, not assumed; a "known amount" turn means
 measuring it once and reusing the number; and real sensor data sometimes contradicts what the rules
 description implies, [confirmed real more than once building this site's own
-material](debugging-playbook.md). Point ahead to [the wall-follower page](code-wall-follower.md) for
-combining all three sensors into one continuously-running controller.
+material](debugging-playbook.md).
+
+To see all three sensors combined into one continuously-running controller, point students ahead to
+[the wall-follower page](code-wall-follower.md).
 
 ## If you're running short on time
 
@@ -124,8 +127,8 @@ Cut in this order:
 3. **Shorten Activity 1** to just the two readings (open space, against a wall) rather than having
    pairs drive around exploring further.
 
-Don't cut Activity 2's real turn-angle number, guessing a fresh one live wastes far more time than
-it saves.
+Additionally, don't cut Activity 2's real turn-angle number, as guessing a fresh one live wastes far
+more time than it saves.
 
 ---
 
