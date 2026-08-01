@@ -1,7 +1,6 @@
 # Building and submitting the map matrix
 
-The hardest page in this series, not because the code is complex, but because the matrix it sends
-is the most detailed data structure anywhere on this site. This page adapts the official
+To understand the most detailed data structure on this site, this page adapts the official
 `MapScorerExample.py` sample, which ships with something invaluable: a complete, ready-made answer
 matrix for `world1`, the same world every page in this series has used. About 20 minutes, most of it
 reading, not typing.
@@ -22,10 +21,11 @@ mechanics of sending it: three separate emitter messages, in order.
 
 1. **The matrix itself**, as `shape_bytes + flattened_data_bytes`. The shape is two ints (rows,
    columns) packed with `struct.pack('2i', *s)`. The data is every cell joined with commas into one
-   string, then UTF-8 encoded, no shape information inside it, that's what the first 8 bytes are for.
+   string, then UTF-8 encoded. No shape information lives inside the data itself; that's what the
+   first 8 bytes are for.
 2. **A single byte, `'M'`**, telling the supervisor "score the map I just sent."
 3. **Later, `'E'`** (exit, [from the last page](code-exit.md)). The map bonus isn't applied when you
-   send `'M'`, it's applied when you exit, as a multiplier on your score at that moment, not as
+   send `'M'`; it's applied when you exit, as a multiplier on your score at that moment, not as
    points added on the spot.
 
 ---
@@ -168,28 +168,30 @@ back onto the start tile before exiting, [same trick as the last page](code-exit
     t=18.0s SENT exit
     ```
 
-    Controller output stops there, same as [the last page](code-exit.md), the match ends at exit.
+    Controller output stops there, same as [the last page](code-exit.md): the match ends at exit.
     The trial harness's independent score feed confirms the final total: **`41.65`**. Working
     backwards: the exit bonus takes `17.5` to `19.25` (`× 1.1`, [as before](code-exit.md)), then the
-    map bonus takes `19.25` to `41.65`. That's a *lot* more than the exit bonus alone, solving the
-    algebra (`41.65 = 19.25 + 19.25 × correctness × 1.2`) says this exact official matrix scored
-    about **97% correctness** against `world1`'s real internal answer, not a perfect 100%. The
-    official sample array is a close match for this world, not a guaranteed-exact one, worth
-    remembering if you're tempted to copy a "known good" map wholesale into a real competition
-    world, small differences between what ships as a test aid and the actual scoring key are real,
-    not hypothetical. Full record: `trials/20260730-085222-C11.json`.
+    map bonus takes `19.25` to `41.65`.
+
+    That's a *lot* more than the exit bonus alone. Solving the algebra
+    (`41.65 = 19.25 + 19.25 × correctness × 1.2`) says this exact official matrix scored
+    about **97% correctness** against `world1`'s real internal answer, not a perfect 100%.
+    Therefore, the official sample array is a close match for this world, not a guaranteed-exact
+    one. This is worth remembering if you're tempted to copy a "known good" map wholesale into a
+    real competition world: small differences between what ships as a test aid and the actual
+    scoring key are real, not hypothetical. Full record: `trials/20260730-085222-C11.json`.
 
 ---
 
 ## Now make it your own
 
-- Submit an empty matrix (every cell `'0'`) and confirm the map bonus really is zero, not negative,
-  [the map format page](rules-map-format.md) and [the scoring page](rules-scoring.md) both describe
-  it as "no penalty for trying."
+To confirm the map bonus really is zero and not negative, submit an empty matrix (every cell `'0'`);
+[the map format page](rules-map-format.md) and [the scoring page](rules-scoring.md) both describe
+it as "no penalty for trying."
 - Change one correct wall cell (`'1'`) to `'0'` in a copy of this matrix, resend, and see how much
   the score drops. That tells you roughly how much a single mapping mistake costs on a matrix this
   size.
-- Cross-reference a few cells of this matrix against [the map format page's](rules-map-format.md)
+- Additionally, cross-reference a few cells of this matrix against [the map format page's](rules-map-format.md)
   encoding table by hand. Building your own matrix during a real round means reading your robot's
   own sensor history into this exact shape, this page only covers submitting one that's already
   built.
