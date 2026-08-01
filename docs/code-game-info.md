@@ -1,8 +1,8 @@
 # Reading the clock and the score
 
-Every page so far has had you guess at your score by reasoning about the rules. This page adapts
-the official `GetGameInfo.py` sample so your own controller can ask the supervisor directly: what's
-my score right now, and how much time is actually left. It takes about 10 minutes.
+To ask the supervisor directly what your score is and how much time is actually left, this page
+adapts the official `GetGameInfo.py` sample for your own controller. Every page so far has had
+you guess at your score by reasoning about the rules. It takes about 10 minutes.
 
 !!! note "Credit where it's due"
     This page's polling loop is the official Erebus `GetGameInfo.py` sample, essentially unchanged.
@@ -21,10 +21,10 @@ live:
 - **`game_time_left`**, whole seconds left in the match clock.
 - **`real_time_left`**, whole seconds left on a *separate*, longer real-world clock. This page's
   trial found it starts around **600s (10 minutes)** against a match clock starting around **480s
-  (8 minutes)**, the extra buffer is presumably there to absorb lag or a paused match, not something
+  (8 minutes)** — the extra buffer is presumably there to absorb lag or a paused match, not something
   a normal run should ever hit.
 
-There's no fourth field for "have I called exit yet" or similar, whatever this page's title implies
+There's no fourth field for "have I called exit yet" or similar. Whatever this page's title implies
 about "exit state", the message itself only ever carries these three numbers. If you need to know
 whether you've already sent an exit, that's state your own controller has to track.
 
@@ -97,21 +97,21 @@ field to report on partway through the run.
     ```
 
     Two things worth noticing. First, `game_time_left` counts down by roughly 1 each second, exactly
-    as you'd expect from an 8-minute match clock. Second, `score` does **not** update instantly: the
-    poll at `t=4.1s`, one tenth of a second after the identification was sent, still reads the old
-    `0.0`. It's the *next* poll, at `t=5.1s`, that shows `22.5`. The supervisor processes your report
+    as you'd expect from an 8-minute match clock. Additionally, `score` does **not** update instantly:
+    the poll at `t=4.1s`, one tenth of a second after the identification was sent, still reads the old
+    `0.0`. It's the *next* poll, at `t=5.1s`, that shows `22.5`. Therefore, the supervisor processes your report
     and your game-info request as separate messages in its own loop, and there's no guarantee they
     land in the same simulation step. If your code ever needs to react to a score change the instant
-    it happens, polling once a second like this sample does isn't fast enough, you'd need to poll
+    it happens, polling once a second like this sample does isn't fast enough — you'd need to poll
     every timestep instead.
 
 ---
 
 ## Now make it your own
 
-- Poll every timestep instead of once a second (drop the `now - last_request_time > 1` check
-  entirely) and see how much sooner the updated score shows up after a report.
-- Print `real_time_left - game_time_left` once at the start. It won't be zero, now you know by how
+- To see how much sooner the updated score shows up, poll every timestep instead of once a second
+  (drop the `now - last_request_time > 1` check entirely).
+- Print `real_time_left - game_time_left` once at the start. It won't be zero. Thus, you know by how
   much the two clocks actually differ on this build.
 - Combine this with the exit message (a later page's topic): once `game_time_left` gets close to
   zero, what should your controller do differently?
