@@ -1,11 +1,11 @@
 # Putting it together: a complete scored run
 
-Every piece of Track C now exists on its own: [sensing](code-sensors.md),
+To see every piece of Track C wired into one controller and run for real, with no supervisor-side
+positioning help, this page brings together [sensing](code-sensors.md),
 [driving](code-driving.md), [the wall-follower](code-wall-follower.md),
 [seeing](code-victim-detection.md), [reporting](code-reporting.md),
-[recovering](code-lack-of-progress.md), and [exiting](code-exit.md). This page wires all of them
-into one controller and runs it for real, with no supervisor-side positioning help this time. This
-is the payoff page, and it comes with an honest result, not a clean one.
+[recovering](code-lack-of-progress.md), and [exiting](code-exit.md).
+This is the payoff page, and it comes with an honest result, not a clean one.
 
 ---
 
@@ -209,7 +209,7 @@ while robot.step(timeStep) != -1:
 robot actually ends up (the same kind of one-time measurement as the wheel geometry Track C has
 used since [driving](code-driving.md)), not something the controller works out for itself. The
 `odom_x`/`odom_z` accumulation is standard differential-drive dead reckoning: every timestep, how
-far each wheel turned, converted to how far the robot's center moved and how much it rotated.
+far each wheel turned, converted to how far the robot's centre moved and how much it rotated.
 
 ---
 
@@ -251,22 +251,24 @@ far each wheel turned, converted to how far the robot's center moved and how muc
 Every individual piece of Track C works, verified on its own page with real, non-zero score
 changes: [reporting](code-reporting.md) (`0.0 → 22.5`), [LoP](code-lack-of-progress.md)
 (`22.5 → 17.5`), [the exit bonus](code-exit.md) (`17.5 → 19.25`), [the map bonus](code-mapping.md)
-(`19.25 → 41.65`). Wired together into one autonomous controller, this robot still doesn't score,
+(`19.25 → 41.65`).
+
+Wired together into one autonomous controller, however, this robot still doesn't score,
 for two compounding reasons, in order: it can't reliably explore enough of the maze to find a sign
 in the first place, and even when handed a sign for free, five seconds of real wheel movement is
-already enough dead-reckoning drift to miss the identification radius. Both are real, unsolved
-problems on this site, not oversights in this page. Getting past them is exactly what [Track
-S](rules-scoring.md) exists to think through, better exploration and better position estimates are
+already enough dead-reckoning drift to miss the identification radius. Therefore, both are real,
+unsolved problems on this site, not oversights in this page. Getting past them is exactly what [Track
+S](rules-scoring.md) exists to think through; better exploration and better position estimates are
 strategy questions, not new API calls.
 
 ---
 
 ## Now make it your own
 
-- Try recalibrating position more often than "never" (this controller only ever dead-reckons from
-  one fixed reference), for instance resetting to a known value every time [a checkpoint tile is
-  crossed](rules-scoring.md), if you can detect that reliably.
-- Try a smarter exploration strategy than [the existing wall-follower](code-wall-follower.md). Even
+- To improve your dead-reckoning accuracy, try recalibrating position more often than "never" (this
+  controller only ever dead-reckons from one fixed reference), for instance resetting to a known
+  value every time [a checkpoint tile is crossed](rules-scoring.md), if you can detect that reliably.
+- Additionally, try a smarter exploration strategy than [the existing wall-follower](code-wall-follower.md). Even
   a modest improvement in how much of the maze gets covered directly improves how often a sign is
   ever seen at all.
 - Measure your own dead-reckoning drift the way this page did: report a position you know is wrong
