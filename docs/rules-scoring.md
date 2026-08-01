@@ -1,9 +1,11 @@
 # How points are earned (and lost)
 
 This is the page that turns "find victims and draw a map" into an actual strategy. Every action your
-robot takes in a round is worth something, positive or negative, and where it happens changes how much.
-This page defines each piece, then walks the official worked example all the way to its final score, by
-hand, so every number is traceable.
+robot takes in a round is worth something, positive or negative, and where it happens changes how
+much.
+
+To keep every number traceable, this page defines each piece first, then walks the official worked
+example all the way to its final score by hand.
 
 !!! note "Where this fits"
     Third of five pages building on the [official rules](official-rules-2026.md). Previous:
@@ -15,7 +17,7 @@ hand, so every number is traceable.
 |---|---|---|
 | **TI** | Wall Token Identification | Your robot stopped at a wall token for 1+ second and reported it. |
 | **TT** | Wall Token Type Identification | On top of TI: the *type* it reported (which letter, which hazmat) was correct. |
-| **CN** | Checkpoint Negotiation | Your robot's center passed over a checkpoint tile. |
+| **CN** | Checkpoint Negotiation | Your robot's centre passed over a checkpoint tile. |
 | **TMI** | Wall Token Misidentification | Your robot reported a token that isn't there, in the wrong place, or mixed up a victim for a hazard. |
 | **LoP** | Lack of Progress | Your robot got stuck, fell in a hole, or otherwise needed to be reset to the last checkpoint. |
 | **AM** | Area Multiplier | Everything earned in a given area gets scaled by how hard that area is. |
@@ -24,8 +26,8 @@ hand, so every number is traceable.
 
 ### Identifying a token correctly
 
-To count as a successful identification, your robot's center has to be within **half a tile** of the
-token's true location at the moment it reports it. Any farther than that, and it's a
+To count as a successful identification, your robot's centre has to be within **half a tile** of the
+token's true location at the moment it reports it. Any farther than that, and it counts as a
 misidentification instead.
 
 ![The half-tile identification-distance rule, with correct and incorrect examples](assets/rules/identification-distance.png)
@@ -40,16 +42,16 @@ misidentification instead.
 | Cognitive target — TI | 10 pts | 30 pts |
 | Cognitive target — TT (if type is also correct) | +20 pts | +20 pts |
 
-Floating tiles and Area 4 are worth 3× as much for TI, because they're harder to reach. TT is a flat
-bonus on top, for reporting the correct type, not just that *something* is there.
+Floating tiles and Area 4 are worth 3× as much for TI, as they're harder to reach. TT is a flat
+bonus on top, awarded for reporting the correct type rather than just that *something* is there.
 
 - **TMI** (misidentification): −5 points, wherever it happens.
 - **CN** (checkpoint): +10 points, wherever it happens.
 - **LoP**: −5 points, wherever it happens.
-- Neither TMI nor LoP scale with the area multiplier, only TI, TT, and CN do.
+- Neither TMI nor LoP scales with the area multiplier. Only TI, TT, and CN do.
 - No duplicate rewards: revisiting the same checkpoint or re-reporting the same token twice only ever
   counts once.
-- Total score can never go below zero.
+- Even if the penalties take you into the negative, the total score can never go below zero.
 
 ### Area multipliers
 
@@ -65,14 +67,18 @@ bonus on top, for reporting the correct type, not just that *something* is there
 - **Exit bonus (EB):** if your robot has identified at least one wall token *and* returns to the
   starting tile while sending an `exit` command, add 10% on top of everything scored so far.
 - **Mapping bonus (MB):** submit a map matrix (see [Drawing the map](rules-map-format.md)) and the
-  organizers compare it to the real one. The bonus is a multiplier between 1 and 2:
+  organisers compare it to the real one. The bonus is a multiplier between 1 and 2:
   `correctness × 1.2 + 1`, where a perfectly correct map gives `1 × 1.2 + 1 = 2.2`, and a completely
   wrong one gives `0 × 1.2 + 1 = 1` (i.e. no penalty for trying, but no reward either).
 
+Note the order these two are applied in. Both are multipliers rather than additions, and the mapping
+bonus multiplies a total that already includes the exit bonus. Therefore, a good map is worth more
+the more you scored before submitting it.
+
 ## Worked example, step by step
 
-This reproduces the official worked example in the rules, one arithmetic step at a time, so you can
-follow exactly how 2680.15 is reached.
+To show exactly how 2680.15 is reached, this reproduces the official worked example in the rules,
+one arithmetic step at a time.
 
 ![The official fully worked scoring example](assets/rules/scoring-worked-example.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
@@ -114,7 +120,8 @@ Total penalties: −15 − 5 − 15 − 10 = **−45**
 
 1218.25 × 2.2 = **2680.15**
 
-That's the final field score for this round.
+That's the final field score for this round. Note how much of it came from the last two steps: the
+raw total after penalties was 1107.5, and the two bonuses more than doubled it.
 
 ## Check yourself
 
@@ -124,12 +131,13 @@ That's the final field score for this round.
 
 ??? question "Why do TMI and LoP not get multiplied by area, when TI/TT/CN do?"
     The rules apply the area multiplier only to TI, TT, and CN (the rewards). TMI and LoP are flat
-    −5 penalties everywhere, so a mistake in the hardest area doesn't cost proportionally more than
-    the same mistake in Area 1.
+    −5 penalties everywhere. Therefore, a mistake in the hardest area doesn't cost proportionally
+    more than the same mistake in Area 1.
 
 ## What's next
 
-The mapping bonus deserves its own page, since the matrix format is the trickiest thing to get right:
-[Drawing the map](rules-map-format.md).
+The mapping bonus is the largest single multiplier on this page, and the matrix format is the
+trickiest thing to get right. Therefore, it is worth reading [Drawing the map](rules-map-format.md)
+before you write any mapping code.
 
 Unfamiliar word? Check the [glossary](glossary.md#rules-scoring-words).
