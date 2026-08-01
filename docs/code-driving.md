@@ -1,8 +1,10 @@
 # Driving straight and turning a known amount
 
-[Reading a distance sensor](code-sensors.md) watched the robot drive into a wall with no steering
-at all. This page fixes that: you'll make the robot stop before it hits the wall, then turn a
-measured 90 degrees using its wheel sensors, not a guess. It takes about 20 minutes.
+[Reading a distance sensor](code-sensors.md) left the robot driving into a wall with no steering at
+all.
+
+To fix that, this page has you stop the robot before it makes contact, then turn a measured 90
+degrees using its wheel sensors rather than a guess. It takes about 20 minutes.
 
 !!! note "What you're building"
     A controller that drives straight, stops when a wall is close, turns a measured quarter turn,
@@ -14,18 +16,19 @@ measured 90 degrees using its wheel sensors, not a guess. It takes about 20 minu
 
 Each wheel motor has a matching **position sensor** (an encoder), named `wheel1 sensor` and
 `wheel2 sensor`. It reports how far that wheel has spun, in radians, since the controller started.
-It only ever counts up (or down), it never resets on its own.
+The count only ever runs up or down, and it never resets on its own.
 
-To turn the robot in place, spin the wheels in opposite directions: one forward, one backward. The
-robot pivots roughly around its own centre instead of driving forward. How far it turns depends on
-how far the wheels have spun, which is exactly what the position sensor measures. So the plan is:
+To turn the robot on the spot, you spin the wheels in opposite directions: one forward, one
+backward. The robot then pivots roughly around its own centre instead of driving forward. How far
+it turns depends on how far the wheels have spun, which is exactly what the position sensor
+measures. Therefore, the plan is:
 
 1. Remember what the wheel sensor reads right before the turn starts.
 2. Spin the wheels in opposite directions.
 3. Stop once the sensor has moved a target amount away from where it started.
 
-That target amount is a real number you have to find out empirically, it depends on the robot's
-wheel size and how far apart the wheels are. Step 3 shows how we found it.
+That target amount is a number you have to find empirically, as it depends on the robot's wheel
+size and how far apart the wheels are. Step 3 shows how we found it.
 
 ---
 
@@ -114,9 +117,11 @@ in this exact build, using the check in Step 3. Save the file.
 
 ### How we found `2.28`, and how we know it's really 90 degrees
 
-We didn't measure an angle directly, there's no protractor in Webots. Instead we used a check that
-doesn't depend on knowing anything about the maze around the robot: if one turn is really 90
-degrees, four turns in a row should bring the robot back to face the exact wall it started against.
+No angle was measured directly, as there is no protractor in Webots.
+
+To address this, we used a check that doesn't depend on knowing anything about the maze around the
+robot: if one turn is really 90 degrees, four turns in a row should bring the robot back to face
+the exact wall it started against.
 
 !!! success "You should now see"
     Running four turns back to back, with `TURN_TARGET_RADIANS = 2.28` each time, on a real run:
@@ -129,10 +134,12 @@ degrees, four turns in a row should bring the robot back to face the exact wall 
     AFTER TURN 4/4 wheel1 turned 2.2985 rad this turn  ps0=0.041 ps7=0.066
     ```
 
-    After turn 4, `ps0` and `ps7` read `0.041` and `0.066`, close to the `0.052`/`0.052` we started
-    with, and nothing like turns 2 and 3, which faced open space. Four quarter turns brought the
-    robot back to the wall it started against. That's our evidence `2.28` is a real 90 degree turn
-    on this robot, not just a number that happened to work once.
+    After turn 4, `ps0` and `ps7` read `0.041` and `0.066`. Those are close to the `0.052`/`0.052`
+    we started with, and nothing like turns 2 and 3, which faced open space.
+
+    The results indicate that four quarter turns brought the robot back to the wall it started
+    against. Therefore, `2.28` is a real 90 degree turn on this robot, not just a number that
+    happened to work once.
 
 ---
 
@@ -143,9 +150,9 @@ degrees, four turns in a row should bring the robot back to face the exact wall 
 - Chain two turns in a row (reset `wheel1_at_turn_start` and go back to `"turning"` instead of
   `"done"`) to make a 180 degree turn, then check the front sensors read something completely
   different from the wall you started against.
-- Try `TURN_SPEED = 6.0`. The turn finishes faster, but check whether `wheel1 turned` still lands
-  close to the same number, if it overshoots noticeably, that tells you something about how the
-  simulation handles fast spins.
+- Try `TURN_SPEED = 6.0`. The turn finishes faster. However, check whether `wheel1 turned` still
+  lands close to the same number. If it overshoots noticeably, that tells you something about how
+  the simulation handles fast spins.
 
 Next in this series, [the floor colour sensor](code-colour.md) tells the robot what kind of tile
 it's driving over, which matters as much as not hitting walls.
@@ -159,11 +166,11 @@ it's driving over, which matters as much as not hitting walls.
   and the turn never ends.
 - **The turn happens but the numbers afterward look nothing like this page's.** That's expected if
   your robot reaches the wall from a different angle or a different spot in the maze than this run
-  did, the exact sensor values depend on exactly where the robot is standing. What should carry
+  did, as the exact sensor values depend on exactly where the robot is standing. What should carry
   over is the shape of the result: turn 1 and turn 4 read similarly, turns 2 and 3 don't.
 - **`wheel1_sensor.getValue()` returns `nan` or throws an error.** You likely forgot the
-  `.enable(timeStep)` call for the position sensor, it's easy to enable the motor and the distance
-  sensors and forget the encoder, since it doesn't look like a normal sensor.
+  `.enable(timeStep)` call for the position sensor. It's easy to enable the motor and the distance
+  sensors and forget the encoder, as it doesn't look like a normal sensor.
 
 ---
 
