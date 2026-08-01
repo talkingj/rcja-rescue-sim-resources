@@ -1,8 +1,8 @@
 # Running a mock competition in class
 
-A guide for running a scored mock round in a single class period, with a scoring sheet, walked
-through once against this site's own real [complete-run page](code-complete-run.md) data so the
-procedure is proven before you use it live.
+To run a scored mock round in a single class period, use this guide. It includes a scoring sheet
+and is walked through once against this site's own real [complete-run
+page](code-complete-run.md) data, meaning the procedure is proven before you use it live.
 
 !!! note "Who this page is for"
     The teacher or mentor running week 8 of [the club curriculum](club-curriculum.md), or any single
@@ -15,7 +15,7 @@ procedure is proven before you use it live.
 **Materials checklist:**
 
 - [ ] Every team's controller loads and runs without crashing, confirmed once beforehand, [per the
-      debugging playbook](debugging-playbook.md), a controller that fails silently can eat a whole
+      debugging playbook](debugging-playbook.md). A controller that fails silently can eat a whole
       team's turn with nothing to show for it.
 - [ ] One printed scoring sheet (below) per team.
 - [ ] The Competition Controller visible to the room, or announced aloud after each run.
@@ -24,7 +24,8 @@ procedure is proven before you use it live.
 
 Each team gets one timed run (use [the eight practice worlds page](practice-worlds.md) to pick a
 world matching what your teams have practised on). Run the match for real, watch the Competition
-Controller's score, and fill in the scoring sheet as it happens, not from memory afterward.
+Controller's score, and fill in the scoring sheet as it happens. Therefore, do not fill it in from
+memory afterward.
 
 ## The scoring sheet
 
@@ -80,7 +81,7 @@ bonus, all on one sheet.
 
 - Compare each team's sheet against [the point-value table](rules-scoring.md#point-values) and
   confirm the arithmetic, not just the final number.
-- Ask each team to name one thing their sheet shows they should practise next, [the debugging
+- Ask each team to name one thing their sheet shows they should practise next. [The debugging
   playbook](debugging-playbook.md) and [costly mistakes page](costly-mistakes.md) are good places to
   point them.
 

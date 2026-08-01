@@ -16,9 +16,9 @@ anything here doesn't make sense, those pages explain it in full.
 | Ψ | Stable | S |
 | Ω | Unharmed | U |
 
-## Cognitive targets: ring colors → values
+## Cognitive targets: ring colours → values
 
-| Color | Value |
+| Colour | Value |
 |---|---|
 | Black | −2 |
 | Red | −1 |
@@ -26,7 +26,7 @@ anything here doesn't make sense, those pages explain it in full.
 | Green | 1 |
 | Blue | 2 |
 
-Sum all 5 (center + 4 rings), center to outward. Adjacent same-color rings still count separately.
+Sum all 5 (centre + 4 rings), centre to outward. Adjacent same-colour rings still count separately.
 
 | Sum | Hazmat | Code |
 |---|---|---|
@@ -48,8 +48,8 @@ Sum all 5 (center + 4 rings), center to outward. Adjacent same-color rings still
 - **CN** (checkpoint): +10, anywhere.
 - **TMI** (misidentification): −5, anywhere.
 - **LoP** (lack of progress): −5, anywhere.
-- Identification only counts if your robot's center is within **half a tile** of the token.
-- TI, TT, and CN get scaled by the area multiplier below. TMI and LoP never do.
+- Identification only counts if your robot's centre is within **half a tile** of the token.
+- TI, TT, and CN get scaled by the area multiplier below. Therefore, TMI and LoP never do.
 
 ## Area multipliers
 

@@ -1,7 +1,7 @@
 # Glossary: unfamiliar words explained
 
-Every word here shows up somewhere in this guide. If you hit a word you don't know, it's probably
-listed below. Words are in the order you'll meet them, not alphabetical order.
+Every word here shows up somewhere in this guide. To look one up, check below — words are in the
+order you'll meet them, not alphabetical order.
 
 ## Setup words
 
@@ -148,8 +148,8 @@ listed below. Words are in the order you'll meet them, not alphabetical order.
   unharmed. See [Victims and hazmats](rules-tokens.md#letter-victims).
 
 **Cognitive target**
-: A 5 cm ringed circle on a wall representing a hazardous chemical. Its colors decode to a hazmat type
-  by summing color values. See
+: A 5 cm ringed circle on a wall representing a hazardous chemical. Its colours decode to a hazmat type
+ by summing colour values. See
   [Victims and hazmats](rules-tokens.md#cognitive-targets-reading-the-rings).
 
 **Checkpoint**
@@ -188,5 +188,5 @@ listed below. Words are in the order you'll meet them, not alphabetical order.
 ## If a word isn't here
 
 Check [When it goes wrong](troubleshooting.md), or ask someone. Don't guess. Every step in this
-guide is supposed to define new words the first time they show up. If one slipped through, that's a
-bug in this guide, not something you did wrong.
+guide is supposed to define new words the first time they show up. If one slipped through, that is a
+bug in this guide, not something you did wrong. Therefore, let us know so it can be fixed.

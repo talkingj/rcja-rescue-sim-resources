@@ -1,8 +1,9 @@
 # Erebus API cheat sheet
 
 Every device name, method, and message byte format this site actually confirmed while building
-[Track C](code-sensors.md), in one place. Every entry cites the resource where it was verified,
-nothing here comes from documentation alone, if it's listed, this site ran it for real.
+[Track C](code-sensors.md), in one place. Therefore, every entry cites the resource where it was
+verified, and nothing here comes from documentation alone — if it's listed, this site ran it for
+real.
 
 !!! note "Where this fits"
     A reference page, not a tutorial. If a row here doesn't make sense on its own, follow its link
@@ -54,7 +55,7 @@ format expected, [confirmed present in C5](code-camera.md)).
 
 Victim type letters, confirmed from `Victim.py`: `'H'` = harmed, `'U'` = unharmed, `'S'` = stable.
 
-## Behavior worth knowing, not obvious from the API alone
+## Behaviour worth knowing, not obvious from the API alone
 
 - A 9-byte report is silently dropped unless the robot has been stationary for a full second
   (`time_stopped() >= 1.0`), and in practice needs more margin than that right after a spawn or

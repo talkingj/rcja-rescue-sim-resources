@@ -9,10 +9,10 @@ explanation: [Victims and hazmats](rules-tokens.md#cognitive-targets-reading-the
 
 ## The rule
 
-Read a cognitive target's colors from the **center outward** (center circle, ring 1, ring 2, ring 3,
-ring 4). Convert each color to a number and add all five together.
+Read a cognitive target's colours from the **centre outward** (centre circle, ring 1, ring 2, ring 3,
+ring 4). Convert each colour to a number and add all five together.
 
-| Color | Value |
+| Colour | Value |
 |---|---|
 | Black | −2 |
 | Red | −1 |
@@ -28,7 +28,7 @@ ring 4). Convert each color to a number and add all five together.
 | 3 | Organic Peroxide [O] |
 | anything else | Fake target |
 
-Adjacent rings of the same color still count separately, never merge them.
+Adjacent rings of the same colour still count separately, never merge them.
 
 ## Decode these six
 

@@ -1,8 +1,8 @@
 # Rules self-check
 
-A mixed set of questions covering the last four pages: field, tokens, scoring, and the map format.
-Not graded, not timed, just a way to find out what stuck before you start writing code that depends on
-it. Work out each answer yourself before opening it.
+To find out what stuck before you start writing code that depends on it, work through this mixed set of
+questions covering the last four pages: field, tokens, scoring, and the map format. Not graded, not
+timed. Work out each answer yourself before opening it.
 
 !!! note "Where this fits"
     Last of five pages building on the [official rules](official-rules-2026.md). If any question here
@@ -14,8 +14,8 @@ it. Work out each answer yourself before opening it.
     **Area 3.** Area 2 also uses quarter-tiles, but only Area 3 is allowed to round corners.
     ([Understanding the field](rules-field.md#the-four-areas))
 
-??? question "2. Your robot's floor-color sensor reads green. Which two areas did it just cross between?"
-    **Area 1 and Area 4.** Check the passage-color table: green connects Areas 1 and 4.
+??? question "2. Your robot's floor-colour sensor reads green. Which two areas did it just cross between?"
+    **Area 1 and Area 4.** Check the passage-colour table: green connects Areas 1 and 4.
     ([Understanding the field](rules-field.md#the-four-areas))
 
 ??? question "3. What's the actual difference between a linear tile and a floating tile?"
@@ -39,7 +39,7 @@ it. Work out each answer yourself before opening it.
     **Stable victim** (health status code S). Φ is harmed, Ω is unharmed.
     ([Victims and hazmats](rules-tokens.md#letter-victims))
 
-??? question "7. A cognitive target's rings, center to outward, are: Blue, Blue, Yellow, Yellow, Black.
+??? question "7. A cognitive target's rings, centre to outward, are: Blue, Blue, Yellow, Yellow, Black.
     What hazmat is this?"
     2 + 2 + 0 + 0 − 2 = **2 → Corrosive [C]**.
     ([Victims and hazmats](rules-tokens.md#cognitive-targets-reading-the-rings))
@@ -59,7 +59,8 @@ it. Work out each answer yourself before opening it.
 ??? question "10. Why are TMI and LoP always a flat −5, regardless of which area they happen in?"
     The area multiplier only applies to TI, TT, and CN (the rewards). Penalties are flat everywhere,
     so a mistake in the hardest area doesn't cost proportionally more than the same mistake in
-    Area 1. ([How points are earned](rules-scoring.md#area-multipliers))
+    Area 1. Therefore, penalties treat every area equally, regardless of its multiplier.
+    ([How points are earned](rules-scoring.md#area-multipliers))
 
 ??? question "11. What two things must both be true for a team to earn the exit bonus?"
     The robot must have identified **at least one** wall token, **and** it must return to the
@@ -92,7 +93,7 @@ it. Work out each answer yourself before opening it.
 
 - **13–15 right:** you're ready to start turning this into strategy. Go build.
 - **8–12 right:** re-read whichever page(s) tripped you up, then come back to just those questions.
-- **Under 8:** that's fine, this is a lot of rules at once. Start over from
+- **Under 8:** that's fine; this is a lot of rules at once. Start over from
   [Understanding the field](rules-field.md) and take it one page at a time.
 
 Want a printable quick-reference instead of re-reading full pages? See the
