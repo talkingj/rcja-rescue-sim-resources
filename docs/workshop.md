@@ -1,7 +1,6 @@
 # Classroom workshop (45–60 min)
 
-A facilitator guide for running Rules & Scoring as one live, teacher-led class period, instead of
-having students read the lesson pages solo. You narrate, time each activity, and debrief as a group;
+To deliver the Rules & Scoring material as one live class period instead of solo reading, use this facilitator guide. You narrate, time each activity, and debrief as a group;
 the lesson pages become the follow-up reading, not the in-class material.
 
 !!! note "Who this page is for"
@@ -12,7 +11,7 @@ the lesson pages become the follow-up reading, not the in-class material.
 
 By the end of the session, students should be able to:
 
-- Name the four field areas and read a passage color to know which two areas it connects.
+- Name the four field areas and read a passage colour to know which two areas it connects.
 - Decode a cognitive target's rings into a hazmat type.
 - Compute a simple score from the point-value table, including an area multiplier.
 - Read the basic shape of a map-matrix legend.
@@ -22,7 +21,7 @@ By the end of the session, students should be able to:
 **Time:** 50 minutes, flexible ±10. Every activity below has a fallback cut if you're running long,
 see [If you're running short on time](#if-youre-running-short-on-time).
 
-**Group size:** works in pairs or small teams of 3–4. Bigger groups tend to let one student do all
+**Group size:** works in pairs or small teams of 3–4. However, bigger groups tend to let one student do all
 the thinking.
 
 **Materials checklist:**
@@ -34,6 +33,9 @@ the thinking.
       [Drawing the map](rules-map-format.md) both have the figures you'll need, or open
       [scoring-cheat-sheet.md](scoring-cheat-sheet.md) for the point-value table.
 - [ ] A visible timer.
+
+To cover the essential rules and scoring without a full lecture, the session runs four short
+activities against a timer, each targeting a different skill from the lesson pages.
 
 ## Agenda at a glance
 
@@ -49,20 +51,20 @@ the thinking.
 ## Intro: the scenario (5 min)
 
 Read or paraphrase the top of the [quick briefing](briefing.md#the-scenario): the robot explores
-alone, searches walls for tokens, maps as it goes, and isn't eliminated for getting stuck, it's just
+alone, searches walls for tokens, maps as it goes, and isn't eliminated for getting stuck — it's just
 sent back to the last checkpoint. This is the only slide-style narration in the session; everything
 after this is hands-on.
 
 ## Activity 1 — Read the Field (10 min)
 
-**Objective:** recognize the four areas, passage colors, tile types, and hazards.
+**Objective:** recognise the four areas, passage colours, tile types, and hazards.
 
 Project the two field figures from [Understanding the field](rules-field.md#the-four-areas) (the area
-overview and the passage-color table). Then run these five questions rapid-fire, cold-call or show of
-hands, no writing needed, they're pulled directly from [Rules self-check](rules-quiz.md):
+overview and the passage-colour table). Then run these five questions rapid-fire, cold-call or show of
+hands, no writing needed — they're pulled directly from [Rules self-check](rules-quiz.md):
 
 1. Which area uses quarter-tiles *and* can round a 90° corner into a curve?
-2. Your robot's floor-color sensor reads green. Which two areas did it just cross between?
+2. Your robot's floor-colour sensor reads green. Which two areas did it just cross between?
 3. What's the actual difference between a linear tile and a floating tile?
 4. True or false: a tile can be both a checkpoint and have an obstacle on it.
 5. A robot enters the same swamp tile for the third time. How much faster is simulated time running
@@ -80,11 +82,11 @@ hands, no writing needed, they're pulled directly from [Rules self-check](rules-
 **Objective:** practice the cognitive-target ring-decoding formula under a bit of time pressure.
 
 Hand out the printed [cognitive target decoder](cognitive-target-decoder.md) sheets, one per team.
-Give teams **6 minutes** to decode all six targets (color → value → sum → hazmat). First team with all
+Give teams **6 minutes** to decode all six targets (colour → value → sum → hazmat). First team with all
 six correct can call it out, but let everyone finish before debriefing.
 
 Debrief using the answer key already printed at the bottom of that page. If a team gets one wrong,
-the most common mistake is merging two adjacent same-color rings into one, remind them every ring
+the most common mistake is merging two adjacent same-colour rings into one — remind them every ring
 counts separately.
 
 ## Activity 3 — Score the Run (15 min)
@@ -92,7 +94,7 @@ counts separately.
 **Objective:** apply the point-value table and an area multiplier to compute an actual score.
 
 The full official worked example (on [How points are earned](rules-scoring.md)) covers all four areas
-at once and is too dense to compute live in a few minutes. Use these two smaller scenarios instead.
+at once and is too dense to compute live in a few minutes. Therefore, use these two smaller scenarios instead.
 Have the [scoring cheat sheet](scoring-cheat-sheet.md) point-value table visible.
 
 **Together, on the board (5 min):** *A robot identifies a letter victim on a floating tile in Area 2,
@@ -124,11 +126,11 @@ gets the type right, visits two checkpoints, and has one Lack of Progress.*
                                       --
     final                            70
     ```
-    The LoP penalty is flat and applied *after* the multiplier, that's the detail most pairs miss.
+    The LoP penalty is flat and applied *after* the multiplier — that's the detail most pairs miss.
 
 ## Activity 4 — Read the Map (10 min)
 
-**Objective:** recognize the shape of a map-matrix legend without doing a full encoding from scratch.
+**Objective:** recognise the shape of a map-matrix legend without doing a full encoding from scratch.
 
 Project the simplest map figure from
 [Drawing the map](rules-map-format.md#worked-example-the-smallest-possible-map). In teams, have
@@ -138,7 +140,7 @@ students answer just two things out loud or on their activity sheet:
 - Which cells hold the wall tokens, and what do their values mean?
 
 Confirm as a class: four `5` cells (one per quarter-tile of the starting tile), and the token cells
-read `F` and `H` exactly where those tokens sit on the real wall. Full encoding practice is homework
+read `F` and `H` exactly where those tokens sit on the real wall. Additionally, full encoding practice is homework
 material, not something to start from scratch with 10 minutes left.
 
 ## Wrap-up (5 min)
@@ -163,4 +165,4 @@ Cut in this order:
    verbally instead of having pairs work it.
 3. **Trim Activity 1 to 3 questions** instead of 5, questions 2 and 4 are the fastest to cut.
 
-Don't cut Activity 2, it's the most engaging part of the session and needs the least setup.
+Don't cut Activity 2 — it's the most engaging part of the session and needs the least setup.
