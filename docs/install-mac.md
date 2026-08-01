@@ -1,6 +1,6 @@
 # Install on macOS
 
-This page sets everything up on a Mac. Do the three steps **in order**, since each one needs the one
+To get everything set up on a Mac, do the three steps **in order**, since each one needs the one
 before it. Give yourself about 30 minutes the first time.
 
 !!! tip "Before you begin"
@@ -27,8 +27,8 @@ Python is the language your robot's instructions are written in.
 !!! warning "Install this even if you think you already have Python"
     Macs come with a Python, and if you've used Homebrew or Anaconda you have more. **Install this
     fresh python.org version anyway.** Mixing the others with Webots is the most common reason the
-    robot won't run on a Mac even though everything looks installed. A fresh python.org 3.10 avoids
-    the whole mess.
+    robot won't run on a Mac even though everything looks installed. Therefore, a fresh python.org
+    3.10 avoids the whole mess.
 
 !!! success "You should now have"
     Python installed. To check, open **Terminal** (press <kbd>Cmd</kbd> + <kbd>Space</kbd>, type
@@ -41,14 +41,14 @@ Python is the language your robot's instructions are written in.
 
 Webots is the simulator, the 3D app where the maze and robot live.
 
-1. Download the **exact** version Erebus needs, **Webots R2023b**, straight from here:
+1. To get the **exact** version Erebus needs, download **Webots R2023b** straight from here:
    **[webots-R2023b.dmg](https://github.com/cyberbotics/webots/releases/download/R2023b/webots-R2023b.dmg)**.
    It's about 100 MB to download and expands to roughly 1 GB once installed, so this takes a few
    minutes. That's normal.
 
     !!! warning "Use R2023b, not the newest Webots"
-        A newer Webots will give confusing errors with Erebus. Install **exactly R2023b**. The link
-        above already points to the right one.
+        A newer Webots will give confusing errors with Erebus. Therefore, install **exactly
+        R2023b** — the link above already points to the right one.
 
 2. Open the downloaded **`webots-R2023b.dmg`**. (A DMG is a Mac installer file, explained in the
    [glossary](glossary.md#setup-words).) A window opens showing the **Webots** icon and an
@@ -73,7 +73,7 @@ isn't an app you install. It's a folder of files you unzip.
 2. Under **"Assets"**, click **"Source code (zip)"** to download it.
 
     !!! warning "There's no file called 'Release Build.' Use 'Source code (zip)'"
-        Older guides say to download a "Release Build." Newer Erebus releases don't include one, so
+        Older guides say to download a "Release Build." Newer Erebus releases don't include one. Thus,
         **"Source code (zip)" is the real, complete package** (confirmed against the current v26.1).
 
 3. Find the download in your **Downloads** folder. Safari usually unzips it for you into a folder
