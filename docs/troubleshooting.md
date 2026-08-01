@@ -1,8 +1,10 @@
 # When it goes wrong
 
 Find the thing you're seeing on screen in the list below and jump to it. Each fix tells you **what
-you'll see**, **why it happens**, and **exactly what to do**. None of this is your fault. These are
-just the normal rough edges of setting up a robotics simulator.
+you'll see**, **why it happens**, and **exactly what to do**.
+
+None of this is your fault. These are just the normal rough edges of setting up a robotics
+simulator.
 
 !!! tip "How to use this page"
     Use your browser's find (<kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>F</kbd>) and paste in the exact
@@ -55,8 +57,8 @@ unzipped folder.
 
 **You'll see:** the message **"Initializing…"** for a long time the first time you open a world.
 
-**Why:** the very first run installs several Python libraries in the background. This normally takes
-one to three minutes. It looks frozen, but it usually isn't.
+**Why:** the very first run installs several Python libraries in the background, which normally
+takes one to three minutes. It looks frozen. However, it usually isn't.
 
 **Fix:**
 
@@ -69,11 +71,12 @@ one to three minutes. It looks frozen, but it usually isn't.
     - **macOS or Linux:** open a terminal and run `python3 -m pip install numpy termcolor requests opencv-python pillow overrides`
 
 !!! warning "The docs only mention three libraries, but the simulator needs more"
-    The official install pages list `numpy termcolor requests`, but the Competition Supervisor also
-    needs **`opencv-python`** (imported as `cv2`), **`pillow`**, and **`overrides`**. On a brand-new
-    Python, `opencv-python` in particular is *not* installed automatically, and the supervisor
-    crashes with `ModuleNotFoundError: No module named 'cv2'`. If you hit that, run the full `pip`
-    command above. That's the complete list, and we confirmed it on a real first run.
+    The official install pages list `numpy termcolor requests`. However, the Competition Supervisor
+    also needs **`opencv-python`** (imported as `cv2`), **`pillow`**, and **`overrides`**.
+
+    On a brand-new Python, `opencv-python` in particular is *not* installed automatically, meaning
+    the supervisor crashes with `ModuleNotFoundError: No module named 'cv2'`. If you hit that, run
+    the full `pip` command above. That's the complete list, and we confirmed it on a real first run.
 
 ---
 
@@ -152,8 +155,8 @@ can't find it.
 2. Open a **new** Command Prompt and type `python`. It should now start Python.
 3. Then set it in Webots, under **Tools → Preferences → Python command**, and enter `python`.
 
-Paths can be fiddly. This is the single most common Windows snag, and it's normal to take a couple
-of tries.
+Paths can be fiddly. This is the single most common Windows snag, so it's normal to take a couple of
+tries.
 
 ---
 
@@ -180,11 +183,13 @@ clear error dialog.
 (`QScreen::geometry()` null pointer, deep in Webots' own GUI setup) reproduced on this Mac
 regardless of rendering or batch-mode settings.
 
-**Fix:** launch Webots minimized rather than with its window immediately visible, then restore the
-window once it's running. If you're driving Webots from the command line (not something a normal
-LOAD-and-play session needs), add a minimize flag to the launch command; if you only ever use the
-Webots app directly, this is unlikely to affect you, it showed up specifically when automating
-Webots from outside the app.
+**Fix:** to avoid the crash, launch Webots minimised rather than with its window immediately
+visible, then restore the window once it's running. If you're driving Webots from the command line
+(not something a normal LOAD-and-play session needs), add the `--minimize` flag to the launch
+command.
+
+If you only ever use the Webots app directly, this is unlikely to affect you. It showed up
+specifically when automating Webots from outside the app.
 
 ---
 
@@ -195,24 +200,24 @@ your print statements stop appearing right after the controller starts, and the 
 is `INFO: 'robot0Controller' controller exited successfully.` No traceback, no `AttributeError`.
 
 **Why:** confirmed on [the sensors page](code-sensors.md): a misspelled `robot.getDevice("...")`
-name doesn't raise a visible error in this engine, the controller just silently stops on the bad
-call.
+name doesn't raise a visible error in this engine, meaning the controller just silently stops on the
+bad call.
 
-**Fix:** double check every device name against [the API cheat sheet](api-cheat-sheet.md) or the
-robot's proto file. This is the single most common cause of "my controller does nothing at all,"
-confirmed while building this site's own code pages.
+**Fix:** to rule this out first, check every device name against [the API cheat
+sheet](api-cheat-sheet.md) or the robot's proto file. This is the single most common cause of "my
+controller does nothing at all," confirmed while building this site's own code pages.
 
 For anything else that comes up once you're past first-run and into writing your own Track C
 controllers, [the debugging playbook](debugging-playbook.md) is the deeper, code-focused companion
-to this page, symptom-indexed the same way, covering the camera, the emitter/receiver, and the
-wall-follower specifically.
+to this page. It is symptom-indexed the same way, and covers the camera, the emitter/receiver, and
+the wall-follower specifically.
 
 ---
 
 ## Still stuck?
 
-If none of these match, note the **exact** text of the error in the Webots console and which step
-you were on. Then re-read the install page for your system,
+To narrow down anything not listed above, note the **exact** text of the error in the Webots console
+and which step you were on. Then re-read the install page for your system,
 [Windows](install-windows.md), [macOS](install-mac.md), or [Linux](install-linux.md), with that
 error in mind. That usually reveals the missed step.
 
