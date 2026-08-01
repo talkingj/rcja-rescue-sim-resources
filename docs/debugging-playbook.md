@@ -1,8 +1,8 @@
 # The debugging playbook
 
-Every symptom below is one this site actually hit while building [Track C](code-sensors.md), not a
-hypothetical. Same format as [the setup troubleshooting page](troubleshooting.md): what you'll see,
-why it happens, and what to do.
+To help you match what you're seeing to a known cause fast, every symptom below is one this site
+actually hit while building [Track C](code-sensors.md), not a hypothetical. Same format as [the
+setup troubleshooting page](troubleshooting.md): what you'll see, why it happens, and what to do.
 
 !!! tip "How to use this page"
     Search for the exact behaviour you're seeing. If your controller involves the emitter/receiver,
@@ -29,8 +29,8 @@ line in the console is `INFO: 'robot0Controller' controller exited successfully.
 `AttributeError`, nothing pointing at the actual problem.
 
 **Why:** a misspelled `robot.getDevice("...")` name. [Confirmed on the sensors
-page](code-sensors.md): Webots doesn't raise a visible error here, the controller just silently
-stops on the bad call.
+page](code-sensors.md): Webots doesn't raise a visible error here, meaning the controller just
+silently stops on the bad call.
 
 **Fix:** check every device name for typos against the robot's proto file. This is the single most
 likely cause of "my controller does nothing at all."
@@ -47,7 +47,7 @@ page](code-victim-detection.md), needs a contour covering 39% of this robot's sm
 frame, which a sign never reaches before you're uncomfortably close to the wall.
 
 **Fix:** lower the area threshold, `150` worked reliably in this site's own trials. Print the
-largest contour area you're actually seeing before picking a number, don't guess.
+largest contour area you're actually seeing before picking a number — don't guess.
 
 ---
 
@@ -56,8 +56,9 @@ largest contour area you're actually seeing before picking a number, don't guess
 **You'll see:** you send a 9-byte identification, or a single control byte like `'L'` or `'E'`, and
 nothing appears to happen.
 
-**Why, for identification specifically:** the supervisor only honors a report if your robot has been
-stationary for a full second, [confirmed on the reporting page](code-reporting.md). Sent while still
+**Why, for identification specifically:** the supervisor only honours a report if your robot has
+been stationary for a full second, [confirmed on the reporting page](code-reporting.md). Sent while
+still
 "moving" (including brief physics-settling right after a spawn or relocate), it's silently dropped.
 
 **Fix:** wait longer than the bare `1.0` second minimum, [several extra seconds of margin
@@ -71,7 +72,7 @@ consistently fixed this in this site's own trials](code-exit.md#getting-this-run
 the old value.
 
 **Why:** [confirmed on the game-info page](code-game-info.md), a score update isn't guaranteed
-visible on the very next poll after the action that caused it, the supervisor processes messages
+visible on the very next poll after the action that caused it, as the supervisor processes messages
 independently, one simulation step apart in this site's own measurement.
 
 **Fix:** poll again a moment later before concluding nothing happened. If you need to react
@@ -85,11 +86,11 @@ instantly, poll every timestep instead of once a second.
 with no traceback and no crash flag.
 
 **Why:** [confirmed repeatedly across several resources on this site](code-lack-of-progress.md), this
-happens intermittently and isn't tied to any specific bug, an identical rerun of the identical
+happens intermittently and isn't tied to any specific bug. An identical rerun of the identical
 controller has consistently produced a clean, full-length run afterward.
 
-**Fix:** retry once or twice before assuming your code is broken. If a third identical attempt still
-fails the same way, then start suspecting the controller itself.
+**Fix:** Therefore, retry once or twice before assuming your code is broken. If a third identical
+attempt still fails the same way, then start suspecting the controller itself.
 
 ---
 
@@ -99,12 +100,12 @@ fails the same way, then start suspecting the controller itself.
 stuck oscillating in place.
 
 **Why:** [the wall-follower page](code-wall-follower.md) found this happens on real mazes even with
-reasonable-looking avoidance logic, tight corridors and corners are genuinely harder to escape than
-they look.
+reasonable-looking avoidance logic, as tight corridors and corners are genuinely harder to escape
+than they look.
 
 **Fix:** a dedicated stuck-detector (count consecutive steps with the front sensor blocked, then
 reverse and turn hard before resuming) recovers from most cases, [as built and trialled on that
-page](code-wall-follower.md). It doesn't guarantee full maze coverage, [that limitation is real and
+page](code-wall-follower.md). It doesn't guarantee full maze coverage — [that limitation is real and
 still unsolved on this site](code-complete-run.md).
 
 ---
