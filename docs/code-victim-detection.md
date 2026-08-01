@@ -1,8 +1,8 @@
 # Spotting a victim sign
 
-This page adapts the official `victim_detection_test.py` sample to find a victim sign in the
-camera image from [the last page](code-camera.md). It's the first page in this series that touches
-something the rules actually score. It takes about 20 minutes, and the most useful thing on it is a
+To find a victim sign in the camera image from [the last page](code-camera.md), this page adapts
+the official `victim_detection_test.py` sample. It takes about 20 minutes and is the first page in
+this series that touches something the rules actually score. The most useful thing on it is a
 number we had to change from the official sample to get it working at all.
 
 !!! note "Credit where it's due"
@@ -74,9 +74,9 @@ The only change from the official sample is `150` where it originally said `1000
 
 ## Step 3: Why the official threshold didn't work here
 
-We pointed the robot straight at a real victim sign from about 15 cm away, close enough that the
-sign filled a real portion of the frame, and printed every contour's area, even small ones, to see
-what the camera was actually reporting.
+To see what the camera was actually reporting, we pointed the robot straight at a real victim
+sign from about 15 cm away, close enough that the sign filled a real portion of the frame, and
+printed every contour's area, even small ones.
 
 !!! success "You should now see"
     With the original `1000` threshold: nothing. Not one detection, even standing right in front of
@@ -112,22 +112,22 @@ what the camera was actually reporting.
 
 ### How we actually got the robot in front of a sign
 
-Reliable navigation to a specific spot in the maze is still an open problem on this site,
-[the wall-follower page](code-wall-follower.md) found that even a dedicated wall-following
-controller settles into a small loop rather than touring world1. So for this page, we used our own
-trial harness's supervisor access to place the robot a known short distance from a known victim
-sign, the same way a team might manually position a robot on their desk to test detection code in
-isolation before trusting it to navigate there on its own. That positioning step is not something
-your controller can do, and it isn't shown above, the code above is exactly what ran and produced
-the output on this page.
+Reliable navigation to a specific spot in the maze is still an open problem on this site.
+[The wall-follower page](code-wall-follower.md) found that even a dedicated wall-following
+controller settles into a small loop rather than touring world1. Therefore, for this page, we used
+our own trial harness's supervisor access to place the robot a known short distance from a known
+victim sign, the same way a team might manually position a robot on their desk to test detection
+code in isolation before trusting it to navigate there on its own. That positioning step is not
+something your controller can do, and it isn't shown above. The code above is exactly what ran and
+produced the output on this page.
 
 ### What about false positives?
 
 We ran this same `150`-threshold detector for 90 seconds while the robot explored on its own with
 [the wall-follower from two pages ago](code-wall-follower.md), away from any known victim, and
-**didn't get a single false detection** in that test. That's a real result, not a guarantee: `150`
-is a much lower bar than the official `1000`, and a lower bar is inherently more likely to mistake
-a dark shadow or wall corner for a sign somewhere we haven't tried yet. Treat `150` as a starting
+**didn't get a single false detection** in that test. However, that is a real result, not a
+guarantee: `150` is a much lower bar than the official `1000`, and a lower bar is inherently
+more likely to mistake a dark shadow or wall corner for a sign somewhere we haven't tried yet. Treat `150` as a starting
 point you should re-check in every world you actually compete in, not a number to trust blindly.
 
 ---
@@ -136,8 +136,8 @@ point you should re-check in every world you actually compete in, not a number t
 
 - Try threshold values between `150` and `1000` and see roughly where detection stops working at
   the distance this page used.
-- Print `len(contours)` as well as the accepted ones, on a busy frame there are often several small
-  contours that never cross the threshold, that's normal, not a bug.
+- Additionally, print `len(contours)` as well as the accepted ones. On a busy frame there are often several small
+  contours that never cross the threshold, and that's normal, not a bug.
 - Combine this with [driving](code-driving.md): once you detect a victim, what should the robot do
   next? The next page in this series answers that.
 
