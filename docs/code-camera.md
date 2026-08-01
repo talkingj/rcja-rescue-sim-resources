@@ -1,9 +1,9 @@
 # Turning on the camera
 
-Every previous page read a sensor that returns a small handful of numbers. This page reads the
-robot's main camera, which returns a whole image, thousands of numbers at once. It's the first step
-toward the robot recognising a victim sign rather than just avoiding walls. It takes about 15
-minutes.
+Every previous page read a sensor that returns a small handful of numbers.
+To take the first step toward the robot recognising a victim sign rather than just avoiding walls,
+this page reads the robot's main camera, which returns a whole image, thousands of numbers at once.
+It takes about 15 minutes.
 
 !!! note "What you're building"
     A controller that enables the camera, prints its real resolution, and saves one real frame to a
@@ -13,14 +13,14 @@ minutes.
 
 ## Step 1: A camera is a much bigger sensor
 
-`camera_centre` is a device like any other, `robot.getDevice("camera_centre")` then
+`camera_centre` is a device like any other: `robot.getDevice("camera_centre")` then
 `.enable(timeStep)`. Once it's enabled, `.getImage()` returns a raw byte buffer, and
-`.getWidth()` / `.getHeight()` tell you its resolution. Like
+`.getWidth()` / `.getHeight()` tell you its resolution. However, like
 [the floor colour sensor](code-colour.md), which is really a tiny camera too, the bytes are in
 **BGRA** order: blue, green, red, alpha, four bytes per pixel, row by row.
 
-The buffer length should always equal `width * height * 4`. That's a useful sanity check if you
-ever get a shape or size error later when processing the image.
+To catch a shape or size error before it derails your processing code later, check that the buffer
+length always equals `width * height * 4`.
 
 ---
 
@@ -57,7 +57,7 @@ while robot.step(timeStep) != -1:
         printed_info = True
 ```
 
-We added a slow forward drive so the camera actually sees something changing, a camera pointed at a
+We added a slow forward drive so the camera actually sees something changing — a camera pointed at a
 completely static scene is a boring first test.
 
 ---
@@ -79,28 +79,28 @@ completely static scene is a boring first test.
 
 ### What the camera actually sees
 
-We went one step further than printing numbers: we decoded a real frame's raw bytes into an actual
-picture, byte for byte, no screenshot tool involved, just reading `camera_centre`'s own buffer and
-writing it out as an image.
+We went one step further than printing numbers. Additionally, we decoded a real frame's raw bytes
+into an actual picture, byte for byte, no screenshot tool involved, just reading `camera_centre`'s
+own buffer and writing it out as an image.
 
 ![A real frame from the robot's camera_centre, decoded directly from getImage()](assets/real/c5-camera-view.png)
 
 *Decoded directly from `camera.getImage()` on a real run, not a screenshot of the Webots window.
 The dark shape is a wall close in front of the robot; the lighter band above it is the simulated
-sky. `camera_centre` is a low resolution, wide field-of-view sensor, this blocky look is really
-what 64×40 pixels looks like, not a rendering problem.*
+sky. `camera_centre` is a low resolution, wide field-of-view sensor, meaning this blocky look is
+really what 64×40 pixels looks like, not a rendering problem.*
 
 ---
 
 ## Now make it your own
 
 - Change `camera.enable(timeStep)` to enable it once every few steps instead (call `.enable()` with
-  a bigger number) and watch `image_bytes` stay exactly the same, resolution doesn't change, only
+  a bigger number) and watch `image_bytes` stay exactly the same. Resolution doesn't change, only
   how often you get a fresh frame.
 - Print the value of just one pixel, say the very centre one, at `image[(height // 2 * width +
   width // 2) * 4]` for its blue byte. Watch it change as the robot drives toward the wall.
 - Try `camera.getFov()` after changing nothing, then compare it with the `fieldOfView` field in
-  `custom_robot.proto`, they should match.
+  `custom_robot.proto` — they should match.
 
 Next in this series: spotting a victim sign in this same camera image.
 
@@ -114,8 +114,8 @@ Next in this series: spotting a victim sign in this same camera image.
   wrong device. Print `camera.getWidth()` and `camera.getHeight()` right next to `len(image)` to
   make sure they're all coming from the same call.
 - **Decoding the image into a picture yourself produces a solid grey or black square.** Double
-  check the byte order. It's BGRA, if you write it out assuming RGBA you'll get a colour-shifted or
-  washed-out result, not a clean error, which makes this an easy mistake to miss.
+  check the byte order. It's BGRA. If you write it out assuming RGBA, you'll get a colour-shifted or
+  washed-out result rather than a clean error, which makes this an easy mistake to miss.
 
 ---
 
