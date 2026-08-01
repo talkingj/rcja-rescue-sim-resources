@@ -1,8 +1,8 @@
 # Assessment rubric and progress tracker
 
-A rubric for grading a student's or team's real progress through [Track C](code-sensors.md), plus a
-simple per-student tracker. Every criterion below maps to one specific skill taught on one specific
-page, nothing here is a generic "participation" or "effort" score.
+To grade a student's or team's real progress, use this rubric plus a simple per-student tracker for
+[Track C](code-sensors.md). Every criterion below maps to one specific skill taught on one specific
+page — nothing here is a generic "participation" or "effort" score.
 
 !!! note "Who this page is for"
     A teacher or mentor who needs to grade progress, formally or informally, rather than just run
@@ -47,9 +47,9 @@ A simple table to copy per student or team. Fill in a score (0/1/2) per skill as
 
 [The 8-week curriculum's](club-curriculum.md) weeks map onto this rubric roughly as: Week 2 → skills
 1-2, Week 3 → skills 3-4, Week 4 → skills 5-7, Week 5 → skills 8-10, Week 6 → skills 11-12, Week 7 →
-skills 13-14. A team scoring mostly 2s through skill 12 by week 6 is on pace; a team stuck at 1s on
-skill 4 (the wall-follower) going into week 4 is worth extra attention before piling on camera work,
-[skill 6 assumes the robot can already move around reliably](code-victim-detection.md).
+skills 13-14. A team scoring mostly 2s through skill 12 by week 6 is on pace. However, a team stuck
+at 1s on skill 4 (the wall-follower) going into week 4 is worth extra attention before piling on
+camera work, as [skill 6 assumes the robot can already move around reliably](code-victim-detection.md).
 
 ---
 
