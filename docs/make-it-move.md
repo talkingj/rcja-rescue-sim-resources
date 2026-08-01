@@ -1,8 +1,8 @@
 # Make it move
 
-You've watched the sample robot drive itself in [Your first run](first-run.md). Now you'll change
-**one number** in its code and see the robot behave differently. This is your first real taste of
-programming the robot, and it takes about 5 minutes.
+You've watched the sample robot drive itself in [Your first run](first-run.md). To change how the
+robot behaves, you'll edit **one number** in its code and see the result immediately. This is your
+first real taste of programming the robot, and it takes about 5 minutes.
 
 !!! note "What you're changing"
     A single number, then save. Everything else in the file stays exactly as it is.
@@ -32,8 +32,8 @@ The robot's brain is a plain text file. Open it in any code or text editor:
 `max_velocity` is how fast the robot's wheels are allowed to spin.
 
 - The number is in **radians per second**, which is a way of measuring turning speed.
-- **`6.28`** is about **2 × π**, which works out to one full wheel-turn every second. That's the
-  robot's top speed in the sample code.
+- **`6.28`** is about **2 × π**, which works out to one full wheel-turn every second, meaning the
+  robot is already at its top speed in the sample code.
 
 To make the robot slower, you'll cut that number in half.
 
@@ -53,7 +53,8 @@ To make the robot slower, you'll cut that number in half.
 
 ## Step 4: Reload and watch the difference
 
-Webots is still running your *old* code until you load the new version.
+To see your change take effect, you need to load the new code into Webots. It is still running your
+*old* code until you do.
 
 1. Back in Webots, in the Competition Controller panel, press **reset**, then **LOAD** and pick
    `ExamplePlayerController_updated.py` again.
@@ -76,8 +77,8 @@ Try these one at a time. Change the number, save, then reset, LOAD, and start:
 - Try a number **bigger** than 6.28, like `10`. The sample maze is small, though, so a very fast
   robot mostly bumps around the walls.
 
-You just changed how the robot behaves by editing its code. Everything a competition robot does,
-from turning to sensing walls to finding victims, is built from more lines like this one.
+You just changed how the robot behaves by editing its code. Therefore, everything a competition robot
+does, from turning to sensing walls to finding victims, is built from more lines like this one.
 
 ---
 
