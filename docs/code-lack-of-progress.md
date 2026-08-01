@@ -1,9 +1,9 @@
 # Getting stuck, and recovering from it
 
-This page adapts the official `LackOfProgress.py` sample to answer a question every earlier page in
-this series has been quietly ignoring: what actually happens when your robot gets stuck? The answer
-costs points either way, this page is about choosing *when* you pay that cost rather than avoiding it
-entirely. About 15 minutes.
+To answer a question every earlier page in this series has been quietly ignoring — what actually
+happens when your robot gets stuck? — this page adapts the official `LackOfProgress.py` sample. The
+answer costs points either way; this page is about choosing *when* you pay that cost rather than
+avoiding it entirely. About 15 minutes.
 
 !!! note "Credit where it's due"
     The request/acknowledge pattern on this page is the official Erebus `LackOfProgress.py` sample,
@@ -12,7 +12,7 @@ entirely. About 15 minutes.
 
 ---
 
-## Step 1: Lack of Progress isn't a bug report, it's a relocation
+## Step 1: Lack of Progress isn't a bug report — it's a relocation
 
 "LoP" happens in exactly three situations, and only one of them is something your controller
 triggers on purpose:
@@ -26,7 +26,7 @@ triggers on purpose:
 All three do exactly the same thing: your robot teleports back to the last checkpoint tile it
 crossed (the start tile, if it hasn't crossed any), and [the scoring page](rules-scoring.md) is
 correct that it costs a flat **−5**, every time, with no exception for having asked for it yourself.
-Sending `'L'` isn't a way to dodge the penalty, it's a way to control *when* you take it, rather than
+Sending `'L'` isn't a way to dodge the penalty; it's a way to control *when* you take it, rather than
 losing time first and then being relocated involuntarily anyway.
 
 ---
@@ -87,7 +87,7 @@ while robot.step(timeStep) != -1:
 		receiver.nextPacket()
 ```
 
-The identification at the top isn't the point of this page, it's there so there's a non-zero score
+The identification at the top isn't the point of this page; it's there so there's a non-zero score
 for the LoP penalty to visibly subtract from. [The scoring page](rules-scoring.md) also notes total
 score can never go below zero, so testing this against a starting score of exactly `0.0` would have
 hidden the whole effect.
@@ -120,21 +120,20 @@ t=21.6s RECEIVED LoP acknowledgement (nobody asked for this)
 ```
 
 The supervisor decided on its own that 20 seconds of stillness was enough. A second run of the same
-setup confirmed the same thing from the other direction, our own position telemetry (a verification
+setup confirmed the same thing from the other direction: our own position telemetry (a verification
 tool this site's trial harness uses, not something available to student code) showed the robot's
 position jump from its stationary spot back to the start tile's real-world coordinates between the
-`t=20` and `t=22` position samples, unprompted. If your controller ever pauses for 20 seconds for any
-reason, debugging, waiting on a sensor, anything, expect this to fire whether you wanted it to or
-not.
+`t=20` and `t=22` position samples, unprompted. Therefore, if your controller ever pauses for 20
+seconds for any reason — debugging, waiting on a sensor, anything — expect this to fire whether you
+wanted it to or not.
 
 ---
 
 ## Now make it your own
 
-- Write an actual stuck-detector: compare a wheel's position-sensor reading now against its reading
-  a few seconds ago, and send `'L'` yourself once it stops changing, rather than waiting for the
-  passive 20-second timeout to do it for you. You lose the same 5 points either way, but you get
-  back to trying sooner.
+To avoid waiting for the passive 20-second timeout, write an actual stuck-detector: compare a wheel's
+position-sensor reading now against its reading a few seconds ago, and send `'L'` yourself once it
+stops changing. You lose the same 5 points either way, but you get back to trying sooner.
 - Try triggering LoP with a starting score of exactly `0`, confirm for yourself that the score
   really does floor at zero rather than going negative.
 - Combine this with [the wall-follower](code-wall-follower.md), which the wall-follower's own page
@@ -151,8 +150,8 @@ not.
 - **Your score doesn't visibly change after LoP.** If your score was already `0`, this is expected,
   not a bug, per [the scoring page](rules-scoring.md#point-values) the total floors at zero.
 - **LoP fires and you didn't ask for it.** Almost always the 20-second passive timeout, see above.
-  If your controller is doing real work but the robot itself isn't physically moving (waiting on a
-  slow calculation, for instance), that still counts as stationary to the supervisor.
+  Additionally, if your controller is doing real work but the robot itself isn't physically moving
+  (waiting on a slow calculation, for instance), that still counts as stationary to the supervisor.
 
 ---
 
