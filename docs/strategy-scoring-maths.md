@@ -1,7 +1,8 @@
 # Scoring maths for strategy decisions
 
-[The scoring page](rules-scoring.md) defines every point value. This page uses them to work three
-real decisions all the way through, by hand, the way you'd actually reason about them mid-season.
+To work through three real decisions the way you'd actually reason about them mid-season, this page
+takes them all the way through by hand, starting from every point value [the scoring
+page](rules-scoring.md) defines.
 Every number below either comes straight from [the scoring page's own
 table](rules-scoring.md#point-values) or from a real measurement earlier on this site.
 
@@ -34,7 +35,7 @@ correctness, a gain of `22.4`, consistent with the table above.
 effort a matrix takes, see [building the map matrix](code-mapping.md) for how much work that is).
 A strong map is worth more than almost anything else on the field, because it multiplies work
 you've *already* banked. The map bonus rewards teams that have already scored well more than teams
-that haven't, it is not a flat consolation prize.
+that haven't. Therefore, it is not a flat consolation prize.
 
 ---
 
@@ -53,12 +54,12 @@ scoring page](rules-scoring.md#area-multipliers)):
 | Floating tile | `15 + 10 = 25` | `25 × 1.25 = 31.25` |
 
 The floating tile is worth `12.5` more, before even asking how much longer it takes to reach one.
-[Track C's own wall-follower](code-wall-follower.md) found that reaching *any* specific tile
-reliably, floating or not, is still an open problem here, so "worth it" has to be weighed against a
-real risk: time spent detouring toward a floating tile is time that might instead be spent finding
-two more linear-tile victims, or exiting before the clock forfeits your bonus (see [spending your
-eight minutes](strategy-run-budget.md)). The maths favours the floating tile only if your team's
-navigation is good enough to actually reach it without burning disproportionate time.
+However, [Track C's own wall-follower](code-wall-follower.md) found that reaching *any* specific
+tile reliably, floating or not, is still an open problem here, so "worth it" has to be weighed
+against a real risk: time spent detouring toward a floating tile is time that might instead be spent
+finding two more linear-tile victims, or exiting before the clock forfeits your bonus (see [spending
+your eight minutes](strategy-run-budget.md)). Therefore, only detour for a floating tile if your
+team's navigation is good enough to actually reach it without burning disproportionate time.
 
 ---
 
@@ -82,8 +83,9 @@ two minutes of game clock left. Two options:
 **The maths says:** exiting now is a guaranteed `22`. Exploring further has a strictly higher
 ceiling (`38.5`) but a floor *below* the guaranteed option (`20`, or less with a misidentification).
 Whether that trade is worth it depends entirely on how confident your team is in finding another
-token in the time left, this page can't answer that for you, but it can tell you the exact number
-you're risking to try.
+token in the time left. This page can't answer that for you, but it can tell you the exact number
+you're risking to try. Thus, weigh your own team's confidence against that number, not against a
+guess.
 
 ---
 
@@ -92,7 +94,7 @@ you're risking to try.
 - Redo Comparison 1 with your own team's typical real score instead of `20`. The break-even point
   where a map becomes "worth it" moves depending on how much you usually score first.
 - Redo Comparison 3 with your own team's real identification success rate instead of "best case /
-  worst case", if you're only right half the time, what does the expected value actually favour?
+  worst case". If you're only right half the time, what does the expected value actually favour?
 - [The costly mistakes page](costly-mistakes.md) (later in this series) covers the flip side of
   this page: the ways teams lose points they didn't need to, rather than the trades they chose to
   make.
