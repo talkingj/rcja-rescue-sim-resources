@@ -2,8 +2,9 @@
 
 The robot has a second sensor pointing straight down: a colour sensor that tells you what kind of
 tile it's standing on. [Understanding the field](rules-field.md) already covers what each floor
-colour means in the rules. This page is about reading that colour from code, and what we actually
-saw when we did. It takes about 15 minutes.
+colour means in the rules.
+To turn those rules into a live reading, this page has you read that colour from code and see what
+we actually found. It takes about 15 minutes.
 
 !!! note "What you're building"
     A wall-avoiding controller (borrowed from the very first sample you ran) with one line added:
@@ -22,8 +23,9 @@ image = colour_sensor.getImage()
 b, g, r = image[0], image[1], image[2]
 ```
 
-That byte order (BGRA, not RGB) is easy to get backwards. We checked it against the real result in
-Step 3 before trusting it.
+That byte order (BGRA, not RGB) is easy to get backwards.
+To avoid trusting a byte order that's easy to get wrong, we checked it against the real result in
+Step 3 before relying on it.
 
 ---
 
@@ -77,7 +79,7 @@ while robot.step(timeStep) != -1:
 ```
 
 We reused the wall-avoidance from `ExamplePlayerController_updated.py` so the robot actually
-covers ground instead of sitting still, only printing when the colour changes keeps the console
+covers ground instead of sitting still. Only printing when the colour changes keeps the console
 readable.
 
 ---
@@ -102,7 +104,7 @@ readable.
     COLOUR CHANGED to r=251 g=251 b=251  at t=3.3s
     ```
 
-    All of these are shades of the same near-white grey, `r`, `g`, and `b` always equal to each
+    All of these are shades of the same near-white grey — `r`, `g`, and `b` always equal to each
     other. That's expected: plain floor has no colour tint, just brightness that flickers a little
     with the simulated lighting as the robot moves.
 
@@ -115,31 +117,31 @@ and a swamp tile reached by a short deliberate drive both landed in the exact sa
 near-white band as ordinary floor tiles.
 
 **On this build, the colour sensor alone cannot tell a checkpoint or a swamp apart from plain
-floor.** If your strategy depends on knowing you've reached a checkpoint, you need the game info
-the supervisor reports (a later page in this series), not this sensor.
+floor.** Therefore, if your strategy depends on knowing you've reached a checkpoint, you need the
+game info the supervisor reports (a later page in this series), not this sensor.
 
 ### What we couldn't verify this session
 
 We didn't manage to safely and repeatably drive the robot onto a hole tile or a coloured passage
-tile to quote a real reading from either, the maze routes to reach them from the practice worlds
+tile to quote a real reading from either, as the maze routes to reach them from the practice worlds
 we tried needed more precise navigation than this page's simple wall-avoidance can manage.
 [Understanding the field](rules-field.md) and [Victims and hazmats](rules-tokens.md) describe what
-to expect (a black-edged gap for a hole, a specific solid colour per passage). Until you've measured
-it yourself, don't hard-code an exact number for either: watch for a **large, sudden** change away
-from the near-white range this page confirmed, and treat that as a reason to stop and look, rather
-than trusting a guessed threshold.
+to expect (a black-edged gap for a hole, a specific solid colour per passage). However, until you've
+measured it yourself, don't hard-code an exact number for either: watch for a **large, sudden**
+change away from the near-white range this page confirmed, and treat that as a reason to stop and
+look, rather than trusting a guessed threshold.
 
 ---
 
 ## Now make it your own
 
-- Print `image` itself (the raw 4 bytes) before decoding it, and check the fourth byte, alpha, it
+- Print `image` itself (the raw 4 bytes) before decoding it, and check the fourth byte, alpha — it
   should stay constant even while r/g/b change.
 - Add a `print()` that shows all three channels divided by 255, so you're looking at numbers from
   0 to 1 instead of 0 to 255, useful for comparing against the tile colours described in
   [Understanding the field](rules-field.md).
 - Try slowing the robot down. The near-white readings above jitter by a few points frame to frame,
-  slower driving makes it easier to tell real colour changes from that noise.
+  meaning slower driving makes it easier to tell real colour changes from that noise.
 
 Next in this series: [a wall-follower](code-wall-follower.md) that combines this page and the last
 two into a robot that can actually survive a maze.
@@ -152,13 +154,13 @@ two into a robot that can actually survive a maze.
   `.enable(timeStep)` just like any other sensor, and needs at least one `robot.step()` to have run
   before `getImage()` returns real data. If you call it before the first step, you'll get nothing
   useful.
-- **Every reading looks identical, `r`, `g`, and `b` never seem to change at all.** That may be
+- **Every reading looks identical. `r`, `g`, and `b` never seem to change at all.** That may be
   correct, not a bug: as this page found, ordinary floor, checkpoints, and swamps all read close to
   the same near-white value on this build. Don't assume your sensor is broken just because the
   number isn't moving.
 - **You expected a specific colour (like the black hole or a coloured passage) and got white
   instead.** You're most likely still on plain floor. We ran into exactly this trying to reach
-  those tiles this session, see the note above.
+  those tiles this session — see the note above.
 
 ---
 
