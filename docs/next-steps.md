@@ -1,8 +1,9 @@
 # What's next: sensors
 
-You've got a robot driving itself and you've changed how fast it goes. That's the whole loop this
-guide teaches: **edit code → reload → watch what changes.** Everything past this point uses that
-same loop, just with more interesting code.
+You've got a robot driving itself and you've changed how fast it goes.
+
+To build on that, everything past this point uses the same **edit code → reload → watch what
+changes** loop, just with more interesting code.
 
 !!! success "The full code tutorial series now exists on this site"
     This page used to be a teaser with no tutorial behind it. That's no longer true: **[Code: build
@@ -30,8 +31,9 @@ sensor first.
 
 A distance sensor is a **device**, a piece of hardware code can talk to. It returns a number, and on
 this build it works the opposite way you might expect: a high number means open space, a low number
-means something's close. [Reading a distance sensor](code-sensors.md) has the real values from a
-real run. Reading one in code looks like this:
+means something's close, meaning the robot already has the data it needs to avoid walls.
+[Reading a distance sensor](code-sensors.md) has the real values from a real run. Reading one in
+code looks like this:
 
 ```python
 distance_sensor = robot.getDevice("ps0")
@@ -46,7 +48,7 @@ you drag the robot near a wall.
 ## After that: mapping and victims
 
 The full competition asks the robot to do three things at once, each building on what you've
-already touched, and each now has both a rules explanation and a real, trialled code tutorial:
+already touched. Each now has both a rules explanation and a real, trialled code tutorial:
 
 - **Navigate the maze** without bumping into walls. [A wall-follower that survives
   world1](code-wall-follower.md) builds one, and reports honestly on how much of the maze it does
@@ -75,5 +77,5 @@ mistakes that quietly cost the most.
   for "my thing is broken" questions. Look for the invite link on the
   [Erebus GitHub page](https://github.com/robocup-junior/erebus).
 
-You've installed a real simulator, run a real robot, and changed real code. Sensors are just the
-next number to change.
+You've installed a real simulator, run a real robot, and changed real code. Therefore, sensors are
+just the next number to change.
