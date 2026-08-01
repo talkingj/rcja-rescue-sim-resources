@@ -1,9 +1,9 @@
 # Official rules (2026), in plain markdown
 
 This is a plain-markdown copy of the official *RoboCupJunior Rescue Simulation Rules 2026*, reformatted
-here for easier reading, searching, and linking from the rest of this site. The wording below is kept
-close to the source document on purpose: these are the actual rules your team is bound by, not a
-retelling.
+here for easier reading, searching, and linking from the rest of this site. The rules below have been
+reformatted into plain markdown and copy-edited for readability; the official PDF and the RoboCupJunior
+Forum remain the only authority on what your team is bound by.
 
 !!! warning "The PDF is the authority, not this page"
     The English rules published by the RoboCupJunior Rescue Committee are the **only official rules**.
@@ -43,23 +43,24 @@ non-English speakers to understand the rules better; it is the responsibility of
 understand the official rules.
 
 The RoboCupJunior Rescue Simulation rules are developed and reviewed by the RoboCupJunior Rescue
-Committee. The simulation platform is developed and maintained by the Platform development team.
+Committee. Similarly, the simulation platform is developed and maintained by the Platform development
+team.
 
 *The "robot" refers to "virtual robot" in these rules.*
 
 ??? note "Changes from the 2025 RoboCupJunior Rescue Simulation Rules"
     - Deleted "Terms and Definitions".
     - Deleted the old text about games being executed "in one of the following ways or another way."
-    - Deleted the old text about the organizers running games on the organizer's computer / a Docker-based cloud environment.
-    - Added back "The organizers will run the games on a server-client model and prepare one RJ-45 socket for teams to connect to the game server. Teams must prepare a computer and an ethernet cable to run the prepared programs."
+    - Deleted the old text about the organisers running games on the organiser's computer / a Docker-based cloud environment.
+    - Added back "The organisers will run the games on a server-client model and prepare one RJ-45 socket for teams to connect to the game server. Teams must prepare a computer and an ethernet cable to run the prepared programs."
     - Changed "are" to "can be" (wall placement wording).
     - Deleted "In the end, since walls can take any shape, there is no real distinction between objects and walls."
     - Swamp speed wording changed from a flat "5 times the normal rate" to an escalating rate (see [Swamps, obstacles, and holes](rules-field.md#swamps-obstacles-and-holes)).
-    - Added: obstacle centers are always on a tile, never on an edge; no more than one obstacle per tile.
+    - Added: obstacle centres are always on a tile, never on an edge; no more than one obstacle per tile.
     - Renamed "hazmat signs" → "cognitive targets", and "Wall tokens" → "Letter victims".
     - Renamed the health-status letters to symbols: H → Φ, S → Ψ, U → Ω.
     - Added the fake, 3D-textured decoy wall tokens.
-    - Replaced the old RoboCup Rescue League hazmat images with the new concentric-ring cognitive target design and its color → number → hazmat-type scoring formula.
+    - Replaced the old RoboCup Rescue League hazmat images with the new concentric-ring cognitive target design and its colour → number → hazmat-type scoring formula.
     - Added: "There will not be any tile that is simultaneously two or more of: swamp, hole, checkpoint, starting tile, tile with obstacle, or area passage."
     - Added the mapping bonus formula detail `*1.2` and a required short video demonstrating the server-client setup, submitted alongside the TDP, Poster, and Project Video.
 
@@ -79,8 +80,10 @@ Committee. The simulation platform is developed and maintained by the Platform d
 
 These rules apply to the international RoboCupJunior competition. However, regional, SuperRegional,
 and local tournaments may have variations or adaptations to these rules to suit their specific
-competition needs. It is important to check with the organizers of the tournaments you are
-participating in to confirm which exact rules will be in use.
+competition needs.
+
+To confirm which exact rules will be in use, it is important to check with the organisers of the
+tournaments you are participating in.
 
 If teams are unsure about any aspects of the General Rules or specific League Rules, they are
 encouraged to inquire via the official RoboCupJunior Forum: <https://junior.forum.robocup.org/>. Teams
@@ -103,12 +106,12 @@ Each Junior team must have at least one Junior Mentor registered and attending w
 
 Mentors and Parent/Chaperones are responsible for supervising their teams and maintaining a duty of
 care/well-being for their team members, as appropriate for their home region's regulations. Any
-concerns regarding team member welfare should be brought to the attention of the event organizers
+concerns regarding team member welfare should be brought to the attention of the event organisers
 immediately.
 
 The Junior Mentor is expected to be present during all official competition events with their team.
 They must not interact in an imposing manner with teams, robots, judges, or the judging process. Any
-incident considered inappropriate will be handled by the event organizers and may lead to disciplinary
+incident considered inappropriate will be handled by the event organisers and may lead to disciplinary
 actions.
 
 **1.1.3. Age Requirements**
@@ -128,7 +131,7 @@ actions.
 - To qualify for the International competition, each region's Regional Representative completes the
   Slot Allocation Process at the start of the Competition year.
 - After the region's local qualifying tournament, the Regional Representative assigns slots. Once
-  confirmed by the RoboCupJunior organizers, qualified teams are invited to register through the
+  confirmed by the RoboCupJunior organisers, qualified teams are invited to register through the
   official RoboCup Federation registration system.
 - The qualification process differs by region size, but slot allocation must strongly reflect results
   from regional competitions.
@@ -167,7 +170,7 @@ actions.
 - **Power management:** secure batteries, safe wiring, and emergency stop functionality.
 - **Mechanical safety:** no sharp edges, pinch points, or other hazards; actuators appropriate for the
   robot's size and function.
-- **Hazardous behavior:** teams must report potentially dangerous robot behaviors at least two weeks
+- **Hazardous behaviour:** teams must report potentially dangerous robot behaviours at least two weeks
   before a RoboCupJunior event.
 
 ### 1.4. Documentation and Sharing Requirements
@@ -194,10 +197,10 @@ used, including component name/description, supplier/source, status (new/reused)
 custom-built, and price. A standardized BOM template is provided with the international competition's
 documentation submissions.
 
-### 1.5. Spirit and Behavior
+### 1.5. Spirit and Behaviour
 
-**1.5.1. Behavior** — All participants are expected to be considerate and polite, especially (but not
-only) towards other participants, volunteers, referees, and organizers of all Junior and Major
+**1.5.1. Behaviour** — All participants are expected to be considerate and polite, especially (but not
+only) towards other participants, volunteers, referees, and organisers of all Junior and Major
 Leagues, as well as the host venue.
 
 **1.5.2. Code of Conduct** — All organisers, volunteers, team members, mentors, supporters, and
@@ -223,7 +226,7 @@ they do it.
   the team's performance during competition areas (extended phone/video calls, remote desktop control,
   etc. all count).
 - Breaches may lead to disciplinary action.
-- Teams are recommended to seek help from other teams or organizers if struggling with issues onsite.
+- Teams are recommended to seek help from other teams or organisers if struggling with issues onsite.
 
 **1.5.5. Violations** — Teams, mentors/supporters, or members that repeatedly conduct themselves
 unacceptably, or in violation of the General or League Rules, may be disqualified from the tournament
@@ -243,7 +246,7 @@ and asked to leave the venue.
 2. Humans who cause deliberate interference with robots or damage the field will be disqualified.
 3. It is expected that all teams aim to participate fairly.
 
-### 2.3. Behavior
+### 2.3. Behaviour
 1. Each team is responsible for verifying the latest version of the rules on the RoboCupJunior Official
    website and additional clarifications/corrections on the official forum before the competition.
 2. Participants should be mindful of other people and their robots when moving around the venue.
@@ -251,7 +254,7 @@ and asked to leave the venue.
 4. Teams are responsible for checking updated information (schedules, meetings, announcements) during
    the event.
 5. Participants and companions who misbehave may be asked to leave the venue and risk disqualification.
-6. Referees, officials, tournament organizers, and local law enforcement will enforce these rules
+6. Referees, officials, tournament organisers, and local law enforcement will enforce these rules
    equally to all participants.
 7. Teams are expected to be at the venue early on setup day, when important activities (registration,
    participation raffle, interviews, captains' and mentors' meetings, etc.) occur.
@@ -270,13 +273,13 @@ and asked to leave the venue.
 1. Fraud and misconduct are not condoned, including: mentors working on a student robot's software or
    hardware during the competition; and more experienced students doing the work for other groups
    rather than just advising (risks disqualification).
-2. RoboCupJunior reserves the right to revoke an award if fraudulent behavior is proven after the award
+2. RoboCupJunior reserves the right to revoke an award if fraudulent behaviour is proven after the award
    ceremony.
 3. A mentor proven to have intentionally modified/worked on a student's robot during the competition
    will be banned from future RoboCupJunior participation.
 4. Teams that violate the code of conduct can be disqualified from the tournament; disqualifying a
    single team member from further participation is also possible.
-5. Referees/officials/organizers/law enforcement will warn teams for less severe violations. A team can
+5. Referees/officials/organisers/law enforcement will warn teams for less severe violations. A team can
    be disqualified immediately, without warning, for severe or repeated violations.
 
 ### 2.6. Sharing
@@ -293,18 +296,18 @@ and asked to leave the venue.
 ### 3.1. Simulation platforms
 1. Games run on a platform called Webots. Setup guide: Platform wiki page.
 2. Teams are required to create programs to solve maze tasks.
-3. The organizers will run the games on a server-client model and prepare one RJ-45 socket for teams to
+3. The organisers will run the games on a server-client model and prepare one RJ-45 socket for teams to
    connect to the game server. Teams must prepare a computer and an ethernet cable to run the prepared
    programs; documentation is on the Remote Controller page.
 4. Teams are encouraged to develop their own worlds and upload them to the forum to enable sharing.
-5. The following OpenGL configurations will be used at the competition unless the organizer announces
+5. The following OpenGL configurations will be used at the competition unless the organiser announces
    otherwise: Ambient Occlusion — Low; Texture Quality — Low; Max Texture Filtering — 4; Shadow —
    Disabled; Anti-aliasing — Disabled.
 
 ### 3.2. Description
 1. The field may be divided into four distinct areas with different types of walls for the robot to
    navigate around.
-2. All areas are connected by a passage of one standard tile in width. A color marks the floor of this
+2. All areas are connected by a passage of one standard tile in width. A colour marks the floor of this
    passage.
 3. The field layout consists of a collection of tiles with a horizontal floor, a perimeter wall, and
    walls within the field.
@@ -320,14 +323,14 @@ and asked to leave the venue.
 2. Walls are 1 cm thick and 6 cm tall.
     - **Area 1:** walls can be placed on the edges of each tile.
     - **Area 2:** walls can be placed on the edges of each quarter tile.
-    - **Area 3:** walls can be placed on the edges of each quarter tile; organizers can round a
+    - **Area 3:** walls can be placed on the edges of each quarter tile; organisers can round a
       90-degree corner into a quarter circle.
     - **Area 4:** not based on a tile system — walls and obstacles are placed arbitrarily, not on a
       grid. Various objects (e.g. boxes) will be inside this area; these objects don't vary by height
       (in the context of the robot).
 3. Pathways must be at least the width of the robot itself, and may open into foyers wider than the
    pathways.
-4. Passages connecting areas (e.g. 1→2, 3→4) are distinctively color-coded. Each passage is a single
+4. Passages connecting areas (e.g. 1→2, 3→4) are distinctively colour-coded. Each passage is a single
    standard-width tile with two sides walled, so it has an unambiguous entrance and exit.
 5. One tile in Area 1 is the starting tile, where a robot should start the run.
 6. Tiles that lead to the starting tile by consistently following the leftmost or rightmost wall are
@@ -341,8 +344,8 @@ and asked to leave the venue.
 
 ### 3.4. Division of Areas
 
-![Which color passage connects which pair of areas](assets/rules/area-passage-colors.png)
-*Figure: official RoboCupJunior Rescue Simulation Rules 2026. Actual color tones follow the platform
+![Which colour passage connects which pair of areas](assets/rules/area-passage-colors.png)
+*Figure: official RoboCupJunior Rescue Simulation Rules 2026. Actual colour tones follow the platform
 implementation.*
 
 ### 3.5. Checkpoints
@@ -354,7 +357,7 @@ implementation.*
 All of these can be placed anywhere in the field, with the following restrictions:
 
 **Swamps**
-- Color: brown.
+- Colour: brown.
 - While the robot is on this tile, the simulator's time runs faster.
 - The first time the robot enters a given swamp, simulation time is consumed 5× faster than normal
   while it's inside. Each subsequent entry into the *same* swamp increases that rate by one point
@@ -363,13 +366,13 @@ All of these can be placed anywhere in the field, with the following restriction
 **Obstacles**
 - May be fixed to the floor.
 - May be any shape: rectangular, pyramidal, spherical, or cylindrical.
-- Color is not specified.
+- Colour is not specified.
 - Affect the width of the pathway.
-- The center of an obstacle is always on a tile, never on an edge between tiles.
+- The centre of an obstacle is always on a tile, never on an edge between tiles.
 - No more than one obstacle per tile.
 
 **Holes**
-- The edge of a hole is colored black and sits 1.5 cm from neighboring tiles.
+- The edge of a hole is coloured black and sits 1.5 cm from neighboring tiles.
 - The robot has to avoid the hole.
 
 ![Swamp, hole, and obstacle side by side](assets/rules/swamp-hole-obstacle.png)
@@ -398,20 +401,20 @@ All of these can be placed anywhere in the field, with the following restriction
 6. They're a circle 5 cm in diameter, made of up to five concentric rings. The innermost circle has a
    1 cm diameter; each subsequent ring's diameter increases by 1 cm, giving rings of 1, 2, 3, 4, and
    5 cm.
-7. The rings and center circle can each be a different color. Color maps to a numerical value:
+7. The rings and centre circle can each be a different colour. Colour maps to a numerical value:
     - Black = −2
     - Red = −1
     - Yellow = 0
     - Green = 1
     - Blue = 2
-8. The hazmat type is calculated by summing the values of all 4 rings plus the center circle. If the
+8. The hazmat type is calculated by summing the values of all 4 rings plus the centre circle. If the
    sum isn't in the table below, the target must be treated as a fake victim.
     - Flammable Gas [F]: sum = 0
     - Poison [P]: sum = 1
     - Corrosive [C]: sum = 2
     - Organic Peroxide [O]: sum = 3
-9. Adjacent rings of the same color are **not** merged — always sum all 5 rings separately, even if
-   colors repeat.
+9. Adjacent rings of the same colour are **not** merged — always sum all 5 rings separately, even if
+   colours repeat.
 
 ![Two worked examples of decoding a cognitive target's rings](assets/rules/cognitive-target-rings.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
@@ -424,7 +427,7 @@ All of these can be placed anywhere in the field, with the following restriction
 ## 4. Robots
 
 ### 4.1. Construction
-1. The organizers provide the robot model used on each platform.
+1. The organisers provide the robot model used on each platform.
 2. Using the robot customizer tool, teams can customize their robot's hardware (sensor locations,
    sensor types, wheel location, etc.).
 3. There is an upper bound to the budget: each component costs a certain amount (viewable in the Robot
@@ -434,14 +437,14 @@ All of these can be placed anywhere in the field, with the following restriction
 ### 4.2. Sensors
 1. The robot has the following sensors:
     - **Location sensor (GPS)** — detects where the robot is in the field.
-    - **Color sensor** — detects floor color.
+    - **Colour sensor** — detects floor colour.
     - **Distance sensors** — measure distance to surrounding walls or obstacles.
-    - **RGB cameras** — search for letter victims and cognitive target signs, detect floor color, and
+    - **RGB cameras** — search for letter victims and cognitive target signs, detect floor colour, and
       more.
     - **LiDAR** — measures distance to surrounding walls or obstacles.
     - **Inertial measurement unit (IMU)** — gyroscopic and accelerometer sensing.
 2. The Rescue Committee builds the simulation world and robot with noise similar to real-world noise
-   levels. Programs should be robust to this noise; organizers will not change noise levels within the
+   levels. Programs should be robust to this noise; organisers will not change noise levels within the
    simulation for the competition. All teams are expected to design their systems with these realistic
    conditions in mind.
 
@@ -468,7 +471,7 @@ All of these can be placed anywhere in the field, with the following restriction
 3. All teams must complete a web form before the competition so referees can prepare better for
    interviews; instructions are provided at least 4 weeks before the competition.
 4. All teams must submit their source code and proper documents before the competition. With team
-   agreement, organizers may share them online afterward so other teams can draw inspiration and learn.
+   agreement, organisers may share them online afterward so other teams can draw inspiration and learn.
 
 ### 4.6. Violations
 1. If a team's robot or program violates the rules, the team must fix it within the tournament schedule
@@ -483,7 +486,7 @@ All of these can be placed anywhere in the field, with the following restriction
 1. When possible, teams have access to practice simulation environments for calibration and testing
    throughout the competition.
 2. Where dedicated independent simulation environments exist for competition vs. practice, it's at the
-   organizers' discretion whether testing is allowed in the competition environments.
+   organisers' discretion whether testing is allowed in the competition environments.
 
 ### 5.2. Humans
 1. Teams designate one member as "captain" and another as "co-captain." Only these two may access the
@@ -493,13 +496,13 @@ All of these can be placed anywhere in the field, with the following restriction
 3. No one is allowed to intentionally touch the simulation environments during a game.
 
 ### 5.3. Before the game
-1. Organizers will announce in advance how to participate in the games; it's the team's responsibility
+1. Organisers will announce in advance how to participate in the games; it's the team's responsibility
    to check and follow the announcements.
 2. Failure to comply, whether intended or not, deducts 20%–100% of that game's score. The exact
-   percentage is set by the organizer based on fairness across teams and the competition; teams may not
+   percentage is set by the organiser based on fairness across teams and the competition; teams may not
    comment on this decision.
 3. If a team fails to play in a game for any reason, that game's score is 0 points.
-4. Organizers reveal each round's Competition World for the first time just before the games.
+4. Organisers reveal each round's Competition World for the first time just before the games.
 5. No program changes or updates are allowed after each round's deadline.
 6. A game begins at the scheduled starting time whether or not the team is present or ready. Start
    times are posted around the venue.
@@ -514,7 +517,7 @@ All of these can be placed anywhere in the field, with the following restriction
 4. Game time allowed is **8 minutes simulated time**. A second, real-time timer with a **10-minute**
    limit also runs in the control window. The game ends when either timer expires, whichever comes
    first.
-5. A "visited tile" means the center of the robot is inside it; the game management system makes this
+5. A "visited tile" means the centre of the robot is inside it; the game management system makes this
    judgment.
 
 ### 5.5. Lack of progress
@@ -532,7 +535,7 @@ All of these can be placed anywhere in the field, with the following restriction
 ### 5.6. Scoring
 1. To identify a wall token, the robot must stop at it for at least 1 second, then send the game
    manager a command with the wall token's type, in a platform-specific format.
-2. For a successful token identification (**TI**), the robot's center must be within half a tile
+2. For a successful token identification (**TI**), the robot's centre must be within half a tile
    distance of the wall token's location at the moment it's reported.
 
     ![The half-tile identification-distance rule, with correct and incorrect examples](assets/rules/identification-distance.png)
@@ -597,14 +600,14 @@ respective organiser.
 7. Ties are resolved based on the mean of normalized field scores.
 
 ### 6.2. Technical Challenge
-An additional part of the competition testing how quickly each team can modify their robot's behavior,
+An additional part of the competition testing how quickly each team can modify their robot's behaviour,
 via one or more mini-tasks with a limited timespan.
 
 1. Takes place after the scoring runs have ended.
 2. Individual task rules are not announced beforehand; teams have only limited time to prepare.
 3. Timeframe for completion is announced alongside the rules and scoring, at a team meeting after the
    scoring runs.
-4. Requires reprogramming the robot to change its behavior — no hardware changes required compared to
+4. Requires reprogramming the robot to change its behaviour — no hardware changes required compared to
    the main scoring runs.
 5. Time given corresponds to task difficulty.
 6. Any external contact during the Technical Challenge is prohibited; non-team members may not be in
@@ -622,7 +625,7 @@ own award and focuses on cooperation between teams.
 ## 7. Open Technical Evaluation
 
 ### 7.1. Description
-1. Organizers evaluate your technical innovation during a dedicated time frame; all teams prepare for
+1. Organisers evaluate your technical innovation during a dedicated time frame; all teams prepare for
    an open display.
 2. Judges circulate and interact with teams in a casual, conversational Q&A atmosphere.
 3. Main objective: emphasize the innovation's ingenuity — technical advances over existing knowledge,
@@ -678,7 +681,7 @@ own award and focuses on cooperation between teams.
 1. For unforeseen problems or robot capabilities, rules may be modified by the RoboCupJunior Rescue
    Committee Chair together with available committee members, even during a tournament.
 2. If team captains/mentors don't attend the team meetings where such problems and resulting rule
-   modifications are discussed, organizers will understand they agreed to and were aware of the
+   modifications are discussed, organisers will understand they agreed to and were aware of the
    changes.
 
 ---
@@ -688,7 +691,7 @@ Footnotes below reproduce the source document's own change-history notes.*
 
 [^1]: Previous version: "Depending on the competition, games may be executed in one of the following ways or another way. The organizer will notify the teams in advance of how the games will be executed at the competition. It is the responsibility of the teams to be prepared to participate in the games in the manner notified."
 [^2]: Previous version: "The organizers will run the games on a server-client model and prepare one RJ-45 socket for teams to connect to the game server. Teams must prepare a computer and an ethernet cable to run the prepared programs. There is documentation at Remote Controller page."
-[^3]: Previous version described the organizer recording games on their own computer, or a Docker-based cloud execution model via the erebus-dockerfiles repository.
+[^3]: Previous version described the organiser recording games on their own computer, or a Docker-based cloud execution model via the erebus-dockerfiles repository.
 [^4]: Changed from "are" to "can be."
 [^5]: Previous version: "In the end, since walls can take any shape, there is no real distinction between objects and walls."
 [^6]: Changed from "While the robot is on this tile, simulation time is consumed at 5 times the normal rate" to the current escalating-rate wording.
