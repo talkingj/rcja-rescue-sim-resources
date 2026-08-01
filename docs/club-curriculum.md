@@ -1,8 +1,8 @@
 # An 8-week club curriculum
 
 A term's worth of weekly club sessions, each week pointing at pages that already exist on this site.
-No week references material that doesn't exist yet, every link below is a real, already-verified
-page.
+No week references material that doesn't exist yet. Additionally, every link below points to a real,
+already-verified page.
 
 !!! note "Who this page is for"
     The teacher or mentor running a term-long club, not a single class period. For a single 45-60
@@ -10,9 +10,9 @@ page.
 
 ## How to use this page
 
-Each week lists the pages to assign, roughly one 60-90 minute club session's worth, plus a short
-note on what to check before moving on. Assign pages as homework reading and use club time for the
-hands-on parts (every Track C page is written to be followed along with a laptop and Webots open).
+To keep club time free for the hands-on parts, assign each week's pages as homework reading — every
+Track C page is written to be followed along with a laptop and Webots open. Each week below lists
+roughly one 60-90 minute session's worth, plus a short note on what to check before moving on.
 
 ## Week 1: Setup
 
@@ -39,8 +39,8 @@ measured amount, not just "some amount that looked like 90 degrees."
 
 **Check before moving on:** every student's robot can run for a full 3 minutes in `world1` without
 permanently getting stuck. [This site's own wall-follower still settles into a small loop rather
-than touring the maze](code-wall-follower.md), don't expect full coverage, that's a real, unsolved
-problem, not a bar this week's work needs to clear.
+than touring the maze](code-wall-follower.md), meaning full coverage isn't realistic yet. However,
+that's a real, unsolved problem, not a bar this week's work needs to clear.
 
 ## Week 4: Seeing and reporting
 
@@ -68,8 +68,8 @@ page](strategy-run-budget.md#what-running-out-the-clock-actually-costs-you).
 - [Putting it together: a complete scored run](code-complete-run.md)
 
 **Check before moving on:** every student has combined at least detection and reporting into one
-controller and watched it run without a supervisor's help, [same honest test this site ran on
-itself](code-complete-run.md), it's fine, expected even, if it doesn't score every time.
+controller and watched it run without a supervisor's help — [the same honest test this site ran on
+itself](code-complete-run.md). It's fine, expected even, if it doesn't score every time.
 
 ## Week 7: Strategy
 
@@ -95,10 +95,10 @@ once, start to finish, with a real final score, whatever that score turns out to
 
 ## If a week runs long
 
-Every week above assumes roughly one club session. If a team needs two sessions for a given week,
-that's normal, especially weeks 3 and 6, both build on the site's own hardest, still-unsolved
-problem (reliable maze coverage). Don't compress the schedule by skipping the "check before moving
-on" item, later weeks assume it.
+To account for the site's hardest, still-unsolved problem (reliable maze coverage), plan for two
+sessions on weeks 3 and 6 if a team needs them — that's normal, not a sign anything's wrong.
+Therefore, don't compress the schedule by skipping the "check before moving on" item: later weeks
+assume it.
 
 ---
 
