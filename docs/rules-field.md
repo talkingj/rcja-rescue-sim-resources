@@ -1,8 +1,8 @@
 # Understanding the field
 
-Before your robot can search for victims, it helps to understand the world it's searching. This page
+To search for victims, your robot first needs to understand the world it's searching in. This page
 covers the maze itself: the four areas, the tiles it's built from, and the hazards scattered through
-it. Nothing here is code. It's the map in your head that the code you'll eventually write is trying to
+it. Nothing here is code — it's the map in your head that the code you'll eventually write is trying to
 build.
 
 !!! note "Where this fits"
@@ -19,9 +19,9 @@ stuck, it doesn't fail; it gets sent back to the last checkpoint it reached and 
 ## The four areas
 
 The field is split into four areas, each a little harder to navigate than the last. They're laid out
-around a shared perimeter and connected to each other by short, color-coded one-tile passages.
+around a shared perimeter and connected to each other by short, colour-coded one-tile passages.
 
-![The 4 areas of the field, color-coded](assets/rules/field-areas-overview.png)
+![The 4 areas of the field, colour-coded](assets/rules/field-areas-overview.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
 
 - **Area 1** is the simplest: walls only meet at the edges of full 12 cm × 12 cm tiles.
@@ -33,13 +33,13 @@ around a shared perimeter and connected to each other by short, color-coded one-
   angles that aren't simply north/east/south/west.
 
 Every pair of areas that connects is joined by exactly one passage tile, walled on two sides so it has
-a clear entrance and exit, and painted a specific color:
+a clear entrance and exit, and painted a specific colour:
 
-![Which color passage connects which pair of areas](assets/rules/area-passage-colors.png)
-*Figure: official RoboCupJunior Rescue Simulation Rules 2026. Exact color tones depend on the platform.*
+![Which colour passage connects which pair of areas](assets/rules/area-passage-colors.png)
+*Figure: official RoboCupJunior Rescue Simulation Rules 2026. Exact colour tones depend on the platform.*
 
-That means if your robot's floor-color sensor reads "blue," you immediately know it just crossed
-between Area 1 and Area 2, no matter where in the maze that happened.
+To find out which two areas your robot just crossed, you only need to check its floor-colour sensor: a
+"blue" reading means it crossed between Area 1 and Area 2, no matter where in the maze that happened.
 
 ## Linear tiles vs. floating tiles
 
@@ -58,8 +58,8 @@ hint: a robot that only knows how to hug a wall will always miss the floating ti
 ## Checkpoints
 
 Silver tiles are **checkpoints**. They can show up anywhere on the field, and Area 4 always has one
-right after its entrance passage. Reaching one is worth points on its own, and, just as importantly,
-it's your robot's fallback position: if it gets stuck later, it's sent back to the last checkpoint it
+right after its entrance passage. Reaching one is worth points on its own. Just as importantly, it's
+your robot's fallback position: if it gets stuck later, it's sent back to the last checkpoint it
 touched, not all the way to the start.
 
 ## Swamps, obstacles, and holes
@@ -69,20 +69,20 @@ Three more things can appear anywhere in the maze:
 ![Swamp, hole, and obstacle side by side](assets/rules/swamp-hole-obstacle.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
 
-- **Swamps** (brown) don't block the robot, they slow down *time* instead. The clock runs 5× faster
+- **Swamps** (brown) don't block the robot — they slow down *time* instead. The clock runs 5× faster
   than normal the first time your robot is in a given swamp. Go back into that same swamp again later,
-  and it gets worse: 6× faster, then 7×, up to a cap of 10×. Swamps are a reason to avoid backtracking
-  through ones you've already crossed.
+  and it gets worse: 6× faster, then 7×, up to a cap of 10×. Therefore, swamps are a reason to avoid
+  backtracking through ones you've already crossed.
 - **Obstacles** are solid shapes (boxes, cylinders, spheres, pyramids) fixed to the floor. There's never
-  more than one on a single tile, and its center is always placed on a tile, not straddling the line
+  more than one on a single tile, and its centre is always placed on a tile, not straddling the line
   between two. Your robot has to steer around it.
 - **Holes** are exactly what they sound like: a black-edged gap in the floor your robot must not drive
   into. Falling in one triggers a Lack of Progress (see [How points are earned](rules-scoring.md)).
 
 ## Check yourself
 
-??? question "Your robot's color sensor reads yellow under it. What does that tell you?"
-    Checking the passage-color table above: yellow connects Area 1 and Area 3. Your robot just crossed
+??? question "Your robot's colour sensor reads yellow under it. What does that tell you?"
+    Checking the passage-colour table above: yellow connects Area 1 and Area 3. Your robot just crossed
     directly between those two areas.
 
 ??? question "Why would a robot that only ever 'follows the left wall' fail to find every victim?"
