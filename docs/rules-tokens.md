@@ -27,7 +27,7 @@ tells you the health status of a victim at that spot:
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
 
 These three Greek letters look nothing like the "H / S / U" they stand for on purpose. Don't try to
-match them by shape; just memorize the table. Flashcards help here more than you'd expect.
+match them by shape; just memorise the table. Flashcards help here more than you'd expect.
 
 !!! warning "Some wall tokens are fake"
     You can also find wall tokens with these same symbols, but rendered with visible **3D depth**
@@ -38,11 +38,11 @@ match them by shape; just memorize the table. Flashcards help here more than you
 
 ## Cognitive targets: reading the rings
 
-A cognitive target represents a hazardous chemical (a "hazmat"). Instead of a letter, it's a 5 cm
-circle made of concentric rings, like a tiny archery target. Each ring, and the center circle, is
-colored, and each color stands for a number:
+A cognitive target represents a hazardous chemical (a "hazmat"). Instead of a letter, this token is a
+5 cm circle made of concentric rings, like a tiny archery target. Each ring, and the centre circle, is
+coloured, and each colour stands for a number:
 
-| Color | Value |
+| Colour | Value |
 |---|---|
 | Black | −2 |
 | Red | −1 |
@@ -50,7 +50,7 @@ colored, and each color stands for a number:
 | Green | 1 |
 | Blue | 2 |
 
-To decode a target: read the colors from the **center outward** (center circle, then ring 1, ring 2,
+To decode a target: read the colours from the **centre outward** (centre circle, then ring 1, ring 2,
 ring 3, ring 4), convert each to its number, and add all 5 together. The total tells you the hazmat:
 
 | Sum | Hazmat |
@@ -61,13 +61,13 @@ ring 3, ring 4), convert each to its number, and add all 5 together. The total t
 | 3 | Organic Peroxide [O] |
 | anything else | Fake target — don't report it |
 
-**Important:** if two adjacent rings happen to be the same color, you still count them separately.
+**Important:** if two adjacent rings happen to be the same colour, you still count them separately.
 Never merge them into one ring. Always sum all 5 values.
 
 ![Two worked examples of decoding a cognitive target's rings](assets/rules/cognitive-target-rings.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
 
-Walking through the left example above, center to outward: Yellow, Blue, Red, Black, Green.
+Walking through the left example above, centre to outward: Yellow, Blue, Red, Black, Green.
 
 ```
 Yellow  =  0
@@ -93,7 +93,7 @@ total = -4   →  not 0, 1, 2, or 3, so this is a FAKE target
 
 ## Your turn: decode these four
 
-Work these out on paper first (colors are listed center-to-outward), then open each answer to check
+Work these out on paper first (colours are listed centre-to-outward), then open each answer to check
 yourself.
 
 **Target 1:** Red, Blue, Yellow, Yellow, Yellow
@@ -122,15 +122,16 @@ Want a printable version of this exercise to hand out? See the
 ## Spotting them in the maze
 
 Both kinds of wall tokens can appear on any wall your robot can get close enough to, including curved
-Area 3 walls, but never inside the one-tile passages that connect areas. Letter-victim signs can also
-be rotated, anywhere from −180° to 180°, so don't assume they're always sitting upright.
+Area 3 walls. However, they never appear inside the one-tile passages that connect areas.
+Letter-victim signs can also be rotated, anywhere from −180° to 180°, so don't assume they're always
+sitting upright.
 
 ![Letter victims and cognitive targets spotted in a maze render](assets/rules/wall-tokens-in-scene.png)
 *Figure: official RoboCupJunior Rescue Simulation Rules 2026.*
 
 ## What's next
 
-You know what your robot is hunting for. Next: what each of these is actually worth, and what makes
-the score go up or down: [How points are earned](rules-scoring.md).
+To find out what each of these is actually worth, and what makes the score go up or down, read
+[How points are earned](rules-scoring.md) next. You now know what your robot is hunting for.
 
 Unfamiliar word? Check the [glossary](glossary.md#rules-scoring-words).
