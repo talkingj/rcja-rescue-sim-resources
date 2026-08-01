@@ -1,9 +1,9 @@
 # Sending the exit message
 
-This page adapts the official `exit_test.py` sample, the shortest one in the whole official
-sample set, and pairs it with [the scoring page's](rules-scoring.md) two conditions for the exit
-bonus, so you can see for yourself both what happens when you meet them and what doesn't happen if
-you don't. About 10 minutes.
+To see for yourself what happens when you meet the exit bonus conditions — and what doesn't when
+you don't — this page adapts the official `exit_test.py` sample, the shortest one in the whole
+official sample set, and pairs it with [the scoring page's](rules-scoring.md) two conditions. About 10
+minutes.
 
 !!! note "Credit where it's due"
     The exit message itself is the official Erebus `exit_test.py` sample, three lines, unchanged.
@@ -23,8 +23,8 @@ and what it's done so far, per [the scoring page](rules-scoring.md#bonuses-appli
   target](code-reporting.md)) already, anywhere, anytime before this message.
 
 Meet both and you get a flat **+10%** on your entire score so far. Miss either one and nothing
-happens, no bonus, no penalty, the match still ends. Either way, sending `'E'` ends the match: the
-supervisor removes your robot from the simulation and there's no going back to keep scoring
+happens — no bonus, no penalty, the match still ends. Therefore, sending `'E'` is a one-way action:
+the supervisor removes your robot from the simulation and there's no going back to keep scoring
 afterward.
 
 ---
@@ -93,7 +93,9 @@ while robot.step(timeStep) != -1:
 
 This controller does three things in sequence, on a timer: identify a real victim (so there's a
 score, and so the "has identified something" condition is met), send an LoP request (which happens
-to relocate the robot back onto the start tile as a side effect), then exit.
+to relocate the robot back onto the start tile as a side effect), then exit. Additionally, the
+identification must register before the exit is sent — the two conditions are checked at the moment
+the supervisor receives `'E'`.
 
 ---
 
@@ -148,8 +150,8 @@ exactly this kind of intermittent nothing-happened result.
 - **The exit bonus never appears, even from the start tile.** Confirm you've actually identified
   something first, in this exact match, a plan to identify something later doesn't count.
 - **You send `'E'` from what you believe is the start tile, and get nothing.** Position checks in
-  this engine are exact, not approximate to the eye, if you drove there yourself rather than being
-  relocated, you may simply not be as centered on the tile as you think.
+  this engine are exact, not approximate to the eye; if you drove there yourself rather than being
+  relocated, you may simply not be as centred on the tile as you think.
 - **Nothing seems to happen at all after sending `'E'`.** That's actually correct, once the match
   ends there's no further message coming back, your controller's next `robot.step()` call will start
   returning `-1` as the simulation winds the robot down.
