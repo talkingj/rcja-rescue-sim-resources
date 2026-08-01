@@ -1,8 +1,8 @@
 # Your first run
 
 You've installed everything ([Windows](install-windows.md), [macOS](install-mac.md), or
-[Linux](install-linux.md)). Now you'll load the sample robot brain and watch the robot drive around
-the maze by itself. This takes about 5 minutes.
+[Linux](install-linux.md)). To see the simulator working before you write any code, you'll load the
+sample robot brain and watch the robot drive around the maze by itself. This takes about 5 minutes.
 
 !!! note "What you'll see by the end"
     The e-puck robot appears in the maze and drives forward on its own, slowing and turning when it
@@ -27,7 +27,7 @@ the maze by itself. This takes about 5 minutes.
 ## Step 2: Load the sample robot code
 
 The robot needs a **controller**, the Python file that acts as its brain. Erebus comes with a sample
-one.
+one, meaning you can test the setup without writing anything yet.
 
 1. In the Competition Controller panel, click the **LOAD** button (top band).
 
@@ -49,7 +49,8 @@ one.
 
 ## Step 3: Press play and watch it drive
 
-The Competition Controller has three round buttons. The left one starts the match.
+The Competition Controller has three round buttons. The left one starts the match, while the
+others pause and reset it.
 
 ![The three run buttons in the Competition Controller](assets/official/getting-started/controller.png)
 
@@ -83,6 +84,8 @@ maze.*
 
 ## The other buttons
 
+Additionally, the controller gives you two more controls:
+
 - **Pause** freezes the match so you can look around. Press start again to continue.
 
     ![The pause button](assets/official/getting-started/pause_button.png)
@@ -95,8 +98,8 @@ maze.*
 
 ## Move the robot by hand
 
-Click the robot in the maze and coloured arrows appear. **Drag an arrow** to slide the robot to a
-new spot. (The robot only shows up once you've pressed start.)
+To reposition the robot without restarting, click it in the maze and coloured arrows appear. Drag
+an arrow to slide the robot to a new spot. (The robot only shows up once you've pressed start.)
 
 ![Dragging the arrows to move the robot](assets/official/getting-started/manual.png)
 
@@ -114,4 +117,4 @@ new spot. (The robot only shows up once you've pressed start.)
 ---
 
 Next up: **[Make it move](make-it-move.md)**. You'll change one number in the robot's code and watch
-it drive differently. It's your first real taste of programming the robot.
+it drive differently, which is your first real taste of programming the robot.
