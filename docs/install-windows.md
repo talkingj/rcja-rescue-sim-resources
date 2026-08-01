@@ -1,7 +1,7 @@
 # Install on Windows
 
-This page sets up everything on a Windows 10 or 11 computer. Do the three steps **in order**, since
-each one needs the one before it. Give yourself about 30 minutes the first time.
+To get everything set up on a Windows 10 or 11 computer, do the three steps **in order**, since each
+one needs the one before it. Give yourself about 30 minutes the first time.
 
 !!! tip "Before you begin"
     If you haven't read [Before you start](before-you-start.md), do that first. It explains what
@@ -16,7 +16,8 @@ Python is the language your robot's instructions are written in.
 
 1. Go to the official Python download page: **<https://www.python.org/downloads/windows/>**.
 2. Download **Python 3.10.11** (the last 3.10 version with a Windows installer). Click the
-   **"Windows installer (64-bit)"** link. *(Python 3.9.x also works, but this guide uses 3.10.)*
+   **"Windows installer (64-bit)"** link. *(Python 3.9.x also works. However, this guide uses
+   3.10.)*
 3. Open the file you just downloaded. It's called something like `python-3.10.11-amd64.exe`.
 4. On the very first screen of the installer, **tick the box at the bottom that says
    "Add python.exe to PATH."** This is the most important click on the whole page. If you miss it,
@@ -46,13 +47,13 @@ Python is the language your robot's instructions are written in.
 
 Webots is the simulator, the 3D app where the maze and robot live.
 
-1. Download the **exact** version Erebus needs, **Webots R2023b**, straight from here:
+1. To get the **exact** version Erebus needs, download **Webots R2023b** straight from here:
    **[webots-R2023b_setup.exe](https://github.com/cyberbotics/webots/releases/download/R2023b/webots-R2023b_setup.exe)**.
    It's about 1 GB, so this download takes a while. That's normal.
 
     !!! warning "Use R2023b, not the newest Webots"
-        A newer Webots will give confusing errors with Erebus. Install **exactly R2023b**. The link
-        above already points to the right one.
+        A newer Webots will give confusing errors with Erebus. Therefore, install **exactly
+        R2023b** — the link above already points to the right one.
 
 2. Open the downloaded file and click through the installer, leaving every option at its default.
 3. Wait for it to finish, then click **Finish**.
@@ -72,7 +73,7 @@ isn't an installer. It's a folder of files you unzip.
 2. Under **"Assets"**, click **"Source code (zip)"** to download it.
 
     !!! warning "There's no file called 'Release Build.' Use 'Source code (zip)'"
-        Older guides say to download a "Release Build." Newer Erebus releases don't include one, so
+        Older guides say to download a "Release Build." Newer Erebus releases don't include one. Thus,
         **"Source code (zip)" is the real, complete package.** (We confirmed this against the current
         v26.1 release.)
 
