@@ -1,8 +1,8 @@
 # Install on Linux (Ubuntu)
 
-This page sets everything up on **Ubuntu 20.04 or 22.04**. Most steps are typed into a **terminal**
-(the window where you type commands instead of clicking, explained in the
-[glossary](glossary.md#setup-words)). Copy each command exactly. Give yourself about 30 minutes.
+To get everything set up on **Ubuntu 20.04 or 22.04**, work through the steps below in a
+**terminal** (the window where you type commands instead of clicking, explained in the
+[glossary](glossary.md#setup-words)), copying each command exactly. Give yourself about 30 minutes.
 
 !!! tip "Before you begin"
     If you haven't read [Before you start](before-you-start.md), do that first. It explains the
@@ -37,8 +37,8 @@ Open a terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run these 
     !!! note "Why more than three?"
         The official docs list only `numpy termcolor requests`, but the Competition Supervisor also
         needs `opencv-python`, `pillow`, and `overrides`, and `opencv-python` isn't installed
-        automatically. Installing the full list now saves you from a `No module named 'cv2'` crash
-        later. (We hit this on a real run and confirmed the fix.)
+        automatically. Therefore, installing the full list now saves you from a
+        `No module named 'cv2'` crash later. (We hit this on a real run and confirmed the fix.)
 
 !!! success "You should now have"
     `pip` and the libraries installed. Check that Python itself is present with `python3 --version`.
@@ -48,7 +48,8 @@ Open a terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run these 
 
 ## Step 2: Install Webots R2023b
 
-Erebus needs the **exact** version R2023b, not the newest Webots.
+To get the **exact** version Erebus needs, download **R2023b** — not the newest Webots — and
+install it.
 
 1. Download the R2023b package (about 1 GB, so this takes a while, and that's normal):
 
@@ -64,8 +65,8 @@ Erebus needs the **exact** version R2023b, not the newest Webots.
     ```
 
     !!! warning "Install exactly R2023b"
-        A newer Webots will give confusing errors with Erebus. The command above installs the
-        correct version.
+        A newer Webots will give confusing errors with Erebus. Therefore, the command above installs
+        the correct version.
 
 !!! success "You should now have"
     Webots installed. Test it by typing `webots` in the terminal, and it should open to a 3D window.
@@ -82,7 +83,7 @@ files you unzip, not an installer.
 2. Under **"Assets"**, download **"Source code (zip)"**.
 
     !!! warning "There's no 'Release Build' file. Use 'Source code (zip)'"
-        Older guides mention a "Release Build." Newer Erebus releases don't include one, so
+        Older guides mention a "Release Build." Newer Erebus releases don't include one. Thus,
         **"Source code (zip)" is the real, complete package** (confirmed against the current v26.1).
 
 3. Unzip it into a folder you'll remember, for example your home folder:
