@@ -1,9 +1,10 @@
 # Drawing the map: the mapping bonus
 
-At any point during a run, your robot can submit a matrix describing the maze it has explored, walls,
-holes, swamps, checkpoints, tokens, and all. Get it right and your entire score is multiplied by up to
-2.2×. This is the fiddliest part of the rules to read cold, so this page is entirely about building the
-matrix by hand once, slowly, before you ever have to make code do it.
+To stop this from tripping you up in code later, this page is entirely about building the matrix by
+hand once, slowly, before you ever have to automate it. At any point during a run, your robot can
+submit a matrix describing the maze it has explored — walls, holes, swamps, checkpoints, tokens, and
+all — and getting it right multiplies your entire score by up to 2.2×. This is the fiddliest part of
+the rules to read cold.
 
 !!! note "Where this fits"
     Fourth of five pages building on the [official rules](official-rules-2026.md). Previous:
@@ -15,11 +16,11 @@ Even in Area 1, the map matrix is built at **quarter-tile** resolution: every 12
 a 2×2 block of quarter-tiles. On top of that, the matrix also has a cell for every **edge** between
 quarter-tiles (where a wall might be) and every **vertex** where edges meet (corners). That's why the
 matrix always looks a lot bigger than the maze it describes: a simple 1×1 tile needs a 3×3 block of
-cells just by itself (2 quarter-tile centers... plus the edge and vertex cells around them, in each
+cells just by itself (2 quarter-tile centres... plus the edge and vertex cells around them, in each
 direction).
 
 If you've ever seen a "maze as a grid of odd and even coordinates" representation before, this is
-exactly that idea: cells at odd row/column positions are quarter-tile centers, cells at even
+exactly that idea: cells at odd row/column positions are quarter-tile centres, cells at even
 positions are the edges and vertices between them.
 
 ## The legend
@@ -100,13 +101,14 @@ right: that's Area 4, filled in wholesale rather than tile-by-tile.*
     ordered by their real position (top-to-bottom, then left-to-right).
 
 ??? question "Why does Area 4 get filled with `*` instead of the usual wall/hole/swamp codes?"
-    Area 4 isn't built on a tile grid at all, its walls and objects are placed arbitrarily, so there's
-    no quarter-tile system to encode against. The rules simply mark the whole area (border included)
-    with `*` rather than trying to force it into the grid format the other three areas use.
+    Area 4 isn't built on a tile grid at all — its walls and objects are placed arbitrarily.
+    Therefore, there's no quarter-tile system to encode against, and the rules simply mark the whole
+    area (border included) with `*` rather than trying to force it into the grid format the other
+    three areas use.
 
-??? question "You submit a map that's rotated 90° from how the organizers built it, but otherwise
+??? question "You submit a map that's rotated 90° from how the organisers built it, but otherwise
     identical. Does that hurt your mapping bonus?"
-    No. The organizers check your submitted matrix against the real one at every 90° rotation and use
+    No. The organisers check your submitted matrix against the real one at every 90° rotation and use
     whichever rotation matches best, so a correctly-shaped map submitted "sideways" still scores as
     fully correct.
 
