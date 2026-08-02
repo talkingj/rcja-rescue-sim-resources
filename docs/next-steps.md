@@ -45,35 +45,35 @@ you drag the robot near a wall.
 
 ## After that: mapping and victims
 
-The full competition asks the robot to do three things at once, each building on what you've
-already touched. Each now has both a rules explanation and a real, trialled code tutorial:
+The complete competition requires the robot to execute three concurrent tasks, each extending
+functionality already introduced.
 
-- **Navigate the maze** without bumping into walls. [A wall-follower that survives
-  world1](code-wall-follower.md) builds one, and reports honestly on how much of the maze it does
-  and doesn't cover.
-- **Find "victims"** using the robot's camera, little coloured or lettered markers on the walls. What
-  those markers mean and what they're worth is covered in [Victims and hazmats](rules-tokens.md) and
-  [How points are earned](rules-scoring.md); the code that actually sees one is [Spotting a victim
-  sign](code-victim-detection.md), and [Reporting a victim](code-reporting.md) turns that into real
-  points.
-- **Report a map** of the maze back to the Competition Supervisor before time runs out. The format is
-  covered in [Drawing the map](rules-map-format.md); [Building and submitting the map
-  matrix](code-mapping.md) is the code that sends one and shows the real score change.
+- **Maze navigation without wall collision.** [A wall-follower that survives
+  world1](code-wall-follower.md) implements this and documents its actual maze coverage,
+  including limitations.
+- **Victim detection** via the robot's camera, identifying coloured or lettered markers on walls.
+  Marker semantics and scoring values are specified in [Victims and hazmats](rules-tokens.md) and
+  [How points are earned](rules-scoring.md). Detection implementation is covered in [Spotting a
+  victim sign](code-victim-detection.md), and [Reporting a victim](code-reporting.md) converts
+  detection into scored points.
+- **Map submission** to the Competition Supervisor before time expiration. Format specification is
+  in [Drawing the map](rules-map-format.md); [Building and submitting the map
+  matrix](code-mapping.md) provides the implementation and demonstrates the resulting score change.
 
-Once you've been through all of Track C, [Spending your eight minutes](strategy-run-budget.md)
-starts a second series on strategy, budgeting your time, the maths behind real decisions, and the
-mistakes that quietly cost the most.
+Upon completing Track C, [Spending your eight minutes](strategy-run-budget.md) begins a second
+series covering strategy: time budgeting, the quantitative basis for run decisions, and common
+high-cost errors.
 
-## Where to go for the real thing
+## Additional resources
 
-- The official
-  [Erebus tutorials](https://erebus.rcj.cloud/docs/tutorials/) cover sensors, the camera, and
-  mapping in depth, using the same controller file you've already been editing.
+- The official [Erebus tutorials](https://erebus.rcj.cloud/docs/tutorials/) provide in-depth
+  coverage of sensors, camera use, and mapping, using the same controller file referenced
+  throughout this site.
 - The [RoboCupJunior Rescue Simulation forum](https://junior.forum.robocup.org/c/rescue-simulation)
-  is where teams ask setup and rules questions.
-- The Erebus Discord server is where most **technical support** happens. It's faster than the forum
-  for "my thing is broken" questions. Look for the invite link on the
+  handles setup and rules questions.
+- The Erebus Discord server handles most technical support and provides faster turnaround than the
+  forum for troubleshooting. The invite link is available on the
   [Erebus GitHub page](https://github.com/robocup-junior/erebus).
 
-You've installed a real simulator, run a real robot, and changed real code. Therefore, sensors are
-just the next number to change.
+At this point you have a working simulator installation, a functioning robot and direct experience
+modifying controller code. Sensor integration is the next incremental step.
