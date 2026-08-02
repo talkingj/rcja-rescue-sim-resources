@@ -1,13 +1,12 @@
 # Your first run
 
-You've installed everything ([Windows](install-windows.md), [macOS](install-mac.md), or
-[Linux](install-linux.md)). To see the simulator working before you write any code, you'll load the
-sample robot brain and watch the robot drive around the maze by itself. This takes about 5 minutes.
-
 !!! note "What you'll see by the end"
     The e-puck robot appears in the maze and drives forward on its own, slowing and turning when it
     gets near a wall. That's the sample code thinking for it, and it's code you'll edit yourself on
     the next page.
+
+    If you haven't installed yet: [Windows](install-windows.md), [macOS](install-mac.md), or
+    [Linux](install-linux.md).
 
 ---
 
@@ -33,8 +32,6 @@ one, meaning you can test the setup without writing anything yet.
 
     ![The Competition Controller before loading, with the LOAD button](assets/official/getting-started/main_screen_unloaded.png)
 
-    *Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
-
 2. A file picker opens. Go into the **`player_controllers`** folder and choose
    **`ExamplePlayerController_updated.py`**.
 
@@ -42,8 +39,6 @@ one, meaning you can test the setup without writing anything yet.
     The **LOAD button turns orange**, which means the code is loaded and ready.
 
     ![The LOAD button turned orange after loading](assets/official/getting-started/main_screen_loaded.png)
-
-    *Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
 
 ---
 
@@ -54,21 +49,18 @@ others pause and reset it.
 
 ![The three run buttons in the Competition Controller](assets/official/getting-started/controller.png)
 
-*Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
-
 1. Press the **start** (play) button.
 
     ![The start button](assets/official/getting-started/start_button.png)
-
-    *Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
 
 2. The robot appears in the maze and **starts driving forward on its own**. When it gets close to a
    wall, the sample code slows one wheel so the robot turns away.
 
 !!! note "First time only: a short wait"
-    The very first time, Webots may show **"Initializing…"** while it sets up the Python libraries
-    the simulator needs. Give it a minute or two. If it never finishes, or you see an error about a
-    missing module, see [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
+    The very first time, Webots may show **"Initializing…"** while it installs the Python
+    libraries the simulator needs; this is expected behaviour, not a hang. Allow a minute or two
+    for the process to complete. If it does not finish, or you see an error about a missing
+    module, see [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
 !!! success "You should now see"
     The robot driving around the start area by itself, turning away from walls. We ran this ourselves
@@ -102,8 +94,6 @@ To reposition the robot without restarting, click it in the maze and coloured ar
 an arrow to slide the robot to a new spot. (The robot only shows up once you've pressed start.)
 
 ![Dragging the arrows to move the robot](assets/official/getting-started/manual.png)
-
-*Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
 
 ---
 
