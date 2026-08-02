@@ -24,19 +24,20 @@ Unfamiliar terms are defined in the [glossary](glossary.md).
     Erebus **v26.1** (the current release, 2026 competition rules) requires **Webots R2023b**
     specifically. Do not use any newer releases.
 
-## What "done" looks like
+## Expected end state
 
-By the end of the install pages, you'll have:
+Upon completion of the install pages, the following should be true:
 
-- Python installed and working from a terminal.
-- Webots R2023b installed and opening to an empty 3D window.
-- The Erebus files unzipped into a folder you can find again.
+- Python is installed and accessible from a terminal.
+- Webots R2023b is installed and launches to an empty 3D window.
+- The Erebus files are extracted to a known, locatable directory.
 
-Then [Your first run](first-run.md) takes you from there to an actual robot driving around a maze on
-your screen.
+From this state, [Your first run](first-run.md) proceeds to a functioning robot navigating a
+maze on screen.
 
 ## If it goes wrong
 
-To avoid guessing when an install step fails, check [When it goes wrong](troubleshooting.md) for the
-exact error message, or re-read the step. The most common cause is skipping the "add to PATH"
-checkbox during the Python install, which the install page for your computer walks you through.
+If an installation step fails, consult [When it goes wrong](troubleshooting.md) for the specific
+error message rather than guessing at a fix, or re-verify the step against the instructions. The
+most common failure cause is omitting the "add to PATH" option during Python installation; the
+platform-specific install page addresses this explicitly.
