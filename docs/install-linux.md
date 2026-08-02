@@ -1,13 +1,10 @@
 # Install on Linux (Ubuntu)
 
-To get everything set up on **Ubuntu 20.04 or 22.04**, work through the steps below in a
-**terminal** (the window where you type commands instead of clicking, explained in the
-[glossary](glossary.md#setup-words)), copying each command exactly. Give yourself about 30 minutes.
-
 !!! tip "Before you begin"
     If you haven't read [Before you start](before-you-start.md), do that first. It explains the
-    three pieces (Python, Webots, Erebus). On Ubuntu, Python 3 is already installed, so you only add
-    a couple of pieces to it.
+    three pieces (Python, Webots, Erebus). Every unfamiliar word is in the
+    [Glossary](glossary.md#setup-words). On Ubuntu, Python 3 is already installed, so you only add a couple of
+    pieces to it.
 
 !!! note "Other Linux distributions"
     These exact commands are for **Ubuntu** (and Ubuntu-based systems like Linux Mint). On Fedora,
@@ -48,8 +45,8 @@ Open a terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run these 
 
 ## Step 2: Install Webots R2023b
 
-To get the **exact** version Erebus needs, download **R2023b** — not the newest Webots — and
-install it.
+Webots is the simulation environment in which the maze and robot are rendered. Download the exact
+version required by Erebus directly from this link:
 
 1. Download the R2023b package (about 1 GB, so this takes a while, and that's normal):
 
@@ -82,9 +79,9 @@ files you unzip, not an installer.
 1. Go to the latest release page: **<https://github.com/robocup-junior/erebus/releases/latest>**.
 2. Under **"Assets"**, download **"Source code (zip)"**.
 
-    !!! warning "There's no 'Release Build' file. Use 'Source code (zip)'"
-        Older guides mention a "Release Build." Newer Erebus releases don't include one. Thus,
-        **"Source code (zip)" is the real, complete package** (confirmed against the current v26.1).
+    !!! warning "There's no 'Release Build' file. Use 'Source code (zip)' instead."
+        Older guides reference downloading a "Release Build," but as of v26.1, Erebus releases no
+        longer include one. Use "Source code (zip)."
 
 3. Unzip it into a folder you'll remember, for example your home folder:
 
@@ -110,9 +107,10 @@ files you unzip, not an installer.
    **"Initializing…"**.
 
     !!! note "\"Initializing…\" can take a few minutes, and that's normal"
-        It looks frozen, but it isn't. It's setting up in the background. Wait a couple of minutes.
-        If it truly never finishes, remember you already installed the libraries in Step 1, so open
-        the console and read the actual error. See [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
+        It is installing Python libraries in the background; this is expected behaviour, not a hang.
+        Allow a couple of minutes for the process to complete. If it does not finish, remember you
+        already installed the libraries in Step 1, so open the console and read the actual error.
+        See [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
 !!! success "You should now have"
     When the maze is on screen and the Competition Controller panel shows a time limit, Linux setup
