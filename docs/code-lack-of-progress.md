@@ -108,8 +108,9 @@ hidden the whole effect.
     `22.5 → 17.5`, exactly `−5`, right after the acknowledgement. Full record:
     `trials/20260730-083834-C9-retry.json`.
 
-    Identification right after a spawn or relocate is timing-sensitive on this build — across
-    several re-test runs, the same code and spawn sometimes scored `22.5` and sometimes `0.0`.
+    Identification right after a spawn or relocate is timing-sensitive on this build — in 10
+    consecutive test runs the same code and spawn landed the identification only half the time
+    (5 of 10 scored `22.5`; the other 5 scored `0.0` despite sending an identical report).
     If the report scores `0.0` on the first try, reset and try again rather than assuming the code
     is wrong.
 
