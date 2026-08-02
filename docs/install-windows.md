@@ -1,8 +1,5 @@
 # Install on Windows
 
-To get everything set up on a Windows 10 or 11 computer, do the three steps **in order**, since each
-one needs the one before it. Give yourself about 30 minutes the first time.
-
 !!! tip "Before you begin"
     If you haven't read [Before you start](before-you-start.md), do that first. It explains what
     these three pieces (Python, Webots, Erebus) are. Every unfamiliar word is in the
@@ -19,21 +16,17 @@ Python is the language your robot's instructions are written in.
    **"Windows installer (64-bit)"** link. *(Python 3.9.x also works. However, this guide uses
    3.10.)*
 3. Open the file you just downloaded. It's called something like `python-3.10.11-amd64.exe`.
-4. On the very first screen of the installer, **tick the box at the bottom that says
-   "Add python.exe to PATH."** This is the most important click on the whole page. If you miss it,
-   Webots won't be able to find Python later.
+4. On the very first screen of the installer, tick the box at the bottom that says
+   "Add python.exe to PATH."
 
     ![The Python installer with the "Add python.exe to PATH" box ticked at the bottom](assets/official/windows/python-path.png)
-
-    *Tick **Add python.exe to PATH** before clicking Install. Screenshot: RoboCupJunior Erebus
-    documentation, Apache-2.0.*
 
 5. Click **"Install Now"** and wait for it to finish. Click **Close** at the end.
 
 !!! info "What is PATH?"
-    PATH is the list your computer checks to find a program when something asks for it by name.
-    Ticking that box adds Python to the list, so Webots can start Python for you. There's more in the
-    [glossary](glossary.md#setup-words).
+    PATH is the list of locations your computer searches when a program is called by name. Enabling
+    that option adds Python to this list, allowing Webots to launch it automatically. See the
+    [glossary](glossary.md#setup-words) for more detail.
 
 !!! success "You should now have"
     Python installed. To check, press <kbd>Win</kbd>, type **cmd**, and open **Command Prompt**.
@@ -45,11 +38,11 @@ Python is the language your robot's instructions are written in.
 
 ## Step 2: Install Webots
 
-Webots is the simulator, the 3D app where the maze and robot live.
+Webots is the simulation environment in which the maze and robot are rendered.
 
-1. To get the **exact** version Erebus needs, download **Webots R2023b** straight from here:
+1. Download the exact version required by Erebus directly from this link:
    **[webots-R2023b_setup.exe](https://github.com/cyberbotics/webots/releases/download/R2023b/webots-R2023b_setup.exe)**.
-   It's about 1 GB, so this download takes a while. That's normal.
+   The file is approximately 1 GB, so the download may take some time.
 
     !!! warning "Use R2023b, not the newest Webots"
         A newer Webots will give confusing errors with Erebus. Therefore, install **exactly
@@ -72,22 +65,19 @@ isn't an installer. It's a folder of files you unzip.
 1. Go to the latest release page: **<https://github.com/robocup-junior/erebus/releases/latest>**.
 2. Under **"Assets"**, click **"Source code (zip)"** to download it.
 
-    !!! warning "There's no file called 'Release Build.' Use 'Source code (zip)'"
-        Older guides say to download a "Release Build." Newer Erebus releases don't include one. Thus,
-        **"Source code (zip)" is the real, complete package.** (We confirmed this against the current
-        v26.1 release.)
+    !!! warning "There's no 'Release Build' file. Use 'Source code (zip)' instead."
+        Older guides reference downloading a "Release Build," but as of v26.1, Erebus releases no
+        longer include one. Use "Source code (zip)."
 
     ![The Erebus release download](assets/official/windows/download_erebus.png)
-
-    *Screenshot: RoboCupJunior Erebus documentation, Apache-2.0.*
 
 3. Find the downloaded `.zip` in your Downloads folder. **Right-click it, choose "Extract All…",
    then Extract.** Pick somewhere easy to find, like `Documents\Erebus`.
 
-    !!! warning "Actually extract it. Don't just open the zip"
-        If you double-click a `.zip`, Windows only *previews* it. Running Erebus from inside that
-        preview causes a **blank or black Webots screen**. Use **Extract All** so you get a real
-        folder first.
+    !!! warning
+        If you double-click a `.zip`, Windows only previews it. Running Erebus from inside that
+        preview causes a blank or black Webots screen. Use **Extract All** so you get a real folder
+        first.
 
 !!! success "You should now have"
     A folder (for example `Documents\Erebus\erebus-26.1`) containing folders named `game`,
@@ -104,8 +94,9 @@ isn't an installer. It's a folder of files you unzip.
    **"Initializing…"**.
 
     !!! note "\"Initializing…\" can take a few minutes"
-        It's installing Python libraries in the background, not stuck. Give it a couple of minutes.
-        If it truly never finishes, see [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
+        It is installing Python libraries in the background; this is expected behaviour, not a hang.
+        Allow a couple of minutes for the process to complete. If it does not finish, see
+        [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
 
 !!! success "You should now have"
     When the maze is on screen and the Competition Controller panel shows a time limit, Windows
