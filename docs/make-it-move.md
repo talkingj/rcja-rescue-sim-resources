@@ -1,8 +1,9 @@
 # Make it move
 
-You've watched the sample robot drive itself in [Your first run](first-run.md). To change how the
-robot behaves, you'll edit **one number** in its code and see the result immediately. This is your
-first real taste of programming the robot, and it takes about 5 minutes.
+Having observed the sample robot's autonomous behaviour in [Your first run](first-run.md), you
+will now modify a single parameter in the controller code and observe the resulting behavioural
+change immediately. This constitutes initial hands-on robot programming and takes approximately
+5 minutes.
 
 !!! note "What you're changing"
     A single number, then save. Everything else in the file stays exactly as it is.
