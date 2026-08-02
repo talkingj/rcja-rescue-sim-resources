@@ -1,39 +1,28 @@
 # Before you start
 
-To make sure none of it is a surprise, this page tells you what you're about to install and why. It
-doesn't install anything yet. The actual steps are on the install page for your computer.
+To eliminate ambiguity before installation begins, this page documents the required components
+and their purpose. No installation is performed on this page; the actual installation steps are
+provided on the platform-specific install page for your operating system.
 
-## The three pieces you'll install
+## Components required for installation
 
-You're going to install three separate things, in this order. Each one needs the one before it, so
-the order matters.
+Three components must be installed, in the following order. Each component depends on the one
+preceding it, so sequence is important.
 
-1. **Python** is a programming language. It's what your robot's code is written in and what runs it.
-2. **Webots** is the simulator, a 3D app that the robot lives inside. It draws the maze and the
-   robot, and it makes the robot bump into walls like a real one would. Erebus needs one *exact*
-   version of Webots, not "whatever's newest," so check the box below.
-3. **Erebus** is the competition itself: the maze worlds, the sample robot, and the scoring referee.
-   It's a `.zip` file (a compressed folder, explained
-   in the [glossary](glossary.md#setup-words)) that you download and unzip into a folder you choose.
+1. **Python** is the programming language in which the robot's control code is written and executed.
+2. **Webots** is the simulation environment. It renders the maze and robot models and handles
+   physics interactions, such as collisions with walls. Erebus requires a specific Webots version,
+   not the most recent release, so verify the version requirement below before installing.
+3. **Erebus** is the competition package itself, comprising the maze environments, a sample robot
+   controller, and the scoring engine. It's distributed as a `.zip` archive (a compressed folder,
+   defined in the [glossary](glossary.md#setup-words)), which you download and extract to a
+   directory of your choice.
 
-If any of those words are new, the [glossary](glossary.md) explains every one of them.
+Unfamiliar terms are defined in the [glossary](glossary.md).
 
 !!! success "The exact version that works"
-    Erebus **v26.1** (the current release, with the 2026 competition rules) needs **Webots R2023b**,
-    not the newest Webots. This isn't a guess: the official Erebus code confirms it, and the required
-    Webots version hasn't changed since 2024. Additionally, a newer Webots will likely cause confusing
-    errors. Therefore, install *exactly* R2023b — the install pages below link straight to it.
-
-## What you need before you begin
-
-- [ ] **A computer** running Windows, macOS, or Linux (Ubuntu). This guide covers all three.
-- [ ] **About 2 GB of free disk space** (Webots and Erebus together are roughly that size).
-- [ ] **An internet connection** for the downloads. Webots alone is a large download (several
-      hundred MB), so a fast connection helps, but patience works too.
-- [ ] **About 30 minutes**, uninterrupted if possible, for the first-time setup. After that,
-      opening Erebus again takes seconds.
-- [ ] **Nothing else.** However, you don't need to already know how to program, use a terminal, or
-      know what any of the words above mean. That's what this guide is for.
+    Erebus **v26.1** (the current release, 2026 competition rules) requires **Webots R2023b**
+    specifically. Do not use any newer releases.
 
 ## What "done" looks like
 
