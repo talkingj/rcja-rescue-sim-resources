@@ -1,16 +1,9 @@
 # Install on macOS
 
-To get everything set up on a Mac, do the three steps **in order**, since each one needs the one
-before it. Give yourself about 30 minutes the first time.
-
 !!! tip "Before you begin"
     If you haven't read [Before you start](before-you-start.md), do that first. It explains what
     these three pieces (Python, Webots, Erebus) are. Every unfamiliar word is in the
     [Glossary](glossary.md).
-
-!!! note "Apple Silicon (M1/M2/M3) or Intel: same steps either way"
-    Both use the exact same downloads below. The Webots R2023b installer is *universal* (one file
-    works on both), and so is the Python installer. You don't need to know which chip you have.
 
 ---
 
@@ -39,16 +32,16 @@ Python is the language your robot's instructions are written in.
 
 ## Step 2: Install Webots
 
-Webots is the simulator, the 3D app where the maze and robot live.
+Webots is the simulation environment in which the maze and robot are rendered.
 
-1. To get the **exact** version Erebus needs, download **Webots R2023b** straight from here:
+1. Download the exact version required by Erebus directly from this link:
    **[webots-R2023b.dmg](https://github.com/cyberbotics/webots/releases/download/R2023b/webots-R2023b.dmg)**.
-   It's about 100 MB to download and expands to roughly 1 GB once installed, so this takes a few
-   minutes. That's normal.
+   The download is about 100 MB and expands to roughly 1 GB once installed, so it may take a few
+   minutes.
 
     !!! warning "Use R2023b, not the newest Webots"
         A newer Webots will give confusing errors with Erebus. Therefore, install **exactly
-        R2023b** — the link above already points to the right one.
+        R2023b**; the link above already points to the right one.
 
 2. Open the downloaded **`webots-R2023b.dmg`**. (A DMG is a Mac installer file, explained in the
    [glossary](glossary.md#setup-words).) A window opens showing the **Webots** icon and an
@@ -72,9 +65,9 @@ isn't an app you install. It's a folder of files you unzip.
 1. Go to the latest release page: **<https://github.com/robocup-junior/erebus/releases/latest>**.
 2. Under **"Assets"**, click **"Source code (zip)"** to download it.
 
-    !!! warning "There's no file called 'Release Build.' Use 'Source code (zip)'"
-        Older guides say to download a "Release Build." Newer Erebus releases don't include one. Thus,
-        **"Source code (zip)" is the real, complete package** (confirmed against the current v26.1).
+    !!! warning "There's no 'Release Build' file. Use 'Source code (zip)' instead."
+        Older guides reference downloading a "Release Build," but as of v26.1, Erebus releases no
+        longer include one. Use "Source code (zip)."
 
 3. Find the download in your **Downloads** folder. Safari usually unzips it for you into a folder
    like `erebus-26.1`. If you see a `.zip` instead, **double-click it** to unzip.
@@ -95,8 +88,9 @@ isn't an app you install. It's a folder of files you unzip.
    **"Initializing…"**.
 
     !!! note "\"Initializing…\" can take a few minutes"
-        It's installing Python libraries in the background, not stuck. If it never finishes, or you
-        see `WARNING: Python was not found`, head to
+        It is installing Python libraries in the background; this is expected behaviour, not a hang.
+        Allow a couple of minutes for the process to complete. If it does not finish, or you see
+        `WARNING: Python was not found`, head to
         [When it goes wrong](troubleshooting.md#5-warning-python-was-not-found).
 
 !!! success "You should now have"
