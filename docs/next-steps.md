@@ -26,8 +26,7 @@ changes** loop, just with more interesting code.
 
 The e-puck robot (the round one you've been driving) has **eight distance sensors**. They're named
 `ps0` through `ps7`, spaced evenly around its edge. The sample code already reads some of them to
-avoid walls. That's *why* the robot turns before it crashes. It isn't guessing. It's checking a
-sensor first.
+avoid walls. That's *why* the robot turns before it crashes: it checks a sensor first.
 
 A distance sensor is a **device**, a piece of hardware code can talk to. It returns a number, and on
 this build it works the opposite way you might expect: a high number means open space, a low number

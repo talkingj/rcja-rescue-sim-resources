@@ -4,8 +4,7 @@ All four of this site's printable pages, in one place, in the order a teacher wo
 them out across a term.
 
 !!! note "On the print-quality check below"
-    This resource's acceptance wanted a live print-preview check on this machine, not an assumed
-    result. That check hit a real, confirmed limitation: macOS Accessibility permission for GUI
+    This resource's acceptance wanted a live print-preview check on this machine. That check hit a real, confirmed limitation: macOS Accessibility permission for GUI
     automation isn't available in this session (`System Events` can't address Safari's windows,
     `-1719 Invalid index`, the same category of missing-permission problem [already found and
     documented blocking screenshots](practice-worlds.md)), and this machine has no

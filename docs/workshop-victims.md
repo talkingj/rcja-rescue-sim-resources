@@ -92,13 +92,13 @@ then send the 9-byte identification.
     [Confirmed on the reporting page](code-reporting.md#step-3-a-real-run-score-before-and-after):
     score went `0.0 → 22.5` on a correct report. The exact number depends on which token and area a
     given team's robot happens to be near, the shape of the result (a real, visible jump in the
-    Competition Controller's score display) is what to look for, not that exact number.
+    Competition Controller's score display) is what to look for.
 
 ## Wrap-up (5 min)
 
 Recap: a low-resolution camera means official sample constants may not transfer as-is — always
 re-tune against what your own sensor actually reports. Additionally, the identification message
-needs real stillness margin, not the bare rules minimum.
+needs real stillness margin.
 
 To see what happens when detection and reporting are combined with autonomous exploration, point
 ahead to [the complete-run page](code-complete-run.md) — still an open problem worth working on.

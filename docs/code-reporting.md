@@ -170,7 +170,7 @@ use `0.09` if you're writing detection logic and want to know exactly how close 
   than taking that on faith.
 - Combine this with [victim detection](code-victim-detection.md): once `detectVisualSimple` returns
   a coordinate, what turns that pixel position into the centimetre estimate this page's message
-  needs? That's real dead-reckoning work, and a future page's job, not this one's.
+  needs? That's real dead-reckoning work — a future page's job.
 
 ---
 

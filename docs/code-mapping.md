@@ -179,7 +179,7 @@ back onto the start tile before exiting, [same trick as the last page](code-exit
     Therefore, the official sample array is a close match for this world, not a guaranteed-exact
     one. This is worth remembering if you're tempted to copy a "known good" map wholesale into a
     real competition world: small differences between what ships as a test aid and the actual
-    scoring key are real, not hypothetical. Full record: `trials/20260730-085222-C11.json`.
+    scoring key are real. Full record: `trials/20260730-085222-C11.json`.
 
 ---
 

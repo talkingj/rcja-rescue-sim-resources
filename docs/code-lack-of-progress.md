@@ -108,6 +108,11 @@ hidden the whole effect.
     `22.5 → 17.5`, exactly `−5`, right after the acknowledgement. Full record:
     `trials/20260730-083834-C9-retry.json`.
 
+    Identification right after a spawn or relocate is timing-sensitive on this build — across
+    several re-test runs, the same code and spawn sometimes scored `22.5` and sometimes `0.0`.
+    If the report scores `0.0` on the first try, reset and try again rather than assuming the code
+    is wrong.
+
 ### The 20-second timeout is real, and it doesn't care why you're stationary
 
 A separate run, identical setup but **never sending `'L'` at all**, left the robot sitting still

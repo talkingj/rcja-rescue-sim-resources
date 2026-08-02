@@ -13,7 +13,7 @@ the order matters.
    robot, and it makes the robot bump into walls like a real one would. Erebus needs one *exact*
    version of Webots, not "whatever's newest," so check the box below.
 3. **Erebus** is the competition itself: the maze worlds, the sample robot, and the scoring referee.
-   This isn't an app you install with a wizard. It's a `.zip` file (a compressed folder, explained
+   It's a `.zip` file (a compressed folder, explained
    in the [glossary](glossary.md#setup-words)) that you download and unzip into a folder you choose.
 
 If any of those words are new, the [glossary](glossary.md) explains every one of them.

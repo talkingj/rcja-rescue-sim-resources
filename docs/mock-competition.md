@@ -80,7 +80,7 @@ bonus, all on one sheet.
 ## Debrief
 
 - Compare each team's sheet against [the point-value table](rules-scoring.md#point-values) and
-  confirm the arithmetic, not just the final number.
+  confirm the arithmetic — the final number alone isn't enough.
 - Ask each team to name one thing their sheet shows they should practise next. [The debugging
   playbook](debugging-playbook.md) and [costly mistakes page](costly-mistakes.md) are good places to
   point them.

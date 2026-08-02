@@ -150,7 +150,7 @@ exactly this kind of intermittent nothing-happened result.
 - **The exit bonus never appears, even from the start tile.** Confirm you've actually identified
   something first, in this exact match, a plan to identify something later doesn't count.
 - **You send `'E'` from what you believe is the start tile, and get nothing.** Position checks in
-  this engine are exact, not approximate to the eye; if you drove there yourself rather than being
+  this engine checks your position exactly; if you drove there yourself rather than being
   relocated, you may simply not be as centred on the tile as you think.
 - **Nothing seems to happen at all after sending `'E'`.** That's actually correct, once the match
   ends there's no further message coming back, your controller's next `robot.step()` call will start

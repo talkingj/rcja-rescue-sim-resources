@@ -156,7 +156,7 @@ maze's worth of exploration time to reach them.
 
 ---
 
-## Now pick deliberately, not by habit
+## Now pick deliberately
 
 - If your team always practises on the same one or two worlds, this table is worth a second look.
   Several of these have real, structural differences (trap count, area spread, token density) that
@@ -165,15 +165,15 @@ maze's worth of exploration time to reach them.
   your team is iterating on core logic rather than testing endurance, they're a faster loop than the
   four full-size worlds.
 
-Therefore, pick each session's world by what you actually want to test, not by habit.
+Therefore, pick each session's world by what you actually want to test.
 
 ---
 
 ## If it goes wrong
 
 - **A `mapping_example` world "feels too easy" and gives a false sense of readiness.** That's a real
-  risk with small worlds. They're good for iterating on logic, not for judging whether your
-  exploration coverage is good enough for a full-size maze.
+  risk with small worlds. They're good for iterating on logic; for judging whether your
+ exploration coverage is good enough for a full-size maze, use the full-size worlds.
 - **You expected tokens on `NewPassages` and found none.** Confirmed on this page: that world has
   zero victims and zero cognitive targets by design.
 

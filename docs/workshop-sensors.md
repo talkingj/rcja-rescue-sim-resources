@@ -108,7 +108,7 @@ into later too](code-complete-run.md).)
 
 ## Wrap-up (5 min)
 
-Recap: sensor scale isn't obvious and has to be measured, not assumed; a "known amount" turn means
+Recap: sensor scale isn't obvious and has to be measured; a "known amount" turn means
 measuring it once and reusing the number; and real sensor data sometimes contradicts what the rules
 description implies, [confirmed real more than once building this site's own
 material](debugging-playbook.md).

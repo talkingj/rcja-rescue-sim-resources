@@ -225,8 +225,8 @@ far each wheel turned, converted to how far the robot's centre moved and how muc
     repeating loop, bouncing between the same few positions for the remaining 70-plus seconds,
     never getting close enough to any victim sign for the camera to see one. Final score: **`0.0`**.
     This is the same limitation [the wall-follower's own page](code-wall-follower.md) already
-    admitted to, confirmed again here with the full pipeline attached: exploration, not detection or
-    reporting, is this robot's weakest link. Record: `trials/20260730-094935-C12-retry.json`.
+    admitted to, confirmed again here with the full pipeline attached: exploration is this robot's
+    weakest link.
 
 !!! success "Run 2: started next to a known sign, everything else identical"
     ```
@@ -243,7 +243,7 @@ far each wheel turned, converted to how far the robot's centre moved and how muc
     relocates, exits. But the reported estimate, `x=18 z=11`, is off by about **12 cm** from the
     sign's real position (`x=6 z=13`, [confirmed back on the reporting page](code-reporting.md)),
     outside [the 0.09 m identification radius](code-reporting.md#about-that-identification-range).
-    Final score: **`0.0`** again, a misidentification, not a crash and not nothing happening.
+    Final score: **`0.0`** again — a misidentification (the robot sent the wrong position, so it scored nothing, but it didn't crash or hang).
     Record: `trials/20260730-095138-C12-boosted-v2.json`.
 
 ### What this means
@@ -257,9 +257,9 @@ Wired together into one autonomous controller, however, this robot still doesn't
 for two compounding reasons, in order: it can't reliably explore enough of the maze to find a sign
 in the first place, and even when handed a sign for free, five seconds of real wheel movement is
 already enough dead-reckoning drift to miss the identification radius. Therefore, both are real,
-unsolved problems on this site, not oversights in this page. Getting past them is exactly what [Track
+unsolved problems on this site. Getting past them is exactly what [Track
 S](rules-scoring.md) exists to think through; better exploration and better position estimates are
-strategy questions, not new API calls.
+strategy questions.
 
 ---
 

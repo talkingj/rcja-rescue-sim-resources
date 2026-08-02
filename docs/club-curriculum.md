@@ -49,7 +49,7 @@ that's a real, unsolved problem, not a bar this week's work needs to clear.
 - [Reporting a victim and earning your first points](code-reporting.md)
 
 **Check before moving on:** every student has seen their own score change in the Competition
-Controller after a real report, not just read about it.
+Controller after a real report.
 
 ## Week 5: The game's other messages
 

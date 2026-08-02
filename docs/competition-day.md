@@ -16,7 +16,7 @@ advice.
 - [ ] **Debug mode is off.** Confirmed straight from the supervisor's own source
       (`MainSupervisor.py`): if debug mode is left on when a match starts, it logs "WARNING: Debug
       mode is on. This should not be on during competitions" into the match history, visible to
-      judges. Check this before every real match, not just once.
+      judges. Check this before every real match.
 - [ ] **Every device name in your controller matches the robot's proto file exactly.** [The single
       most common silent failure this site hit](debugging-playbook.md#1-a-device-call-fails-with-no-visible-error-at-all):
       a misspelled name produces no visible error at all, just a controller that quietly does
@@ -26,17 +26,16 @@ advice.
       site](code-exit.md#getting-this-run-clean-took-more-patience-than-it-looked-like-it-should):
       reporting too soon after stopping can silently fail to register at all.
 - [ ] **You know both clocks, and which one you're actually racing.** [Confirmed on the run-budget
-      page](strategy-run-budget.md#two-clocks-not-one): an 8-minute game clock, and a separate,
+      page](strategy-run-budget.md#two-clocks): an 8-minute game clock, and a separate,
       longer real-world clock that's slack, not extra playing time.
-- [ ] **If you're submitting a map, you send it with real time to spare, not on your very last
-      message.** The map bonus is only banked once `'M'` has actually been received, [confirmed on
+- [ ] **If you're submitting a map, you send it with real time to spare.** The map bonus is only banked once `'M'` has actually been received, [confirmed on
       the mapping page](code-mapping.md). Additionally, sending it and then immediately running out
       of time before the supervisor processes it is a real, avoidable risk.
 - [ ] **You know exactly what your exit message needs to be true to pay off.** [Two conditions,
       confirmed on the exit page](code-exit.md#step-1-one-byte-two-conditions): on the start tile,
       and at least one prior identification. Miss either and the message still ends the match — it
-      just doesn't pay the 10% bonus. Therefore, double-check both conditions in testing, not just in
-      the rules.
+      just doesn't pay the 10% bonus. Therefore, double-check both conditions in testing and
+      in the rules.
 - [ ] **You've tested what your controller does immediately after an LoP relocate.** Position and
       orientation both change abruptly [confirmed on the LoP page](code-lack-of-progress.md).
       Therefore, any code that assumes smooth, continuous movement should be checked against a
@@ -55,8 +54,8 @@ advice.
 3. Report timing has margin.
 4. You know which clock you're racing.
 5. Map submitted early if you're submitting one at all.
-6. Exit conditions understood, not assumed.
-7. LoP recovery tested, not just written.
+6. Exit conditions understood.
+7. LoP recovery tested.
 8. Tested on more than one world.
 
 ---
@@ -68,7 +67,7 @@ debugging playbook](debugging-playbook.md). Most of what's there is exactly this
 before, mysteriously doesn't now" symptom.
 - **You're unsure whether to keep exploring or exit with what you have.** [Scoring maths for
   strategy decisions](strategy-scoring-maths.md) works through that exact trade-off with real
-  numbers. Therefore, it is worth reviewing the morning of, not figuring out live.
+  numbers. Review this the morning of, rather than figuring it out live.
 
 ---
 

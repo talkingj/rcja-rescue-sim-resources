@@ -21,8 +21,8 @@ live:
 - **`game_time_left`**, whole seconds left in the match clock.
 - **`real_time_left`**, whole seconds left on a *separate*, longer real-world clock. This page's
   trial found it starts around **600s (10 minutes)** against a match clock starting around **480s
-  (8 minutes)** — the extra buffer is presumably there to absorb lag or a paused match, not something
-  a normal run should ever hit.
+  (8 minutes)** — the extra buffer is presumably there to absorb lag or a paused match. A normal run
+  should never hit it.
 
 There's no fourth field for "have I called exit yet" or similar. Whatever this page's title implies
 about "exit state", the message itself only ever carries these three numbers. If you need to know
