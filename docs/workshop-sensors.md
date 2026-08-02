@@ -59,7 +59,7 @@ which is the whole point of Activity 1.
 
 **Objective:** get real `ps0`-`ps7` readings and find the near/far threshold for yourself.
 
-Have each pair adapt [the sensors page's controller](code-sensors.md#step-2-write-the-controller):
+Have each pair adapt [the sensors page's controller](code-sensors.md#step-1-set-up-the-sensors):
 read all eight sensors every step, print them, and drive the robot into a wall (`wheel1.setVelocity`
 / `wheel2.setVelocity` at a small positive value is enough, steering isn't the point here).
 

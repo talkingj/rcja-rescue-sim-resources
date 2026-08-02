@@ -6,29 +6,19 @@ watch the numbers change as the robot drives into a wall. It takes about 15 minu
 page in a series that ends with a robot that can score points.
 
 !!! note "What you're building"
-    A controller that prints all eight sensor readings, twice a second, while the robot drives
-    straight ahead. No steering logic yet — that's the next page.
+    A controller that outputs all eight sensor readings twice per second while the robot moves
+    forward in a straight line. Steering logic is not yet implemented; that follows on the next
+    page.
 
 ---
 
-## Step 1: What a distance sensor actually returns
+## Step 1: Set up the sensors
 
-The e-puck robot (the round one) has eight distance sensors spaced evenly around its edge, named
-`ps0` through `ps7`. Each one is a **device**, a piece of hardware your code talks to through
-`robot.getDevice("name")`. Once you have the device, you must call `.enable(timeStep)` on it before
-it reports anything. This is easy to forget. An un-enabled sensor silently returns `0.0` forever
-instead of an error.
+Open a fresh copy of `ExamplePlayerController_updated.py` and replace its contents with this.
 
-A sensor's `.getValue()` is **not a distance in centimetres**. It's a raw number, and on this build
-it runs from about `0.8` (nothing nearby) down toward `0.0` (something right against the sensor).
-However, that's the opposite of what you might expect: **low means close, high means clear.** You'll
-see the real numbers in Step 3.
-
----
-
-## Step 2: Write the controller
-
-Open a fresh copy of `ExamplePlayerController_updated.py` and replace its contents with this:
+The e-puck robot (the circular chassis) has eight distance sensors distributed evenly around its
+perimeter, designated `ps0` through `ps7`. Each sensor is accessed as a device via
+`robot.getDevice("name")`.
 
 ```python
 from controller import Robot
@@ -53,7 +43,19 @@ for name in sensor_names:
     sensor = robot.getDevice(name)
     sensor.enable(timeStep)
     sensors.append(sensor)
+```
 
+After device acquisition, `.enable(timeStep)` must be called before the sensor returns valid
+readings; omitting this step is a common error, as an un-enabled sensor returns `0.0` indefinitely
+rather than raising an error.
+
+---
+
+## Step 2: Print the readings
+
+The rest of the controller drives the robot straight ahead and prints the readings:
+
+```python
 step_count = 0
 while robot.step(timeStep) != -1:
     # Drive straight ahead at a gentle speed. This controller does not look at the
@@ -68,6 +70,11 @@ while robot.step(timeStep) != -1:
                     for name, sensor in zip(sensor_names, sensors)}
         print(readings)
 ```
+
+The value returned by `.getValue()` is a raw sensor reading, not a distance in centimetres. On this
+build, values range from approximately `0.8` (no nearby obstacle) to `0.0` (obstacle in direct
+contact with the sensor). Note that this is an inverse relationship: low values indicate proximity,
+high values indicate clearance. Actual output values are shown in Step 3.
 
 Save it. Every device this page uses (`wheel1 motor`, `wheel2 motor`, `ps0`–`ps7`) is already
 named on the robot, so you don't need to change anything in Webots itself.
