@@ -1,12 +1,23 @@
 # Your first run
 
-!!! note "What you'll see by the end"
-    The e-puck robot appears in the maze and drives forward on its own, slowing and turning when it
-    gets near a wall. That's the sample code thinking for it, and it's code you'll edit yourself on
-    the next page.
+Installation is complete ([Windows](install-windows.md), [macOS](install-mac.md), or
+[Linux](install-linux.md)). This section verifies simulator
+functionality prior to any code modification: you will load the sample robot controller and
+observe the robot navigate the maze autonomously. Estimated duration: 5 minutes.
 
-    If you haven't installed yet: [Windows](install-windows.md), [macOS](install-mac.md), or
-    [Linux](install-linux.md).
+## Expected output
+
+The e-puck robot appears in the maze and moves forward autonomously, decelerating and turning when
+approaching walls. This behaviour is governed by the sample controller code.
+
+On initial launch, Webots displays **"Initializing…"** while installing required Python library
+dependencies for the simulator. Allow one to two minutes for completion. If the process fails to
+complete, or a missing module error occurs, see
+[When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
+
+The robot navigates the start area autonomously, turning to avoid walls. This behaviour was
+verified directly: with the sample controller loaded, the robot spawns and moves through the area,
+avoiding obstacles as expected.
 
 ---
 
@@ -56,21 +67,7 @@ others pause and reset it.
 2. The robot appears in the maze and **starts driving forward on its own**. When it gets close to a
    wall, the sample code slows one wheel so the robot turns away.
 
-!!! note "First time only: a short wait"
-    The very first time, Webots may show **"Initializing…"** while it installs the Python
-    libraries the simulator needs; this is expected behaviour, not a hang. Allow a minute or two
-    for the process to complete. If it does not finish, or you see an error about a missing
-    module, see [When it goes wrong](troubleshooting.md#3-its-stuck-on-initializing).
-
-!!! success "You should now see"
-    The robot driving around the start area by itself, turning away from walls. We ran this ourselves
-    to be sure: with the sample controller loaded, the robot really does spawn and drive around,
-    avoiding obstacles.
-
 ![The robot in the world1 maze during a real run](assets/real/world1-first-run.png)
-
-*A real screenshot from our run. The robot is the round object in the upper area of the `world1`
-maze.*
 
 ---
 
@@ -85,8 +82,6 @@ Additionally, the controller gives you two more controls:
 - **Reset** (and the gear next to it for debug options) clears the run so you can start over.
 
     ![The reset and settings buttons](assets/official/getting-started/reset_buttons.png)
-
-    *Screenshots: RoboCupJunior Erebus documentation, Apache-2.0.*
 
 ## Move the robot by hand
 
