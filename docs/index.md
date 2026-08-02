@@ -1,9 +1,8 @@
 # Get your robot driving in the Erebus rescue simulator
 
-## What you'll build
-
-By the end of this guide you will have a robot, driving itself around a maze inside a program
-called Webots.
+This site provides a complete setup and onboarding path, from initial installation to a functioning
+robot navigating a maze in the simulator. Each step includes a corresponding screenshot and
+technical terminology is defined at first use.
 
 ![The Erebus world1 maze with the e-puck robot, captured from a real run](assets/real/world1-first-run.png)
 
@@ -25,17 +24,10 @@ called Webots.
    curriculum](club-curriculum.md), go further still, once you've got a working robot and want to
    place well or run a whole term around this site.
 
-Stuck at any point? **[When it goes wrong](troubleshooting.md)** covers setup. Similarly, [the
-debugging playbook](debugging-playbook.md) covers your own code — both indexed by what you're seeing
-on screen.
-The **[Glossary](glossary.md)** explains every unfamiliar word, and the [Erebus API cheat
-sheet](api-cheat-sheet.md) is a one-page reference once you already know your way around.
-
-## Why this guide exists
-
-The official Erebus install docs are accurate. However, they're written for someone who already
-knows words like "PATH" and "controller."
-To leave nothing to guesswork, this guide adds the missing screenshots, plain-English explanations,
-and a "you should now see…" check after every step.
+Get stuck somewhere? **[When it goes wrong](troubleshooting.md)** addresses setup issues, while [the
+debugging playbook](debugging-playbook.md) addresses issues in your own code; both are organised by
+symptom — what you're actually seeing on screen.
+The **[Glossary](glossary.md)** defines unfamiliar terminology, and the [Erebus API cheat
+sheet](api-cheat-sheet.md) provides a one-page reference for those already familiar with the basics.
 
 Ready? Start with **[Before you start](before-you-start.md)**.
