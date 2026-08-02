@@ -5,11 +5,10 @@ You've got a robot driving itself and you've changed how fast it goes.
 To build on that, everything past this point uses the same **edit code → reload → watch what
 changes** loop, just with more interesting code.
 
-!!! success "The full code tutorial series now exists on this site"
-    This page used to be a teaser with no tutorial behind it. That's no longer true: **[Code: build
-    a scoring robot](code-sensors.md)** is a twelve-page series, sensors and driving through a
-    complete scored run, and every page quotes real numbers from a real run on this exact robot, not
-    invented ones. Read this page for the quick map, then go straight there for the real thing.
+!!! success "The full code tutorial series"
+    **[Code: build a scoring robot](code-sensors.md)** is a twelve-page series, sensors and driving
+    through a complete scored run, and every page quotes real numbers from a real run on this exact
+    robot. Read this page for the quick map, then go straight there for the real thing.
 
     | You want to... | Go to |
     |---|---|
